@@ -84,16 +84,19 @@ class MetodologiaScale {
 
     // Stagger animate results
     results.forEach((result, index) => {
-      setTimeout(() => {
-        result.style.opacity = "0";
-        result.style.transform = "translateX(-20px)";
-        result.style.transition = "all 0.4s ease-out";
+      setTimeout(
+        () => {
+          result.style.opacity = "0";
+          result.style.transform = "translateX(-20px)";
+          result.style.transition = "all 0.4s ease-out";
 
-        setTimeout(() => {
-          result.style.opacity = "1";
-          result.style.transform = "translateX(0)";
-        }, 50);
-      }, features.length * 100 + index * 80);
+          setTimeout(() => {
+            result.style.opacity = "1";
+            result.style.transform = "translateX(0)";
+          }, 50);
+        },
+        features.length * 100 + index * 80,
+      );
     });
   }
 
@@ -312,7 +315,6 @@ class MetodologiaScale {
 
         if (rect.top < window.innerHeight && rect.bottom > 0) {
           const yPos = -(scrolled * speed);
-          
         }
       });
 
@@ -350,26 +352,32 @@ class MetodologiaScale {
       stat.style.opacity = "0";
       stat.style.transform = "translateY(20px)";
 
-      setTimeout(() => {
-        stat.style.transition = "all 0.6s ease-out";
-        stat.style.opacity = "1";
-        stat.style.transform = "translateY(0)";
-      }, 2000 + index * 200);
+      setTimeout(
+        () => {
+          stat.style.transition = "all 0.6s ease-out";
+          stat.style.opacity = "1";
+          stat.style.transform = "translateY(0)";
+        },
+        2000 + index * 200,
+      );
     });
 
     // Animate CTA buttons
     const ctaButtons = document.querySelectorAll(
-      ".hero-cta a, .hero-cta button"
+      ".hero-cta a, .hero-cta button",
     );
     ctaButtons.forEach((button, index) => {
       button.style.opacity = "0";
       button.style.transform = "translateY(20px)";
 
-      setTimeout(() => {
-        button.style.transition = "all 0.6s ease-out";
-        button.style.opacity = "1";
-        button.style.transform = "translateY(0)";
-      }, 2800 + index * 200);
+      setTimeout(
+        () => {
+          button.style.transition = "all 0.6s ease-out";
+          button.style.opacity = "1";
+          button.style.transform = "translateY(0)";
+        },
+        2800 + index * 200,
+      );
     });
   }
 
