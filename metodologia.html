@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Conheça a Metodologia SCALE da Silvtech: framework exclusivo de Growth Hacking baseado em dados para crescimento exponencial. Scan, Create, Amplify, Leverage - a metodologia que transforma dados em resultados."
+    />
+    <meta
+      property="og:title"
+      content="Metodologia SCALE - Silvtech Growth Hacking"
+    />
+    <meta
+      property="og:description"
+      content="Framework científico exclusivo que combina dados, experimentação e psicologia do consumidor para gerar crescimento exponencial e sustentável."
+    />
+    <meta
+      property="og:image"
+      content="https://www.silvtech.com.br/silvtech/assets/logomarca.png"
+    />
+    <meta
+      property="og:url"
+      content="https://www.silvtech.com.br/metodologia.html"
+    />
+    <meta property="og:type" content="website" />
+    <title>
+      Metodologia SCALE - Framework Exclusivo de Growth Hacking | Silvtech
+    </title>
+
+    <!-- Preconnect para fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Fontes -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- CSS da metodologia -->
+    <link rel="stylesheet" href="/css/metodologia.css" />
+    
+       
+      <!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '654658884374776');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=654658884374776&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '24586284564389432');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=24586284564389432&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3Z19LBVSL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Z3Z19LBVSL');
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PLKJR3Q5');</script>
+<!-- End Google Tag Manager -->
+  </head>
+  <body>
+      
+      <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PLKJR3Q5"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <!-- Header dinâmico -->
+    <div id="header"></div>
+    <script>
+      fetch("./header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+
+          document
+            .getElementById("home")
+            .addEventListener("click", function () {
+              window.location.href = "/index.html";
+            });
+
+          document
+            .getElementById("quemsomos")
+            .addEventListener("click", function () {
+              window.location.href = "/quemsomos.html";
+            });
+
+          document
+            .getElementById("blog")
+            .addEventListener("click", function () {
+              window.location.href = "./blog/index.html";
+            });
+
+          document
+            .getElementById("fale-conosco")
+            .addEventListener("click", function () {
+              window.location.href = "/fale-conosco.html";
+            });
+        })
+        .catch((error) => {
+          console.error("Erro ao carregar o header:", error);
+        });
+    </script>
+
+    <main class="main-container">
+      <!-- Hero Section -->
+      <section
+        class="hero-section"
+        aria-label="Metodologia SCALE - Framework Exclusivo"
+      >
+        <div class="hero-content">
+          <div class="hero-text">
+            <span class="hero-badge">METODOLOGIA EXCLUSIVA</span>
+            <h1 class="hero-title">
+              <span class="scale-text">S.C.A.L.E</span>
+              <span class="subtitle"
+                >Framework de Growth Hacking Baseado em Dados</span
+              >
+            </h1>
+            <p class="hero-description">
+              A única metodologia científica do Brasil que transforma dados em
+              crescimento exponencial. Desenvolvida pela Silvtech para gerar
+              resultados mensuráveis e sustentáveis.
+            </p>
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-number">300%</span>
+                <span class="stat-label">Crescimento Médio</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">90%</span>
+                <span class="stat-label">Taxa de Sucesso</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">30</span>
+                <span class="stat-label">Dias para Insights</span>
+              </div>
+            </div>
+            <div class="hero-cta">
+              <a href="fale-conosco.html" class="cta-primary">
+                <i class="fas fa-rocket"></i>
+                Implementar SCALE na Minha Empresa
+              </a>
+              <button class="cta-secondary" onclick="scrollToMethodology()">
+                <i class="fas fa-play"></i>
+                Como Funciona
+              </button>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="methodology-preview">
+              <div class="phase-preview scan">
+                <div class="phase-icon"><i class="fas fa-search"></i></div>
+                <span>SCAN</span>
+              </div>
+              <div class="phase-preview create">
+                <div class="phase-icon"><i class="fas fa-flask"></i></div>
+                <span>CREATE</span>
+              </div>
+              <div class="phase-preview amplify">
+                <div class="phase-icon"><i class="fas fa-chart-line"></i></div>
+                <span>AMPLIFY</span>
+              </div>
+              <div class="phase-preview leverage">
+                <div class="phase-icon"><i class="fas fa-infinity"></i></div>
+                <span>LEVERAGE</span>
+              </div>
+              <div class="connection-lines"></div>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <div class="scroll-arrow"></div>
+        </div>
+      </section>
+
+      <!-- Diferencial Section -->
+      <section class="diferencial-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Por que a Metodologia SCALE é Única?</h2>
+            <p>
+              Enquanto outras agências usam frameworks genéricos, nós
+              desenvolvemos uma metodologia científica proprietária
+            </p>
+          </div>
+          <div class="comparison-grid">
+            <div class="comparison-card tradicional">
+              <div class="card-header">
+                <h3>Metodologias Tradicionais</h3>
+                <span class="card-badge old">Ultrapassado</span>
+              </div>
+              <ul class="comparison-list">
+                <li>
+                  <i class="fas fa-times"></i> Baseadas em "melhores práticas"
+                  genéricas
+                </li>
+                <li>
+                  <i class="fas fa-times"></i> Campanhas isoladas sem integração
+                </li>
+                <li>
+                  <i class="fas fa-times"></i> Crescimento linear dependente de
+                  investimento
+                </li>
+                <li><i class="fas fa-times"></i> Resultados em 6-12 meses</li>
+                <li><i class="fas fa-times"></i> Foco apenas em aquisição</li>
+              </ul>
+            </div>
+            <div class="comparison-card scale">
+              <div class="card-header">
+                <h3>Metodologia SCALE</h3>
+                <span class="card-badge new">Inovadora</span>
+              </div>
+              <ul class="comparison-list">
+                <li>
+                  <i class="fas fa-check"></i> Baseada em dados específicos do
+                  cliente
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Experimentos controlados
+                  integrados
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Crescimento exponencial
+                  auto-sustentável
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Primeiros insights em 30 dias
+                </li>
+                <li>
+                  <i class="fas fa-check"></i> Sistema completo de crescimento
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Metodologia Phases -->
+      <section class="methodology-section" id="methodology">
+        <div class="container">
+          <div class="section-header">
+            <h2>As 4 Fases da Metodologia SCALE</h2>
+            <p>
+              Framework científico que transforma dados em crescimento
+              exponencial
+            </p>
+          </div>
+
+          <!-- Phase 1: SCAN -->
+          <div class="phase-container scan-phase">
+            <div class="phase-content">
+              <div class="phase-info">
+                <div class="phase-header">
+                  <div class="phase-number">01</div>
+                  <div class="phase-title">
+                    <h3>SCAN</h3>
+                    <span class="phase-subtitle">Análise e Diagnóstico</span>
+                  </div>
+                </div>
+                <blockquote class="phase-quote">
+                  "Você não pode otimizar o que não mede"
+                </blockquote>
+                <p class="phase-description">
+                  Mapeamos completamente o ecossistema digital e identificamos
+                  oportunidades de crescimento através de análise profunda de
+                  dados.
+                </p>
+                <div class="phase-features">
+                  <div class="feature-item">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Auditoria Completa de Dados</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="fas fa-route"></i>
+                    <span>Mapeamento da Jornada do Cliente</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="fas fa-crosshairs"></i>
+                    <span>Análise Competitiva Avançada</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="fas fa-bullseye"></i>
+                    <span>Definição de North Star Metric</span>
+                  </div>
+                </div>
+                <div class="phase-results">
+                  <h4>Entregáveis:</h4>
+                  <ul>
+                    <li>Dashboard de métricas críticas</li>
+                    <li>Mapa de oportunidades de crescimento</li>
+                    <li>Análise de gaps competitivos</li>
+                    <li>Definição de KPIs estratégicos</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="phase-visual">
+                <div class="visual-container scan-visual">
+                  <div class="data-points">
+                    <div class="data-point" style="--delay: 0s"></div>
+                    <div class="data-point" style="--delay: 0.5s"></div>
+                    <div class="data-point" style="--delay: 1s"></div>
+                    <div class="data-point" style="--delay: 1.5s"></div>
+                  </div>
+                  <div class="scan-icon">
+                    <i class="fas fa-search"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 2: CREATE -->
+          <div class="phase-container create-phase">
+            <div class="phase-content reverse">
+              <div class="phase-visual">
+                <div class="visual-container create-visual">
+                  <div class="experiment-tubes">
+                    <div class="tube" style="--height: 60%; --delay: 0s"></div>
+                    <div
+                      class="tube"
+                      style="--height: 80%; --delay: 0.3s"
+                    ></div>
+                    <div
+                      class="tube"
+                      style="--height: 45%; --delay: 0.6s"
+                    ></div>
+                    <div
+                      class="tube"
+                      style="--height: 90%; --delay: 0.9s"
+                    ></div>
+                  </div>
+                  <div class="create-icon">
+                    <i class="fas fa-flask"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="phase-info">
+                <div class="phase-header">
+                  <div class="phase-number">02</div>
+                  <div class="phase-title">
+                    <h3>CREATE</h3>
+                    <span class="phase-subtitle">Criação e Experimentação</span>
+                  </div>
+                </div>
+                <blockquote class="phase-quote">
+                  "Hipóteses sem experimentos são apenas opiniões"
+                </blockquote>
+                <p class="phase-description">
+                  Desenvolvemos e testamos hipóteses de crescimento através de
+                  experimentos controlados e iteração rápida.
+                </p>
+                <div class="phase-features">
+                  <div class="feature-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Geração de Hipóteses</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="fas fa-vial"></i>
+                    <span>Design de Experimentos</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="fas fa-rocket"></i>
+                    <span>Prototipagem Rápida</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="fas fa-magic"></i>
+                    <span>Growth Hacks Implementados</span>
+                  </div>
+                </div>
+                <div class="phase-results">
+                  <h4>Entregáveis:</h4>
+                  <ul>
+                    <li>Banco de hipóteses priorizadas</li>
+                    <li>Cronograma de experimentos</li>
+                    <li>Implementação de growth hacks</li>
+                    <li>Otimizações de conversão</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 3: AMPLIFY -->
+          <div class="phase-container amplify-phase">
+            <div class="phase-content">
+              <div class="phase-info">
+                <div class="phase-header">
+                  <div class="phase-number">03</div>
+                  <div class="phase-title">
+                    <h3>AMPLIFY</h3>
+                    <span class="phase-subtitle">Amplificação e Escala</span>
+                  </div>
+                </div>
+                <blockquote class="phase-quote">
+                  "Crescimento sem sustentabilidade é apenas um pico temporário"
+                </blockquote>
+                <p class="phase-description">
+                  Escalamos as estratégias validadas e criamos sistemas de
+                  crescimento sustentável e previsível.
+                </p>
+                <div class="phase-features">
+                  <div class="feature-item">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                    <span>Escalabilidade de Canais</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="fas fa-cogs"></i>
+                    <span>Automação de Processos</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Otimização de LTV/CAC</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="fas fa-share-alt"></i>
+                    <span>Loops Virais</span>
+                  </div>
+                </div>
+                <div class="phase-results">
+                  <h4>Entregáveis:</h4>
+                  <ul>
+                    <li>Canais escalados e otimizados</li>
+                    <li>Sistemas de automação implementados</li>
+                    <li>Estratégias de retenção ativas</li>
+                    <li>Loops de crescimento funcionando</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="phase-visual">
+                <div class="visual-container amplify-visual">
+                  <div class="growth-chart">
+                    <div
+                      class="chart-bar"
+                      style="--height: 20%; --delay: 0s"
+                    ></div>
+                    <div
+                      class="chart-bar"
+                      style="--height: 35%; --delay: 0.2s"
+                    ></div>
+                    <div
+                      class="chart-bar"
+                      style="--height: 55%; --delay: 0.4s"
+                    ></div>
+                    <div
+                      class="chart-bar"
+                      style="--height: 75%; --delay: 0.6s"
+                    ></div>
+                    <div
+                      class="chart-bar"
+                      style="--height: 95%; --delay: 0.8s"
+                    ></div>
+                  </div>
+                  <div class="amplify-icon">
+                    <i class="fas fa-chart-line"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 4: LEVERAGE -->
+          <div class="phase-container leverage-phase">
+            <div class="phase-content reverse">
+              <div class="phase-visual">
+                <div class="visual-container leverage-visual">
+                  <div class="infinity-loop">
+                    <div class="loop-path"></div>
+                    <div class="loop-particle" style="--delay: 0s"></div>
+                    <div class="loop-particle" style="--delay: 1s"></div>
+                    <div class="loop-particle" style="--delay: 2s"></div>
+                  </div>
+                  <div class="leverage-icon">
+                    <i class="fas fa-infinity"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="phase-info">
+                <div class="phase-header">
+                  <div class="phase-number">04</div>
+                  <div class="phase-title">
+                    <h3>LEVERAGE</h3>
+                    <span class="phase-subtitle">Alavancagem e Evolução</span>
+                  </div>
+                </div>
+                <blockquote class="phase-quote">
+                  "O verdadeiro growth hacking é criar um sistema que cresce
+                  exponencialmente"
+                </blockquote>
+                <p class="phase-description">
+                  Criamos vantagens competitivas sustentáveis e sistemas de
+                  crescimento que se auto-alimentam.
+                </p>
+                <div class="phase-features">
+                  <div class="feature-item">
+                    <i class="fas fa-sync-alt"></i>
+                    <span>Otimização Contínua</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="fas fa-globe"></i>
+                    <span>Expansão Estratégica</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="fas fa-network-wired"></i>
+                    <span>Network Effects</span>
+                  </div>
+                  <div class="feature-item">
+                    <i class="fas fa-atom"></i>
+                    <span>Ecosystem Building</span>
+                  </div>
+                </div>
+                <div class="phase-results">
+                  <h4>Entregáveis:</h4>
+                  <ul>
+                    <li>Sistema de crescimento auto-sustentável</li>
+                    <li>Vantagens competitivas consolidadas</li>
+                    <li>Roadmap de expansão estratégica</li>
+                    <li>Cultura data-driven implementada</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resultados Section -->
+      <section class="results-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>Resultados Comprovados da Metodologia SCALE</h2>
+            <p>Dados reais de clientes que implementaram nossa metodologia</p>
+          </div>
+          <div class="results-grid">
+            <div class="result-card">
+              <div class="result-icon">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <div class="result-number">30</div>
+              <div class="result-label">Dias</div>
+              <div class="result-description">
+                Para primeiros insights e quick wins
+              </div>
+            </div>
+            <div class="result-card">
+              <div class="result-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="result-number">50%</div>
+              <div class="result-label">Melhoria</div>
+              <div class="result-description">Em métricas-chave em 90 dias</div>
+            </div>
+            <div class="result-card">
+              <div class="result-icon">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <div class="result-number">300%</div>
+              <div class="result-label">Crescimento</div>
+              <div class="result-description">Sustentável em 180 dias</div>
+            </div>
+            <div class="result-card">
+              <div class="result-icon">
+                <i class="fas fa-infinity"></i>
+              </div>
+              <div class="result-number">∞</div>
+              <div class="result-label">Sistema</div>
+              <div class="result-description">Auto-sustentável em 12 meses</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Segmentos Section -->
+      <section class="segments-section">
+        <div class="container">
+          <div class="section-header">
+            <h2>SCALE Aplicada por Segmento</h2>
+            <p>Metodologia adaptada para diferentes tipos de negócio</p>
+          </div>
+          <div class="segments-grid">
+            <div class="segment-card clinicas">
+              <div class="segment-icon">
+                <i class="fas fa-heartbeat"></i>
+              </div>
+              <h3>Clínicas de Saúde</h3>
+              <div class="segment-phases">
+                <div class="mini-phase">
+                  <strong>SCAN:</strong> Análise de jornada do paciente
+                </div>
+                <div class="mini-phase">
+                  <strong>CREATE:</strong> Experimentos com agendamento
+                </div>
+                <div class="mini-phase">
+                  <strong>AMPLIFY:</strong> Automação de relacionamento
+                </div>
+                <div class="mini-phase">
+                  <strong>LEVERAGE:</strong> Sistema de fidelização
+                </div>
+              </div>
+            </div>
+            <div class="segment-card ecommerce">
+              <div class="segment-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+              <h3>E-commerce</h3>
+              <div class="segment-phases">
+                <div class="mini-phase">
+                  <strong>SCAN:</strong> Análise de funil de conversão
+                </div>
+                <div class="mini-phase">
+                  <strong>CREATE:</strong> Testes de checkout otimizado
+                </div>
+                <div class="mini-phase">
+                  <strong>AMPLIFY:</strong> Personalização em escala
+                </div>
+                <div class="mini-phase">
+                  <strong>LEVERAGE:</strong> Marketplace próprio
+                </div>
+              </div>
+            </div>
+            <div class="segment-card saas">
+              <div class="segment-icon">
+                <i class="fas fa-cloud"></i>
+              </div>
+              <h3>SaaS</h3>
+              <div class="segment-phases">
+                <div class="mini-phase">
+                  <strong>SCAN:</strong> Análise de onboarding e churn
+                </div>
+                <div class="mini-phase">
+                  <strong>CREATE:</strong> Experimentos com trial
+                </div>
+                <div class="mini-phase">
+                  <strong>AMPLIFY:</strong> Growth loops virais
+                </div>
+                <div class="mini-phase">
+                  <strong>LEVERAGE:</strong> Network effects
+                </div>
+              </div>
+            </div>
+            <div class="segment-card energia">
+              <div class="segment-icon">
+                <i class="fas fa-solar-panel"></i>
+              </div>
+              <h3>Energia Solar</h3>
+              <div class="segment-phases">
+                <div class="mini-phase">
+                  <strong>SCAN:</strong> Mapeamento de jornada B2B
+                </div>
+                <div class="mini-phase">
+                  <strong>CREATE:</strong> Calculadoras interativas
+                </div>
+                <div class="mini-phase">
+                  <strong>AMPLIFY:</strong> Sistema de referências
+                </div>
+                <div class="mini-phase">
+                  <strong>LEVERAGE:</strong> Marketplace de fornecedores
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Final Section -->
+      <section class="final-cta-section">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Pronto para Implementar a Metodologia SCALE?</h2>
+            <p>
+              Transforme sua empresa com o único framework científico de Growth
+              Hacking do Brasil. Agende uma consultoria gratuita e descubra como
+              acelerar seu crescimento.
+            </p>
+            <div class="cta-buttons">
+              <a href="fale-conosco.html" class="cta-primary large">
+                <i class="fas fa-rocket"></i>
+                Quero Implementar SCALE
+              </a>
+              <a
+                href="/blog/posts/growth-hacking.html"
+                class="cta-secondary large"
+              >
+                <i class="fas fa-book"></i>
+                Ler Mais sobre Growth Hacking
+              </a>
+            </div>
+            <div class="cta-guarantee">
+              <i class="fas fa-shield-alt"></i>
+              <span
+                >Consultoria gratuita • Sem compromisso • Resultados
+                garantidos</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter -->
+      <div class="back-b">
+        <section class="newsletter">
+          <form class="formulario" id="newsletter-form">
+            <h3>Receba insights exclusivos sobre Growth Hacking</h3>
+            <p>
+              Estratégias avançadas da Metodologia SCALE direto no seu e-mail
+            </p>
+            <input
+              type="email"
+              name="from_email"
+              placeholder="Digite seu E-mail aqui"
+              required
+            />
+            <button type="submit">Quero receber insights SCALE</button>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="./js/header.js"></script>
+    <script src="./js/metodologia.js"></script>
+    <script src="./js/emailjs-integration.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  </body>
+
+  <!-- Footer dinâmico -->
+  <div id="footer"></div>
+  <script>
+    fetch("./footer.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("footer").innerHTML = data;
+      })
+      .catch((error) => {
+        console.error("Erro ao carregar o footer:", error);
+      });
+  </script>
+</html>
