@@ -5,1296 +5,611 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="A Silvtech é uma empresa de marketing orientado por estratégia, focada em ajudar empresas de SaaS, energia solar, clínicas, indústrias e outros segmentos a crescerem com consistência."
+      content="A Silvtech é uma empresa de marketing orientado por estratégia. Ajudamos empresas de SaaS, energia solar, indústria, telecom, clínicas e segurança a crescerem com consistência."
     />
     <meta
       property="og:title"
-      content="Silvtech | Marketing Orientado por Estratégia"
+      content="Silvtech | Marketing orientado por estratégia"
     />
     <meta
       property="og:description"
-      content="Empresa de marketing orientado por estratégia, com sede em FLorianópolis-SC."
+      content="Marketing orientado por estratégia para empresas que querem crescer com consistência. Comece pelo diagnóstico."
     />
     <meta
       property="og:image"
-      content="https://www.silvtech.com.br/silvtech/assets/logomarca.png"
+      content="https://www.silvtech.com.br/assets/logo_silvtech.png"
     />
     <meta property="og:url" content="https://www.silvtech.com.br" />
     <meta property="og:type" content="website" />
-    <title>Assessoria de Marketing orientado por estratégias.</title>
+    <title>Silvtech | Marketing orientado por estratégia</title>
 
     <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;600&display=swap"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
+
+    <!-- Design system -->
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/base.css" />
     <link rel="stylesheet" href="/css/home.css" />
-    <link rel="stylesheet" href="/css/servicos.css" />
-  </head>
-  <body>
-    <div id="header"></div>
+
+    <!-- Meta Pixel Code -->
     <script>
-      fetch("./header.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("header").innerHTML = data;
-
-          document
-            .getElementById("home")
-            .addEventListener("click", function () {
-              window.location.href = "index.html";
-            });
-
-          document
-            .getElementById("quemsomos")
-            .addEventListener("click", function () {
-              window.location.href = "quemsomos.html";
-            });
-
-          document
-            .getElementById("servicos")
-            .addEventListener("click", function () {
-              window.location.href = "servicos.html";
-            });
-          document
-            .getElementById("metodologia")
-            .addEventListener("click", function () {
-              window.location.href = "metodologia.html";
-            });
-
-          document
-            .getElementById("blog")
-            .addEventListener("click", function () {
-              window.location.href = "./blog/index.html";
-            });
-
-          document
-            .getElementById("fale-conosco")
-            .addEventListener("click", function () {
-              window.location.href = "fale-conosco.html";
-            });
-        })
-        .catch((error) => {
-          console.error("Erro ao carregar o header:", error);
-        });
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js",
+      );
+      fbq("init", "654658884374776");
+      fbq("track", "PageView");
     </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=654658884374776&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 
-    <main class="main-container">
-      <section
-        class="container1"
-        aria-label="Seção inicial com proposta da Silvtech"
-      >
-        <div class="chamariz">
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Z3Z19LBVSL"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-Z3Z19LBVSL");
+    </script>
+    <!-- End Google tag -->
+  </head>
+
+  <body>
+    <!-- ================= HEADER ================= -->
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="site-header__logo" href="/index.html">Silvtech</a>
+
+        <button
+          class="site-header__toggle"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <line x1="3" y1="7" x2="21" y2="7" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="17" x2="21" y2="17" />
+          </svg>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Principal">
+          <ul class="site-nav__list">
+            <li><a href="/index.html" aria-current="page">Home</a></li>
+            <li><a href="/quemsomos.html">Quem somos</a></li>
+            <li><a href="/servicos.html">Serviços</a></li>
+            <li><a href="/metodologia.html">Metodologia</a></li>
+            <li><a href="/setores/index.html">Setores</a></li>
+            <li><a href="/cases/index.html">Cases</a></li>
+            <li><a href="/blog/index.html">Blog</a></li>
+            <li><a href="/fale-conosco.html">Contato</a></li>
+          </ul>
+          <a class="btn btn--acento site-nav__cta" href="/fale-conosco.html"
+            >Solicitar diagnóstico</a
+          >
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- ================= HERO ================= -->
+      <section class="hero">
+        <div class="container reveal">
+          <span class="rotulo hero__rotulo"
+            >Marketing orientado por estratégia</span
+          >
           <h1>
             Marketing orientado por estratégia para empresas que querem crescer
             com consistência.
           </h1>
-          <br />
-          <p>
-            Toda empresa investe em marketing esperando crescer. Mas nem sempre
-            o problema está na falta de anúncios, redes sociais ou um novo site.
-            <br />Na Silvtech, toda estratégia começa entendendo o seu negócio
-            para identificar o que realmente limita o seu crescimento e definir
-            as ações de marketing mais adequadas aos seus objetivos.
+          <p class="destaque hero__apoio">
+            Toda empresa investe em marketing esperando crescer. Na Silvtech,
+            cada estratégia começa entendendo o seu negócio — para identificar o
+            que limita o crescimento e definir as ações certas, na ordem certa.
           </p>
-
-          <div class="cta">
-            <a href="https://wa.me/5543988738360" target="_blank"
-              >Falar com especialista</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <section class="container2">
-        <div class="clientes">
-          <p>
-            Grandes empresas que escolheram a silvtech para escalar os seus
-            resultados
-          </p>
-          <div class="logos12">
-            <div class="slide-track">
-              <div class="slide1"><img src="./assets/1.png" alt="" /></div>
-              <div class="slide1"><img src="./assets/2.png" alt="" /></div>
-              <div class="slide1"><img src="./assets/3.png" alt="" /></div>
-              <div class="slide1"><img src="./assets/5.png" alt="" /></div>
-              <div class="slide1"><img src="./assets/6.png" alt="" /></div>
-              <div class="slide1"><img src="./assets/7.png" alt="" /></div>
-              <div class="slide1"><img src="./assets/8.png" alt="" /></div>
-              <div class="slide1"><img src="./assets/9.png" alt="" /></div>
-              <div class="slide1"><img src="./assets/10.png" alt="" /></div>
-              <div class="slide1"><img src="./assets/11.png" alt="" /></div>
-
-              <!-- Duplicação para o loop infinito -->
-              <div class="slide1"><img src="./assets/1.png" alt="" /></div>
-              <div class="slide1"><img src="./assets/2.png" alt="" /></div>
-              <div class="slide1"><img src="./assets/3.png" alt="" /></div>
-              <div class="slide1"><img src="./assets/5.png" alt="" /></div>
-              <div class="slide1"><img src="./assets/6.png" alt="" /></div>
-              <div class="slide1"><img src="./assets/7.png" alt="" /></div>
-              <div class="slide1"><img src="./assets/8.png" alt="" /></div>
-              <div class="slide1"><img src="./assets/9.png" alt="" /></div>
-              <div class="slide1"><img src="./assets/10.png" alt="" /></div>
-              <div class="slide1"><img src="./assets/11.png" alt="" /></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="back">
-        <section
-          class="container3"
-          aria-label="Seção de serviços de marketing e vendas"
-        >
-          <div class="servicos">
-            <div class="descricao">
-              <h2>O marketing <span>vai muito além do digital.</span></h2>
-              <br />
-              <p>
-                Acreditamos que o marketing vai muito além de subir campanha e
-                manter as redes sociais bonitas. <br />
-                A preço do seu produto ou serviço, o seu público-alvo, a forma
-                como a sua empresa se comunica, o mercado de atuação, as suas
-                parcerias, a jornada do seu cliente. <br />
-                Isso também é marketing.
-              </p>
-
-              <div class="cta">
-                <a href="/metodologia.html">Conheça nossa metodologia</a>
-              </div>
-            </div>
-
-            <div class="video">
-              <video
-                src="./assets/marekting_video.mp4"
-                autoplay
-                loop
-                muted
-                playsinline
-              ></video>
-            </div>
-          </div>
-          <div class="solucoes">
-            <h3>Soluções para empresas que buscam</h3>
-            <div class="cards">
-              <div class="card">
-                <i class="fa-solid fa-chart-line"></i>
-                <h4>Escalar as vendas</h4>
-                <p>
-                  Unimos marketing e vendas com estratégias integradas para
-                  aumentar seu volume de oportunidades e conversões de forma
-                  sustentável.
-                </p>
-              </div>
-              <div class="card">
-                <i class="fa-solid fa-filter-circle-dollar"></i>
-                <h4>Gerar mais leads</h4>
-                <p>
-                  Estruturamos estratégias de marketing para atrair pessoas
-                  realmente interessadas no seu produto ou serviço, aumentando a
-                  conversão.
-                </p>
-              </div>
-              <div class="card">
-                <i class="fa-solid fa-award"></i>
-                <h4>Expandir market share</h4>
-                <p>
-                  Com presença forte e posicionamento claro, sua empresa se
-                  destaca da concorrência e conquista mais espaço no mercado.
-                </p>
-              </div>
-              <div class="card">
-                <i class="fa-solid fa-arrow-up-right-dots"></i>
-                <h4>Acelerar o crescimento</h4>
-                <p>
-                  Criamos ações estratégicas para acelerar o crescimento de
-                  forma organizada. Muito comum em empresas de tecnologia que
-                  precisam crescer rápido sem perder controle do processo.
-                </p>
-              </div>
-
-              <div class="card">
-                <i class="fa-solid fa-sitemap"></i>
-                <h4>Otimizar processo comercial</h4>
-                <p>
-                  Implementamos CRMs e processos comerciais inteligentes para
-                  tornar sua equipe mais produtiva e suas vendas mais
-                  previsíveis.
-                </p>
-              </div>
-              <div class="card">
-                <i class="fa-solid fa-earth-americas"></i>
-                <h4>Posicionamento digital</h4>
-                <p>Para empresas que precisam de presença digital.</p>
-              </div>
-              <div class="card">
-                <i class="fa-solid fa-star"></i>
-                <h4>Otimizar resultados</h4>
-                <p>
-                  Quando os resultados param de crescer, é hora de adaptar.
-                  Trazemos novas estratégias para manter sua curva de
-                  crescimento em alta.
-                </p>
-              </div>
-              <div class="card">
-                <i class="fa-solid fa-people-line"></i>
-                <h4>Gerar receita com base de clientes</h4>
-                <p>
-                  Com estratégias de verticalização de carteira, vendendo mais
-                  para quem já compra.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section id="services" class="services-section">
-          <div class="container">
-            <div class="section-header">
-              <h2>Conheça as nossas soluções</h2>
-              <p>
-                Cada empresa possui desafios diferentes. <br />
-                Por isso, antes de recomendar qualquer serviço, buscamos
-                compreender o cenário atual do negócio.
-              </p>
-            </div>
-
-            <div class="services-tabs">
-              <div class="tab-buttons">
-                <button class="tab-btn active" data-tab="growth">
-                  Gestão de Marketing
-                </button>
-                <button class="tab-btn" data-tab="traffic">Tráfego Pago</button>
-                <button class="tab-btn" data-tab="social">Social Media</button>
-                <button class="tab-btn" data-tab="automation">Automação</button>
-                <button class="tab-btn" data-tab="consulting">
-                  Web design
-                </button>
-              </div>
-
-              <div class="tab-content">
-                <!-- Growth Hacking Tab -->
-                <div class="tab-panel active" id="growth">
-                  <div class="service-content">
-                    <div class="service-info">
-                      <h3>Gestão de Marketing</h3>
-                      <p class="service-description">
-                        Tenha uma equipe de marketing completa e dedicada ao seu
-                        negócio.<br />
-                        Aqui você terceiriza o seu setor de marketing e nós
-                        cuidamos de tudo. <br />
-                        <strong>Implementação da equipe em 7 dias.</strong>
-                      </p>
-
-                      <div class="value-proposition">
-                        <h4>Onde atuaremos na operação:</h4>
-                        <ul class="benefits-list">
-                          <li>
-                            <i class="fa-solid fa-check"></i>
-                            Gestão de redes sociais.
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i>
-                            Gestão de campanha paga.
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i>
-                            Geração de conteúdo (Digitais e físicos).
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i>
-                            Criar e executar novas estratégias de marketing.
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i>
-                            Criar e acompanhar métricas de KPI's.
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="service-process">
-                        <h4>Como funciona:</h4>
-                        <div class="process-steps">
-                          <div class="step">
-                            <div class="step-content">
-                              <h5>1️⃣ Diagnóstico</h5>
-                              <p>
-                                🔍 Entendemos o seu negócio <br />
-
-                                Analisamos mercado, concorrência, ações atuais,
-                                processo comercial, KPIs e oportunidades.
-                              </p>
-                            </div>
-                          </div>
-                          <div class="step">
-                            <div class="step-content">
-                              <h5>2️⃣ Planejamento</h5>
-                              <p>
-                                🎯 Construímos a estratégia <br />
-
-                                Definimos prioridades, objetivos, cronograma e
-                                plano de ação.
-                              </p>
-                            </div>
-                          </div>
-                          <div class="step">
-                            <div class="step-content">
-                              <h5>3️⃣ Execução</h5>
-                              <p>
-                                ⚙️ Colocamos o plano em prática <br />
-
-                                Produzimos conteúdo, gerenciamos campanhas,
-                                acompanhamos indicadores e executamos as ações
-                                definidas.
-                              </p>
-                            </div>
-                          </div>
-                          <div class="step">
-                            <div class="step-content">
-                              <h5>4️⃣ Otimização</h5>
-                              <p>
-                                📈 Melhoramos continuamente <br />
-
-                                Monitoramos resultados, identificamos
-                                oportunidades e ajustamos a estratégia para
-                                melhorar a performance.
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="service-visual">
-                      <div class="growth-simulator">
-                        <div class="simulator-header">
-                          <h5>Planos e Preços</h5>
-                          <span class="simulator-status"
-                            >Gestão de Marketing</span
-                          >
-                        </div>
-
-                        <div class="growth-phases">
-                          <table class="pricing-table">
-                            <thead>
-                              <tr>
-                                <th>Plano</th>
-                                <th>Indicado</th>
-                                <th>Preço</th>
-                              </tr>
-                            </thead>
-
-                            <tbody>
-                              <tr>
-                                <td>Essencial</td>
-                                <td>ME's</td>
-                                <td>R$ 3.500,00</td>
-                              </tr>
-
-                              <tr>
-                                <td>Pro</td>
-                                <td>EPP</td>
-                                <td>R$ 5.500,00</td>
-                              </tr>
-
-                              <tr>
-                                <td>Pro +</td>
-                                <td>Demais</td>
-                                <td>R$ 7.500,00</td>
-                              </tr>
-
-                              <tr>
-                                <td>Enterprise</td>
-                                <td>S.A.</td>
-                                <td>Sob análise</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Traffic Tab -->
-                <div class="tab-panel" id="traffic">
-                  <div class="service-content">
-                    <div class="service-info">
-                      <h3>Gestão de tráfego Pago</h3>
-                      <p class="service-description">
-                        Campanhas pagas nas principais plataformas digitais.
-                        Criamos, acompanhamos e otimizamos os resultados através
-                        da análise e interpretação de dados.
-                      </p>
-
-                      <div class="value-proposition">
-                        <h4>O que criamos:</h4>
-                        <ul class="benefits-list">
-                          <li>
-                            <i class="fa-solid fa-check"></i>
-                            Criativos para redes sociais
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i>
-                            Vídeos curtos para reels e storys
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i>
-                            Copywriting para todas as campanhas
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i>
-                            Roteiro para vídeos institucionais
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="service-includes">
-                        <h4>Inclui:</h4>
-                        <div class="includes-grid">
-                          <div class="include-item">
-                            <i class="fa-brands fa-google"></i>
-                            <span>Google Ads</span>
-                          </div>
-                          <div class="include-item">
-                            <i class="fa-brands fa-facebook"></i>
-                            <span>Facebook Ads</span>
-                          </div>
-                          <div class="include-item">
-                            <i class="fa-brands fa-instagram"></i>
-                            <span>Instagram Ads</span>
-                          </div>
-                          <div class="include-item">
-                            <i class="fa-brands fa-linkedin"></i>
-                            <span>LinkedIn Ads</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="service-visual">
-                      <div class="traffic-dashboard">
-                        <div class="dashboard-header">
-                          <h5>O que entregamos</h5>
-                        </div>
-
-                        <div class="traffic-services">
-                          <div class="traffic-item">
-                            <i class="fa-solid fa-bullseye"></i>
-                            <div>
-                              <h6>Estratégia</h6>
-                              <p>Planejamento e definição das campanhas.</p>
-                            </div>
-                          </div>
-
-                          <div class="traffic-item">
-                            <i class="fa-solid fa-users-viewfinder"></i>
-                            <div>
-                              <h6>Segmentação</h6>
-                              <p>
-                                Construção de públicos com foco em conversão.
-                              </p>
-                            </div>
-                          </div>
-
-                          <div class="traffic-item">
-                            <i class="fa-solid fa-pen-ruler"></i>
-                            <div>
-                              <h6>Criativos</h6>
-                              <p>Copywriting e criativos para anúncios.</p>
-                            </div>
-                          </div>
-
-                          <div class="traffic-item">
-                            <i class="fa-solid fa-flask"></i>
-                            <div>
-                              <h6>Testes A/B</h6>
-                              <p>
-                                Experimentação contínua para validar hipóteses.
-                              </p>
-                            </div>
-                          </div>
-
-                          <div class="traffic-item">
-                            <i class="fa-solid fa-chart-line"></i>
-                            <div>
-                              <h6>Otimização</h6>
-                              <p>Melhoria constante das campanhas.</p>
-                            </div>
-                          </div>
-
-                          <div class="traffic-item">
-                            <i class="fa-solid fa-globe"></i>
-                            <div>
-                              <h6>Landing Page</h6>
-                              <p>Página web focada em geração de leads.</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Social Media Tab -->
-                <div class="tab-panel" id="social">
-                  <div class="service-content">
-                    <div class="service-info">
-                      <h3>Gestão de redes sociais</h3>
-                      <p class="service-description">
-                        Com foco em posicionamento digital e relacionamento com
-                        o público. Fazemos toda a gestão das redes sociais,
-                        criando material, definindo a comunicação e acompanhando
-                        as métricas mensalmente para identificar oportunidade de
-                        melhoria no engajamento.
-                      </p>
-
-                      <div class="value-proposition">
-                        <h4>Por que o posicionamento digital é importante?</h4>
-                        <ul class="benefits-list">
-                          <li>
-                            <i class="fa-solid fa-check"></i>
-                            <strong>Reconhecimento de marca</strong> no seu
-                            mercado
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i>
-                            <strong>Maior fatia de market share</strong> vs
-                            concorrentes
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i>
-                            <strong>Leads orgânicos</strong> todo mês
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i>
-                            <strong>Autoridade digital</strong>e aproximação com
-                            o seu público.
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="social-platforms">
-                        <h4>Plataformas:</h4>
-                        <div class="platforms-grid">
-                          <div class="platform">
-                            <i class="fa-brands fa-instagram"></i>
-                            <span>Instagram</span>
-                          </div>
-                          <div class="platform">
-                            <i class="fa-brands fa-linkedin"></i>
-                            <span>LinkedIn</span>
-                          </div>
-                          <div class="platform">
-                            <i class="fa-brands fa-facebook"></i>
-                            <span>Facebook</span>
-                          </div>
-                          <div class="platform">
-                            <i class="fa-brands fa-youtube"></i>
-                            <span>YouTube</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="service-visual">
-                      <div class="social-growth">
-                        <div class="growth-metrics">
-                          <div class="growth-item">
-                            <div class="growth-icon">
-                              <i class="fa-solid fa-users"></i>
-                            </div>
-                            <div class="growth-data">
-                              <div class="growth-label">
-                                Aumento de seguidores
-                              </div>
-                              <div class="growth-trend">Todos os meses</div>
-                            </div>
-                          </div>
-                          <div class="growth-item">
-                            <div class="growth-icon">
-                              <i class="fa-solid fa-heart"></i>
-                            </div>
-                            <div class="growth-data">
-                              <div class="growth-label">
-                                Aumento no engajamento
-                              </div>
-                              <div class="growth-trend">Nas publicações</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Automation Tab -->
-                <div class="tab-panel" id="automation">
-                  <div class="service-content">
-                    <div class="service-info">
-                      <h3>Automação de processos</h3>
-                      <p class="service-description">
-                        Aqui o seu marketing conversa diretamente com o seu time
-                        comercial. Através de ferramentas de automação, tornamos
-                        o fluxo do seu processo mais fluído, aumentando a
-                        produtividade do seu time e a qualidade de atendimento.
-                      </p>
-
-                      <div class="value-proposition">
-                        <h4>O que pode ser automatizado?</h4>
-                        <ul class="benefits-list">
-                          <li>
-                            <i class="fa-solid fa-check"></i>
-                            <strong
-                              >Processo comercial em toda jornada do
-                              cliente</strong
-                            >
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i>
-                            <strong
-                              >Qualificação de leads gerados pelo
-                              marketing</strong
-                            >
-                          </li>
-
-                          <li>
-                            <i class="fa-solid fa-check"></i>
-                            <strong>Recuperação de propostas paradas</strong>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="automation-flow">
-                        <h4>Fluxo de Automação:</h4>
-                        <div class="flow-steps">
-                          <div class="flow-step">
-                            <div class="flow-icon">
-                              <i class="fa-solid fa-magnet"></i>
-                            </div>
-                            <div class="flow-text">Atração</div>
-                          </div>
-                          <div class="flow-arrow">→</div>
-                          <div class="flow-step">
-                            <div class="flow-icon">
-                              <i class="fa-solid fa-filter"></i>
-                            </div>
-                            <div class="flow-text">Qualificação</div>
-                          </div>
-                          <div class="flow-arrow">→</div>
-                          <div class="flow-step">
-                            <div class="flow-icon">
-                              <i class="fa-solid fa-seedling"></i>
-                            </div>
-                            <div class="flow-text">Nutrição</div>
-                          </div>
-                          <div class="flow-arrow">→</div>
-                          <div class="flow-step">
-                            <div class="flow-icon">
-                              <i class="fa-solid fa-handshake"></i>
-                            </div>
-                            <div class="flow-text">Conversão</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="service-visual">
-                      <div class="automation-dashboard">
-                        <div class="dashboard-header">
-                          <h5>Sistema de Automação</h5>
-                          <div class="status-indicator">
-                            <div class="status-dot active"></div>
-                            <span>Ativo</span>
-                          </div>
-                        </div>
-                        <div class="automation-flow-visual">
-                          <div class="flow-node">
-                            <i class="fa-solid fa-magnet"></i>
-                            <span>Captura</span>
-                          </div>
-                          <div class="flow-line"></div>
-                          <div class="flow-node">
-                            <i class="fa-solid fa-filter"></i>
-                            <span>Qualifica</span>
-                          </div>
-                          <div class="flow-line"></div>
-                          <div class="flow-node">
-                            <i class="fa-solid fa-seedling"></i>
-                            <span>Nutre</span>
-                          </div>
-                          <div class="flow-line"></div>
-                          <div class="flow-node">
-                            <i class="fa-solid fa-handshake"></i>
-                            <span>Converte</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Consulting Tab -->
-                <div class="tab-panel" id="consulting">
-                  <div class="service-content">
-                    <div class="service-info">
-                      <h3>Sites personalizados</h3>
-                      <p class="service-description">
-                        <strong
-                          >Criamos sites com alta taxa de conversão.</strong
-                        >
-                        Design moderno e inovador para aumentar as suas
-                        oportunidades de negócio.
-                      </p>
-
-                      <div class="value-proposition">
-                        <h4>O que você vai ganhar:</h4>
-                        <ul class="benefits-list">
-                          <li>
-                            <i class="fa-solid fa-check"></i>
-                            <strong>Site completo</strong> em 20 dias
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i>
-                            <strong>Web design</strong> 100% personalizado
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i>
-                            <strong>Hospedagem gratuita</strong> por 12 meses
-                          </li>
-                          <li>
-                            <i class="fa-solid fa-check"></i>
-                            <strong>Suporte técnico gratuito</strong> por 30
-                            dias
-                          </li>
-                        </ul>
-                      </div>
-
-                      <div class="consulting-phases">
-                        <h4>Fases do desenvolvimento:</h4>
-                        <div class="phases-list">
-                          <div class="phase">
-                            <div class="phase-number">01</div>
-                            <div class="phase-content">
-                              <h5>Briefing</h5>
-                              <p>Definir UX/UI do seu site</p>
-                            </div>
-                          </div>
-                          <div class="phase">
-                            <div class="phase-number">02</div>
-                            <div class="phase-content">
-                              <h5>Implementação</h5>
-                              <p>início do desenvolvimento do site</p>
-                            </div>
-                          </div>
-                          <div class="phase">
-                            <div class="phase-number">03</div>
-                            <div class="phase-content">
-                              <h5>Execução</h5>
-                              <p>Deixar o site disponível na web</p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="service-visual">
-                      <div class="consulting-dashboard">
-                        <div class="dashboard-header">
-                          <h5>Painel do web design</h5>
-                          <span class="consulting-badge">Estratégica</span>
-                        </div>
-                        <div class="consulting-timeline">
-                          <div class="timeline-item completed">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                              <h6>briefing</h6>
-                              <span>3 dias</span>
-                            </div>
-                          </div>
-                          <div class="timeline-item active">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                              <h6>implementação</h6>
-                              <span>15 dias</span>
-                            </div>
-                          </div>
-                          <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                              <h6>Execução</h6>
-                              <span>2 dias</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="container4">
-          <div class="container5">
-            <div class="prova_social">
-              <h3>Atendemos em todo território nacional. <br /></h3>
-              <br />
-              <p>
-                Ajudamos empresas a identificar os gargalos em seu processo.
-                <br />
-                Buscando implementa
-                <strong>soluções e estratégias</strong> que geram resultado e
-                crescimento sustentável.
-              </p>
-
-              <div class="maps">
-                <img
-                  src="./assets/maps.png"
-                  alt="Assessoria growth gestão de tráfego pago"
-                />
-              </div>
-            </div>
-
-            <div class="framework-card">
-              <div class="framework-header">
-                <h3>Como trabalhamos</h3>
-                <p>
-                  Toda estratégia começa entendendo o negócio antes de executar
-                  qualquer ação.
-                </p>
-              </div>
-
-              <div class="framework-grid">
-                <div class="framework-item">
-                  <span>01</span>
-                  <h4>Diagnóstico</h4>
-                  <p>Entendimento da empresa, mercado, objetivos e desafios.</p>
-                </div>
-
-                <div class="framework-item">
-                  <span>02</span>
-                  <h4>Estratégia</h4>
-                  <p>
-                    Definição das ações que realmente geram impacto no negócio.
-                  </p>
-                </div>
-
-                <div class="framework-item">
-                  <span>03</span>
-                  <h4>Planejamento</h4>
-                  <p>Organização das prioridades, cronograma e indicadores.</p>
-                </div>
-
-                <div class="framework-item">
-                  <span>04</span>
-                  <h4>Execução</h4>
-                  <p>Implementação das estratégias de marketing definidas.</p>
-                </div>
-
-                <div class="framework-item">
-                  <span>05</span>
-                  <h4>Mensuração</h4>
-                  <p>Acompanhamento contínuo dos indicadores de desempenho.</p>
-                </div>
-
-                <div class="framework-item">
-                  <span>06</span>
-                  <h4>Otimização</h4>
-                  <p>
-                    Melhoria contínua das ações com base nos resultados obtidos.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="container-secundario">
-          <div class="form-desc">
-            <h2>Receba um diagnóstico gratuito</h2>
-            <div class="linha"></div>
-
-            <div class="desc1">
-              <h2>
-                <i class="fa-solid fa-envelope"></i> Preencha o formulário ao
-                lado
-              </h2>
-              <br />
-              <p>
-                Envie suas informações para contato. Todos os dados são
-                armazenados em nosso banco de dados com criptografia SHA-2
-                SHA-256. Seus dados estão seguros.
-              </p>
-            </div>
-            <br />
-            <div class="desc1">
-              <h2><i class="fa-solid fa-phone"></i> Vamos te ligar</h2>
-              <br />
-              <p>
-                Em até 2 horas, nosso especialista entrará em contato para
-                agendar a nossa consultoria com você.
-              </p>
-            </div>
-          </div>
-
-          <div class="receber-email">
-            <form id="contact-form">
-              <div class="sub-form">
-                <div>
-                  <input
-                    type="text"
-                    name="from_name"
-                    placeholder="Qual o seu nome?"
-                    required
-                  />
-                </div>
-                <div>
-                  <input
-                    type="text"
-                    name="company_name"
-                    placeholder="Qual o nome da sua empresa?"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <input
-                    type="email"
-                    name="from_email"
-                    placeholder="E-mail corporativo para contato"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <input
-                    type="tel"
-                    name="whatsapp"
-                    placeholder="Seu número de telefone"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <select name="faturamento" required>
-                    <option value="" disabled selected hidden>
-                      Qual o faturamento mensal da sua empresa?
-                    </option>
-                    <option value="ate-50k">Até 50 mil</option>
-                    <option value="51k-100k">De 51 mil à 100 mil</option>
-                    <option value="101k-200k">De 101 mil à 200 mil</option>
-                    <option value="201k-300k">De 201 mil à 300 mil</option>
-                    <option value="301k-500k">De 301 mil à 500 mil</option>
-                    <option value="acima-500k">Acima de 500 mil</option>
-                  </select>
-                </div>
-
-                <div>
-                  <select name="segmento" required>
-                    <option value="" disabled selected hidden>
-                      Qual o seu segmento?
-                    </option>
-                    <option value="saas">SaaS</option>
-                    <option value="infoproduto">Infoproduto</option>
-                    <option value="saude-bem-estar">Saúde e bem-estar</option>
-                    <option value="varejo">Varejo</option>
-                    <option value="atacadista">Atacadista</option>
-                    <option value="educacao">Educação</option>
-                    <option value="imobiliario">Imobiliário</option>
-                    <option value="telecomunicacoes">Telecomunicações</option>
-                    <option value="servicos">Serviços</option>
-                    <option value="energia-solar">Energia solar</option>
-                    <option value="outro">Outro</option>
-                  </select>
-                </div>
-
-                <button type="submit">Quero um diagnóstico gratuito</button>
-              </div>
-            </form>
-          </div>
-        </section>
-      </section>
-
-      <section class="container6">
-        <div class="desc-servicos">
-          <h2>Gestão de marketing</h2>
-          <br />
-          <p>
-            Nem toda solução de marketing são
-            <strong>campanhas pagas ou redes sociais bonitas.</strong>
-            Por isso fazemos um diagnóstico para entender a sua operação e
-            sugerir as melhores estratégias
-            <strong>de marketing</strong>.
-          </p>
-          <br />
-
-          <div class="cta1">
-            <a href="https://wa.me/5543988738360" target="_blank"
+          <div class="hero__acoes">
+            <a class="btn btn--acento" href="/fale-conosco.html"
               >Solicitar diagnóstico</a
             >
-          </div>
-        </div>
-
-        <img
-          class="marketing"
-          src="./assets/marketing_digital.png"
-          alt="Campanha de marketing digital com foco em performance"
-        />
-
-        <img
-          class="marketing"
-          src="./assets/crm.png"
-          alt="Campanha de marketing digital com foco em performance"
-        />
-        <div class="desc-servicos">
-          <h2>Estruturação Comercial</h2>
-          <br />
-          <p>
-            A falta de processo nas vendas custa caro. Elaboramos um
-            <strong>processo comercial</strong> com etapas claras, automações e
-            scripts de alto impacto. <br />
-            Entenda o seu mercado, conheça o seu público e adapte um processo
-            comercial que
-            <strong>Aumente conversão, diminua os cancelamentos</strong> e
-            melhore a qualidade da venda.
-          </p>
-          <br />
-
-          <div class="cta1">
-            <a href="https://wa.me/5543988738360" target="_blank"
-              >Falar com especialista</a
+            <a class="btn btn--secundario" href="/metodologia.html"
+              >Conhecer o método</a
             >
-          </div>
-        </div>
-
-        <div class="desc-servicos">
-          <h2>Branding e Posicionamento</h2>
-          <br />
-          <p>
-            Uma marca forte vai muito além de um logotipo. Ela transmite
-            confiança, diferencia sua empresa da concorrência e influencia
-            diretamente a decisão de compra dos clientes.
-            <strong>Construímos posicionamentos estratégicos</strong>, definimos
-            a comunicação da marca e desenvolvemos uma identidade alinhada aos
-            objetivos do seu negócio.
-          </p>
-          <br />
-
-          <div class="cta1">
-            <a href="https://wa.me/5543988738360" target="_blank">
-              Falar com especialista
-            </a>
-          </div>
-        </div>
-
-        <img
-          class="marketing"
-          src="./assets/growth_hacking.png"
-          alt="Branding e posicionamento estratégico"
-        />
-
-        <img
-          class="marketing"
-          src="./assets/gestao_marketing.png"
-          alt="Marketing digital estratégico"
-        />
-
-        <div class="desc-servicos">
-          <h2>Marketing Digital</h2>
-          <br />
-          <p>
-            O marketing digital é uma poderosa ferramenta de crescimento quando
-            faz parte de uma estratégia bem definida. Desenvolvemos
-            <strong
-              >sites, landing pages, campanhas de tráfego pago e gestão de redes
-              sociais</strong
-            >
-            para fortalecer sua presença digital, gerar oportunidades de negócio
-            e apoiar os objetivos da sua empresa.
-          </p>
-          <br />
-
-          <div class="cta1">
-            <a href="https://wa.me/5543988738360" target="_blank">
-              Falar com especialista
-            </a>
           </div>
         </div>
       </section>
 
-      <section class="insight">
-        <h1>Insights</h1>
-        <div class="conteudos">
-          <div class="conteudo">
-            <img
-              src="../assets/growth-hacking-vendas.png"
-              alt="Growth hacking! Venda mais."
-            />
-
-            <a href="../blog/posts/growth-hacking.html">
-              <h2>
-                Growth Hacking: Estratégias Criativas para Crescer Rápido como
-                um Furacão
-              </h2>
-            </a>
+      <!-- ================= POSICIONAMENTO ================= -->
+      <section class="secao posicionamento">
+        <div class="container reveal">
+          <div>
+            <span class="rotulo">Quem é a Silvtech</span>
+          </div>
+          <div>
             <p>
-              <strong
-                >Growth Hacking não é apenas uma tática — é uma revolução
-                silenciosa na forma como construímos negócios
-                escaláveis.</strong
-              >
+              Somos uma empresa de marketing orientado por estratégia — não uma
+              agência de tráfego, social media ou consultoria genérica.
+            </p>
+            <p class="apoio">
+              Tratamos o marketing como uma disciplina que orienta o crescimento
+              do negócio. O trabalho começa entendendo a empresa, o mercado e os
+              objetivos, antes de propor qualquer tática ou ferramenta.
             </p>
           </div>
+        </div>
+      </section>
 
-          <div class="conteudo">
-            <img
-              src="../assets/tipos-de-marketing.png"
-              alt="5 tipos de marketing"
-            />
-            <a href="../blog/posts/5-tipos-de-marketing.html">
-              <h2>Conheça 5 tipos de marketing para aplicar no seu negócio.</h2>
-            </a>
-            <p>
-              No cenário competitivo de hoje, escolher o tipo certo de marketing
-              pode ser a diferença entre estagnar e crescer. Neste guia, você
-              vai conhecer <strong>5 tipos de marketing</strong> que dão
-              resultados reais, independente do porte da sua empresa.
-            </p>
+      <!-- ================= S.C.A.L.E ================= -->
+      <section class="secao scale">
+        <div class="container reveal">
+          <div class="secao__cabecalho">
+            <span class="rotulo rotulo--acento">Metodologia S.C.A.L.E</span>
+            <h2>Existe um método por trás de cada decisão.</h2>
           </div>
 
-          <div class="conteudo">
-            <img
-              src="../assets/clientes.png"
-              alt="Como atrair novos clientes com marketing digital"
-            />
+          <div class="scale__grid">
+            <div class="scale__etapa">
+              <span class="rotulo rotulo--acento scale__num">Etapa 01</span>
+              <h3>Scan</h3>
+              <p>
+                Diagnóstico do negócio, mercado, concorrência, processos e
+                comunicação.
+              </p>
+            </div>
+            <div class="scale__etapa">
+              <span class="rotulo rotulo--acento scale__num">Etapa 02</span>
+              <h3>Create</h3>
+              <p>
+                Construção do plano: prioridades, cronograma, campanhas,
+                conteúdo e processos.
+              </p>
+            </div>
+            <div class="scale__etapa">
+              <span class="rotulo rotulo--acento scale__num">Etapa 03</span>
+              <h3>Amplify</h3>
+              <p>
+                Execução integrada de marketing, comunicação, conteúdo e
+                relacionamento como um sistema.
+              </p>
+            </div>
+            <div class="scale__etapa">
+              <span class="rotulo rotulo--acento scale__num">Etapa 04</span>
+              <h3>Leverage</h3>
+              <p>
+                Acompanhamento contínuo, correção de desvios e melhoria
+                constante.
+              </p>
+            </div>
+          </div>
+
+          <a class="btn btn--secundario scale__link" href="/metodologia.html"
+            >Conhecer a metodologia</a
+          >
+        </div>
+      </section>
+
+      <!-- ================= SERVIÇOS ================= -->
+      <section class="secao servicos">
+        <div class="container reveal">
+          <div class="secao__cabecalho">
+            <span class="rotulo">O que fazemos</span>
+            <h2>Soluções organizadas a partir do seu negócio.</h2>
+          </div>
+
+          <div class="servicos__grid">
+            <article class="card servico">
+              <h3>Gestão de Marketing</h3>
+              <p>
+                Seu marketing conduzido de ponta a ponta, orientado pelos
+                objetivos do negócio.
+              </p>
+            </article>
+            <article class="card servico">
+              <h3>Estruturação Comercial</h3>
+              <p>
+                Marketing e comercial trabalhando como um só sistema, do
+                primeiro contato ao fechamento.
+              </p>
+            </article>
+            <article class="card servico">
+              <h3>Posicionamento e Branding</h3>
+              <p>
+                Clareza sobre o que a empresa é, para quem fala e por que é
+                escolhida.
+              </p>
+            </article>
+            <article class="card servico">
+              <h3>Marketing Digital</h3>
+              <p>
+                Campanhas, conteúdo e presença digital a serviço da estratégia —
+                não o contrário.
+              </p>
+            </article>
+          </div>
+
+          <a class="btn btn--secundario servicos__link" href="/servicos.html"
+            >Ver todas as soluções</a
+          >
+
+          <p class="destaque" style="margin-top: var(--esp-5)">
+            Atendemos com profundidade os setores de
             <a
-              href="../blog/posts/como-atrair-clientes-com-marketing-digital.html"
-            >
-              <h2>Como Atrair Clientes Todos os Dias com Marketing Digital.</h2>
-            </a>
-            <p>
-              Neste guia completo, você vai descobrir um plano de ação
-              estruturado, baseado em dados e comportamento do consumidor, para
-              fazer com que sua empresa esteja
-              <strong
-                >no radar do cliente certo, na hora certa, todos os
-                dias.</strong
-              >
-              <br />
-              Vamos direto ao ponto.
-            </p>
+              href="/setores/index.html"
+              style="
+                color: var(--cor-acento);
+                text-decoration: underline;
+                text-underline-offset: 4px;
+              "
+              >clínicas, energia solar, provedores de internet, indústria,
+              segurança eletrônica e SaaS</a
+            >.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= PROVA ================= -->
+      <section class="secao prova">
+        <div class="container reveal">
+          <div class="secao__cabecalho">
+            <span class="rotulo">Empresas que confiam na Silvtech</span>
           </div>
-
-          <div class="conteudo">
-            <img src="../assets/crm-marketing.png" alt="CRM e produtividade" />
-
-            <a href="../blog/posts/crm-sistema-de-vendas.html">
-              <h2>
-                CRM: Como um sistema de vendas pode dobrar sua produtividade.
-              </h2>
-            </a>
-            <p>
-              <strong>CRM (Customer Relationship Management)</strong> se destaca
-              como uma das soluções mais poderosas para organizar o funil de
-              vendas, acompanhar clientes e aumentar a produtividade da equipe
-              comercial. <br />
-            </p>
-          </div>
-
-          <div class="conteudo">
-            <img
-              src="../assets/marketing_performance.png"
-              alt="marketing de performance"
-            />
-
-            <a href="../blog/posts/marketing-de-performance.html">
-              <h2>
-                Conheça o marketing de performance. <br />
-                uma estratégia focada em retorno financeiro.
-              </h2>
-            </a>
-            <p>
-              Neste artigo, vamos explicar por que essa abordagem é essencial
-              para empresas que querem crescer de forma previsível e lucrativa.
-              <strong>Marketing de performance</strong> é uma estratégia baseada
-              em dados e métricas, onde o investimento é direcionado para ações
-              que geram resultados reais, como vendas, leads e cliques.
-            </p>
-          </div>
-
-          <div class="conteudo">
-            <img
-              src="../assets/marketing-energia-solar.png"
-              alt="marketing de performance"
-            />
-
-            <a href="../blog/posts/marketing-digital-energia-solar.html">
-              <h2>
-                Marketing digital na energia solar <br />
-                uma estratégia essencial no mercado.
-              </h2>
-            </a>
-            <p>
-              Neste artigo, você vai conhecer os tipos de
-              <strong>Marketing digital</strong> mais eficientes para empresas
-              de energia solar. O mercado de energia solar não para de crescer,
-              e enquanto mais cedo se posicionar no mundo digital, mais rápido a
-              sua empresa cresce e se destaca no mercado.
-            </p>
+          <div class="prova__logos">
+            <div class="prova__logo">
+              <img
+                src="/assets/1.png"
+                alt="Cliente Silvtech"
+                width="120"
+                height="44"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="prova__logo">
+              <img
+                src="/assets/2.png"
+                alt="Cliente Silvtech"
+                width="120"
+                height="44"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="prova__logo">
+              <img
+                src="/assets/3.png"
+                alt="Cliente Silvtech"
+                width="120"
+                height="44"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="prova__logo">
+              <img
+                src="/assets/4.png"
+                alt="Cliente Silvtech"
+                width="120"
+                height="44"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="prova__logo">
+              <img
+                src="/assets/5.png"
+                alt="Cliente Silvtech"
+                width="120"
+                height="44"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="prova__logo">
+              <img
+                src="/assets/6.png"
+                alt="Cliente Silvtech"
+                width="120"
+                height="44"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="prova__logo">
+              <img
+                src="/assets/7.png"
+                alt="Cliente Silvtech"
+                width="120"
+                height="44"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="prova__logo">
+              <img
+                src="/assets/8.png"
+                alt="Cliente Silvtech"
+                width="120"
+                height="44"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="prova__logo">
+              <img
+                src="/assets/9.png"
+                alt="Cliente Silvtech"
+                width="120"
+                height="44"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="prova__logo">
+              <img
+                src="/assets/10.png"
+                alt="Cliente Silvtech"
+                width="120"
+                height="44"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="prova__logo">
+              <img
+                src="/assets/11.png"
+                alt="Cliente Silvtech"
+                width="120"
+                height="44"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <div class="back-b">
-        <section class="newsletter">
-          <form class="formulario" id="newsletter-form">
-            <h3>Inscreva-se em nossa newsletter</h3>
-            <p>Os melhores insights sobre marketing...</p>
-            <input
-              type="email"
-              name="from_email"
-              placeholder="Digite seu E-mail aqui"
-              required
-            />
-            <button type="submit">Quero receber tendências</button>
-          </form>
-        </section>
-      </div>
+      <!-- ================= INSIGHTS ================= -->
+      <section class="secao insights">
+        <div class="container reveal">
+          <div class="secao__cabecalho">
+            <span class="rotulo">Insights</span>
+            <h2>Do nosso blog.</h2>
+          </div>
+
+          <div class="insights__grid">
+            <article class="insight">
+              <img
+                class="insight__thumb"
+                src="/assets/marketing_performance.png"
+                alt="Marketing de performance"
+                width="640"
+                height="400"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="rotulo insight__meta">Estratégia</span>
+              <h3>
+                <a href="/blog/posts/marketing-de-performance.html"
+                  >Marketing de performance: uma estratégia focada em
+                  retorno.</a
+                >
+              </h3>
+              <p>
+                Por que essa abordagem é essencial para empresas que querem
+                crescer de forma previsível.
+              </p>
+              <a
+                class="insight__link"
+                href="/blog/posts/marketing-de-performance.html"
+                >Ler artigo</a
+              >
+            </article>
+
+            <article class="insight">
+              <img
+                class="insight__thumb"
+                src="/assets/tipos-de-marketing.png"
+                alt="Tipos de marketing"
+                width="640"
+                height="400"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="rotulo insight__meta">Fundamentos</span>
+              <h3>
+                <a href="/blog/posts/5-tipos-de-marketing.html"
+                  >5 tipos de marketing para aplicar no seu negócio.</a
+                >
+              </h3>
+              <p>
+                Escolher o tipo certo de marketing pode ser a diferença entre
+                estagnar e crescer.
+              </p>
+              <a
+                class="insight__link"
+                href="/blog/posts/5-tipos-de-marketing.html"
+                >Ler artigo</a
+              >
+            </article>
+
+            <article class="insight">
+              <img
+                class="insight__thumb"
+                src="/assets/importancia-marketing.png"
+                alt="Importância do marketing"
+                width="640"
+                height="400"
+                loading="lazy"
+                decoding="async"
+              />
+              <span class="rotulo insight__meta">Gestão</span>
+              <h3>
+                <a href="/blog/posts/importancia-marketing-empresas.html"
+                  >A importância do marketing na empresa.</a
+                >
+              </h3>
+              <p>
+                Como está o setor de marketing na sua organização e por que ele
+                sustenta o crescimento.
+              </p>
+              <a
+                class="insight__link"
+                href="/blog/posts/importancia-marketing-empresas.html"
+                >Ler artigo</a
+              >
+            </article>
+          </div>
+
+          <a class="btn btn--secundario insights__todos" href="/blog/index.html"
+            >Ver o blog</a
+          >
+        </div>
+      </section>
+
+      <!-- ================= CTA FINAL ================= -->
+      <section class="secao cta-final">
+        <div class="container cta-final__inner reveal">
+          <h2>Comece pelo diagnóstico.</h2>
+          <p>
+            O diagnóstico é a porta de entrada da Silvtech. Analisamos o seu
+            negócio, o mercado e a sua comunicação e mostramos onde estão as
+            oportunidades de crescimento — antes de qualquer proposta.
+          </p>
+          <a class="btn btn--primario" href="/fale-conosco.html"
+            >Solicitar diagnóstico</a
+          >
+        </div>
+      </section>
     </main>
 
-    <script src="./js/servicos.js"></script>
-    <script src="./js/header.js"></script>
-    <script src="./js/home.js"></script>
-    <script src="./js/posts.js"></script>
-    <script src="./js/emailjs-integration.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  </body>
+    <!-- ================= FOOTER ================= -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__grid">
+          <div class="site-footer__brand">
+            <a class="site-header__logo" href="/index.html">Silvtech</a>
+            <p class="site-footer__desc">
+              Marketing orientado por estratégia para empresas que querem
+              crescer com consistência.
+            </p>
+          </div>
 
-  <div id="footer"></div>
-  <script>
-    fetch("./footer.html")
-      .then((response) => response.text())
-      .then((data) => {
-        document.getElementById("footer").innerHTML = data;
-      })
-      .catch((error) => {
-        console.error("Erro ao carregar o footer:", error);
-      });
-  </script>
+          <div class="footer-col">
+            <h4>Navegação</h4>
+            <ul>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/quemsomos.html">Quem somos</a></li>
+              <li><a href="/servicos.html">Serviços</a></li>
+              <li><a href="/metodologia.html">Metodologia</a></li>
+              <li><a href="/setores/index.html">Setores</a></li>
+              <li><a href="/cases/index.html">Cases</a></li>
+              <li><a href="/blog/index.html">Blog</a></li>
+              <li><a href="/fale-conosco.html">Contato</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Soluções</h4>
+            <ul>
+              <li><a href="/servicos.html">Gestão de Marketing</a></li>
+              <li><a href="/servicos.html">Estruturação Comercial</a></li>
+              <li><a href="/servicos.html">Posicionamento e Branding</a></li>
+              <li><a href="/servicos.html">Marketing Digital</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Contato</h4>
+            <ul>
+              <li><a href="tel:+5543988738360">(43) 98873-8360</a></li>
+              <li>
+                <a href="mailto:contato@silvtech.com.br"
+                  >contato@silvtech.com.br</a
+                >
+              </li>
+              <li>Londrina, Paraná — Brasil</li>
+              <li>
+                <a
+                  href="https://www.instagram.com/assessoria_silvtech/"
+                  target="_blank"
+                  rel="noopener"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/5543988738360"
+                  target="_blank"
+                  rel="noopener"
+                  >WhatsApp</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="site-footer__bottom">
+          <p>&copy; 2026 Silvtech. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/5543988738360"
+      target="_blank"
+      rel="noopener"
+      aria-label="Falar no WhatsApp"
+    >
+      <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+        <path
+          d="M16.001 3C9.383 3 4 8.383 4 15.001c0 2.386.63 4.62 1.833 6.605L4 29l7.59-1.992A11.94 11.94 0 0 0 16 27c6.618 0 12-5.383 12-12S22.619 3 16.001 3zm0 21.6a9.55 9.55 0 0 1-4.868-1.335l-.349-.207-4.504 1.183 1.203-4.391-.228-.362A9.56 9.56 0 0 1 6.4 15c0-5.294 4.307-9.6 9.601-9.6 5.293 0 9.6 4.306 9.6 9.6 0 5.294-4.307 9.6-9.6 9.6zm5.264-7.19c-.288-.144-1.706-.842-1.97-.938-.264-.096-.456-.144-.648.144-.192.288-.744.938-.912 1.13-.168.192-.336.216-.624.072-.288-.144-1.215-.448-2.314-1.428-.855-.762-1.432-1.704-1.6-1.992-.168-.288-.018-.444.126-.588.129-.128.288-.336.432-.504.144-.168.192-.288.288-.48.096-.192.048-.36-.024-.504-.072-.144-.648-1.562-.888-2.14-.234-.562-.472-.486-.648-.495l-.552-.01c-.192 0-.504.072-.768.36-.264.288-1.008.984-1.008 2.4 0 1.416 1.032 2.784 1.176 2.976.144.192 2.03 3.1 4.92 4.346.688.297 1.224.474 1.643.607.69.22 1.318.189 1.814.115.553-.083 1.706-.697 1.946-1.371.24-.674.24-1.252.168-1.372-.072-.12-.264-.192-.552-.336z"
+        />
+      </svg>
+    </a>
+
+    <script src="/js/site.js" defer></script>
+  </body>
 </html>

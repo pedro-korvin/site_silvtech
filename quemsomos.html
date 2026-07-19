@@ -3,332 +3,397 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quem Somos - Silvtech | assessoria de Marketing</title>
     <meta
       name="description"
-      content="A Silvtech existe para empresas que enxergam o crescimento como uma decisão, não como uma consequência."
+      content="Conheça a Silvtech: por que existimos, como pensamos o marketing e a metodologia S.C.A.L.E que orienta cada projeto."
     />
-    <meta
-      name="keywords"
-      content="Acreditamos que o marketing não deve ser tratado como um conjunto de ferramentas, mas como uma disciplina capaz de orientar o crescimento de uma empresa."
-    />
-    <meta name="robots" content="index, follow" />
-    <meta name="author" content="Silvtech" />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Quem Somos - Silvtech" />
+    <link rel="canonical" href="https://www.silvtech.com.br/quemsomos.html" />
+    <meta property="og:title" content="Quem somos | Silvtech" />
     <meta
       property="og:description"
-      content="Conheça nossa história, missão e valores."
+      content="A Silvtech existe para empresas que enxergam o crescimento como uma decisão, não como uma consequência."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="quem-somos-hero.png" />
+    <meta
+      property="og:image"
+      content="https://www.silvtech.com.br/assets/logo_silvtech.png"
+    />
+    <meta
+      property="og:url"
+      content="https://www.silvtech.com.br/quemsomos.html"
+    />
+    <title>Quem somos | Silvtech</title>
 
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="/favicon.png" />
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/header.css" />
-    <link rel="stylesheet" href="./css/quem-somos.css" />
-    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;600&display=swap"
+    />
 
-    <!-- Schema Markup -->
+    <link rel="stylesheet" href="/css/tokens.css" />
+    <link rel="stylesheet" href="/css/base.css" />
+    <link rel="stylesheet" href="/css/quem-somos.css" />
+
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Silvtech",
-        "description": "assessoria de Marketing de Performance especializada em Growth Hacking",
-        "url": "https://silvtech.com.br",
-        "logo": "https://silvtech.com.br/logo.png",
-        "foundingDate": "2024",
-        "address": {
-          "@type": "PostalAddress",
-          "addressCountry": "BR"
-        },
-        "sameAs": [
-          "https://instagram.com/silvtech",
-          "https://linkedin.com/company/silvtech"
+        "@type": "AboutPage",
+        "name": "Quem somos - Silvtech",
+        "url": "https://www.silvtech.com.br/quemsomos.html",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "Silvtech",
+          "description": "Silvtech — marketing orientado por estratégia para empresas B2B com mentalidade de crescimento.",
+          "url": "https://www.silvtech.com.br",
+          "foundingDate": "2024",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Londrina",
+            "addressRegion": "PR",
+            "addressCountry": "BR"
+          },
+          "sameAs": ["https://www.instagram.com/assessoria_silvtech/"]
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.silvtech.com.br/index.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Quem somos",
+            "item": "https://www.silvtech.com.br/quemsomos.html"
+          }
         ]
       }
     </script>
-  </head>
-  <body>
-    <div id="header"></div>
+
+    <!-- Meta Pixel Code -->
     <script>
-      fetch("./header.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("header").innerHTML = data;
-
-          document
-            .getElementById("home")
-            .addEventListener("click", function () {
-              window.location.href = "index.html";
-            });
-
-          document
-            .getElementById("quemsomos")
-            .addEventListener("click", function () {
-              window.location.href = "quemsomos.html";
-            });
-
-          document
-            .getElementById("blog")
-            .addEventListener("click", function () {
-              window.location.href = "./blog/index.html";
-            });
-
-          document
-            .getElementById("fale-conosco")
-            .addEventListener("click", function () {
-              window.location.href = "fale-conosco.html";
-            });
-        })
-        .catch((error) => {
-          console.error("Erro ao carregar o header:", error);
-        });
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js",
+      );
+      fbq("init", "654658884374776");
+      fbq("track", "PageView");
     </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=654658884374776&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 
-    <!-- Main Content -->
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Z3Z19LBVSL"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-Z3Z19LBVSL");
+    </script>
+    <!-- End Google tag -->
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a class="site-header__logo" href="/index.html">Silvtech</a>
+
+        <button
+          class="site-header__toggle"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <line x1="3" y1="7" x2="21" y2="7" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="17" x2="21" y2="17" />
+          </svg>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Principal">
+          <ul class="site-nav__list">
+            <li><a href="/index.html">Home</a></li>
+            <li>
+              <a href="/quemsomos.html" aria-current="page">Quem somos</a>
+            </li>
+            <li><a href="/servicos.html">Serviços</a></li>
+            <li><a href="/metodologia.html">Metodologia</a></li>
+            <li><a href="/setores/index.html">Setores</a></li>
+            <li><a href="/cases/index.html">Cases</a></li>
+            <li><a href="/blog/index.html">Blog</a></li>
+            <li><a href="/fale-conosco.html">Contato</a></li>
+          </ul>
+          <a class="btn btn--acento site-nav__cta" href="/fale-conosco.html"
+            >Solicitar diagnóstico</a
+          >
+        </nav>
+      </div>
+    </header>
+
     <main>
-      <!-- Hero Section -->
-      <section class="hero-section">
-        <div class="hero-content">
-          <div class="hero-image"></div>
-          <div class="hero-text">
-            <h1>Conheça a Silvtech</h1>
-            <p class="hero-subtitle">
-              A Silvtech existe para empresas que enxergam o crescimento como
-              uma decisão, não como uma consequência.
-            </p>
-          </div>
+      <!-- ================= HERO ================= -->
+      <section class="hero">
+        <div class="container reveal">
+          <span class="rotulo rotulo--acento">Quem somos</span>
+          <h1>A Silvtech existe para empresas que decidem crescer.</h1>
+          <p class="destaque hero__apoio">
+            Crescimento como decisão, não como consequência.
+          </p>
         </div>
       </section>
 
-      <!-- About Section -->
-      <section class="about-section">
-        <div class="container">
-          <div class="about-content">
-            <div class="about-text">
-              <h2>Nossa História</h2>
-              <p>
-                A Silvtech nasceu a partir de uma inquietação. <br />
-                Ao longo dos anos, percebemos que muitas empresas investiam cada
-                vez mais em marketing, mas continuavam enfrentando os mesmos
-                problemas: crescimento inconsistente, baixa previsibilidade e
-                decisões tomadas sem estratégia. <br />
-                Enquanto boa parte do mercado oferecia soluções prontas, nós
-                percebemos que nenhuma estratégia funciona sem antes compreender
-                o negócio. <br />
-                Foi dessa visão que surgiu a Silvtech. <br />
-                <strong
-                  >Acreditamos que o marketing não deve ser tratado como um
-                  conjunto de ferramentas, mas como uma disciplina capaz de
-                  orientar o crescimento de uma empresa. <br />
-                </strong>
-                Por isso, antes de recomendar qualquer ação, buscamos entender o
-                mercado, o posicionamento, a oferta, a jornada do cliente e a
-                integração entre marketing e comercial. <br />
-                Nosso objetivo nunca foi vender campanhas. <br />
-                Nosso objetivo sempre foi ajudar empresas a crescer de forma
-                consistente, através de estratégias de marketing orientadas pelo
-                negócio.
-              </p>
-            </div>
+      <!-- ================= HISTÓRIA ================= -->
+      <section class="secao historia">
+        <div class="container reveal">
+          <div class="secao__cabecalho">
+            <span class="rotulo">Nossa história</span>
           </div>
+          <p>
+            A Silvtech nasceu de uma inquietação. Ao longo dos anos, percebemos
+            que muitas empresas investiam cada vez mais em marketing, mas
+            continuavam enfrentando os mesmos problemas: crescimento
+            inconsistente, baixa previsibilidade e decisões tomadas sem
+            estratégia.
+          </p>
+          <p>
+            Enquanto boa parte do mercado oferecia soluções prontas, percebemos
+            que nenhuma estratégia funciona sem antes compreender o negócio. Foi
+            dessa visão que surgiu a Silvtech.
+          </p>
+          <p>
+            Acreditamos que o marketing não deve ser tratado como um conjunto de
+            ferramentas, mas como uma disciplina capaz de orientar o crescimento
+            de uma empresa. Por isso, antes de recomendar qualquer ação,
+            buscamos entender o mercado, o posicionamento, a oferta, a jornada
+            do cliente e a integração entre marketing e comercial.
+          </p>
+          <p>
+            Nosso objetivo nunca foi vender campanhas. Sempre foi ajudar
+            empresas a crescer de forma consistente, com marketing orientado
+            pelo negócio.
+          </p>
         </div>
       </section>
 
-      <!-- Mission Vision Values -->
-      <section class="mvv-section">
-        <div class="container">
-          <div class="mvv-grid">
-            <div class="mvv-card mission-card">
-              <div class="mvv-icon">🎯</div>
-              <h3>Missão</h3>
+      <!-- ================= MISSÃO / VISÃO / VALORES ================= -->
+      <section class="secao mvv">
+        <div class="container reveal">
+          <div class="mvv__grid">
+            <article class="mvv__item">
+              <span class="rotulo rotulo--acento">Missão</span>
+              <h3>Crescimento sustentável e consistente</h3>
               <p>
-                Ajudar empresas a alcançarem seus objetivos com crescimento
-                sustentável e consistente, implementando ações de marketing
-                inteligente orientadas por estratégia.
+                Ajudar empresas a alcançarem seus objetivos com ações de
+                marketing orientadas por estratégia, não por improviso.
               </p>
-            </div>
+            </article>
 
-            <div class="mvv-card vision-card">
-              <div class="mvv-icon">🚀</div>
-              <h3>Visão</h3>
+            <article class="mvv__item">
+              <span class="rotulo rotulo--acento">Visão</span>
+              <h3>Referência em marketing corporativo</h3>
               <p>
-                Nos tornar referência em marketing corporativo, mostrando que o
-                marketing vai muito além do digital e deve atuar como um dos
-                principais motores do crescimento das empresas.
+                Mostrar que o marketing vai além do digital e deve atuar como um
+                dos principais motores do crescimento das empresas.
               </p>
-            </div>
+            </article>
 
-            <div class="mvv-card values-card">
-              <div class="mvv-icon">💎</div>
-              <h3>Valores</h3>
+            <article class="mvv__item">
+              <span class="rotulo rotulo--acento">Valores</span>
               <ul>
                 <li>
-                  <strong>Respeito:</strong> Construímos relações baseadas na
-                  valorização das pessoas.
+                  <strong>Respeito</strong> — relações baseadas na valorização
+                  das pessoas.
                 </li>
                 <li>
-                  <strong>Comprometimento:</strong> Assumimos cada projeto como
-                  um compromisso.
+                  <strong>Comprometimento</strong> — cada projeto como um
+                  compromisso.
                 </li>
                 <li>
-                  <strong>Ética:</strong> Jamais prometer aquilo que não podemos
+                  <strong>Ética</strong> — nunca prometer o que não podemos
                   entregar.
                 </li>
                 <li>
-                  <strong>Responsabilidade:</strong> Buscamos soluções em vez de
+                  <strong>Responsabilidade</strong> — buscar soluções em vez de
                   culpados.
                 </li>
                 <li>
-                  <strong>Evolução Contínua:</strong> Sempre em constante
-                  aprendizado.
+                  <strong>Evolução contínua</strong> — aprendizado constante.
                 </li>
               </ul>
-            </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- Methodology Section -->
-      <section class="methodology-section">
-        <div class="container">
-          <h2>Nossa Metodologia</h2>
-          <div class="methodology-content">
-            <div class="methodology-text">
-              <h3>S.C.A.L.E</h3>
-              <p>
-                Crescimento consistente não acontece por sorte. <br />
-                <strong
-                  >A metodologia S.C.A.L.E. foi desenvolvida para organizar a
-                  forma como conduzimos cada projeto.
-                </strong>
-                Em vez de executar ações isoladas de marketing, seguimos um
-                processo estruturado para identificar prioridades, construir
-                estratégias, validar o que funciona e expandir aquilo que
-                realmente gera resultados. <br />
-                Cada etapa existe para reduzir decisões baseadas em achismos e
-                aumentar a previsibilidade do crescimento da empresa.
-              </p>
-
-              <div class="methodology-steps">
-                <div class="step">
-                  <span class="step-number">01</span>
-                  <div class="step-content">
-                    <h4>SCAN</h4>
-                    <p>
-                      <strong>Entendemos antes de agir.</strong> <br />
-
-                      Analisamos a empresa, o mercado, o posicionamento, a
-                      operação comercial e as estratégias atuais para
-                      identificar os fatores que realmente limitam o
-                      crescimento.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="step">
-                  <span class="step-number">02</span>
-                  <div class="step-content">
-                    <h4>CREATE</h4>
-                    <p>
-                      <strong>Planejamos com propósito.</strong> <br />
-
-                      Desenvolvemos estratégias de marketing alinhadas aos
-                      objetivos do negócio e definimos um plano de execução com
-                      prioridades claras.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="step">
-                  <span class="step-number">03</span>
-                  <div class="step-content">
-                    <h4>AMPLIFY</h4>
-                    <p>
-                      <strong>Executamos e evoluímos continuamente.</strong>
-                      <br />
-
-                      Colocamos as estratégias em prática, acompanhamos
-                      indicadores e refinamos continuamente aquilo que demonstra
-                      potencial de gerar melhores resultados.Colocamos as
-                      estratégias em prática, acompanhamos indicadores e
-                      refinamos continuamente aquilo que demonstra potencial de
-                      gerar melhores resultados.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="step">
-                  <span class="step-number">04</span>
-                  <div class="step-content">
-                    <h4>LEVERAGE</h4>
-                    <p>
-                      <strong
-                        >Transformamos melhorias em crescimento
-                        sustentável.</strong
-                      >
-                      <br />
-
-                      Depois de validar o que funciona, estruturamos processos
-                      para que o crescimento deixe de depender de ações isoladas
-                      e passe a fazer parte da operação da empresa.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+      <!-- ================= METODOLOGIA (resumo) ================= -->
+      <section class="secao metodologia-resumo">
+        <div class="container reveal">
+          <div class="secao__cabecalho">
+            <span class="rotulo">Como trabalhamos</span>
+            <h2>Crescimento consistente não acontece por sorte.</h2>
           </div>
+          <p>
+            A metodologia S.C.A.L.E organiza a forma como conduzimos cada
+            projeto: diagnóstico, planejamento, execução e melhoria contínua.
+            Cada etapa existe para reduzir decisões baseadas em achismo e
+            aumentar a previsibilidade do crescimento da empresa.
+          </p>
+          <a
+            class="btn btn--secundario metodologia-resumo__link"
+            href="/metodologia.html"
+            >Conhecer a metodologia completa</a
+          >
         </div>
       </section>
 
-      <!-- CTA Section -->
-      <section class="cta-section">
-        <div class="container">
-          <div class="cta-content">
-            <h2>
-              Quer receber uma análise gratuita do cenário atual da sua empresa
-              e do seu mercado?
-            </h2>
-            <p>
-              Vamos analisar seu negócio e seu mercado para mostrar as forças,
-              fraqueza, oportunidades e ameaças para identificar grandes
-              oportunidades e nos previnir de possíveis desafios futuros.
-            </p>
-            <a
-              href="https://wa.me/5543988738360"
-              class="cta-button-large"
-              target="_blank"
-              >Quero uma Análise Gratuita</a
-            >
-          </div>
+      <!-- ================= CTA FINAL ================= -->
+      <section class="secao cta-final">
+        <div class="container cta-final__inner reveal">
+          <h2>Quer uma análise do cenário atual da sua empresa?</h2>
+          <p>
+            Analisamos o seu negócio e o seu mercado para identificar
+            oportunidades de crescimento — antes de qualquer proposta.
+          </p>
+          <a class="btn btn--primario" href="/fale-conosco.html"
+            >Solicitar diagnóstico</a
+          >
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
-    <div id="footer">
-      <!-- Footer content will be loaded here -->
-    </div>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__grid">
+          <div class="site-footer__brand">
+            <a class="site-header__logo" href="/index.html">Silvtech</a>
+            <p class="site-footer__desc">
+              Marketing orientado por estratégia para empresas que querem
+              crescer com consistência.
+            </p>
+          </div>
 
-    <!-- JavaScript -->
-    <script src="quem-somos.js"></script>
-    <script src="/js/header.js"></script>
+          <div class="footer-col">
+            <h4>Navegação</h4>
+            <ul>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/quemsomos.html">Quem somos</a></li>
+              <li><a href="/servicos.html">Serviços</a></li>
+              <li><a href="/metodologia.html">Metodologia</a></li>
+              <li><a href="/setores/index.html">Setores</a></li>
+              <li><a href="/cases/index.html">Cases</a></li>
+              <li><a href="/blog/index.html">Blog</a></li>
+              <li><a href="/fale-conosco.html">Contato</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Soluções</h4>
+            <ul>
+              <li><a href="/servicos.html">Gestão de Marketing</a></li>
+              <li><a href="/servicos.html">Estruturação Comercial</a></li>
+              <li><a href="/servicos.html">Posicionamento e Branding</a></li>
+              <li><a href="/servicos.html">Marketing Digital</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Contato</h4>
+            <ul>
+              <li><a href="tel:+5543988738360">(43) 98873-8360</a></li>
+              <li>
+                <a href="mailto:contato@silvtech.com.br"
+                  >contato@silvtech.com.br</a
+                >
+              </li>
+              <li>Londrina, Paraná — Brasil</li>
+              <li>
+                <a
+                  href="https://www.instagram.com/assessoria_silvtech/"
+                  target="_blank"
+                  rel="noopener"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/5543988738360"
+                  target="_blank"
+                  rel="noopener"
+                  >WhatsApp</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="site-footer__bottom">
+          <p>&copy; 2026 Silvtech. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <a
+      class="whatsapp-float"
+      href="https://wa.me/5543988738360"
+      target="_blank"
+      rel="noopener"
+      aria-label="Falar no WhatsApp"
+    >
+      <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+        <path
+          d="M16.001 3C9.383 3 4 8.383 4 15.001c0 2.386.63 4.62 1.833 6.605L4 29l7.59-1.992A11.94 11.94 0 0 0 16 27c6.618 0 12-5.383 12-12S22.619 3 16.001 3zm0 21.6a9.55 9.55 0 0 1-4.868-1.335l-.349-.207-4.504 1.183 1.203-4.391-.228-.362A9.56 9.56 0 0 1 6.4 15c0-5.294 4.307-9.6 9.601-9.6 5.293 0 9.6 4.306 9.6 9.6 0 5.294-4.307 9.6-9.6 9.6zm5.264-7.19c-.288-.144-1.706-.842-1.97-.938-.264-.096-.456-.144-.648.144-.192.288-.744.938-.912 1.13-.168.192-.336.216-.624.072-.288-.144-1.215-.448-2.314-1.428-.855-.762-1.432-1.704-1.6-1.992-.168-.288-.018-.444.126-.588.129-.128.288-.336.432-.504.144-.168.192-.288.288-.48.096-.192.048-.36-.024-.504-.072-.144-.648-1.562-.888-2.14-.234-.562-.472-.486-.648-.495l-.552-.01c-.192 0-.504.072-.768.36-.264.288-1.008.984-1.008 2.4 0 1.416 1.032 2.784 1.176 2.976.144.192 2.03 3.1 4.92 4.346.688.297 1.224.474 1.643.607.69.22 1.318.189 1.814.115.553-.083 1.706-.697 1.946-1.371.24-.674.24-1.252.168-1.372-.072-.12-.264-.192-.552-.336z"
+        />
+      </svg>
+    </a>
+
+    <script src="/js/site.js" defer></script>
   </body>
-
-  <div id="footer"></div>
-  <script>
-    fetch("./footer.html")
-      .then((response) => response.text())
-      .then((data) => {
-        document.getElementById("footer").innerHTML = data;
-      })
-      .catch((error) => {
-        console.error("Erro ao carregar o footer:", error);
-      });
-  </script>
 </html>

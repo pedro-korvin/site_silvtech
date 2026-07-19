@@ -50,6 +50,7 @@ etapas diferentes; isso é um bug de conteúdo, não uma segunda metodologia):
 ---
 
 ## Termos proibidos (bloquear em qualquer copy, comentário de código, nome de
+
 classe/variável, texto alt, título de página)
 
 Growth Hacker, Growth Ninja, Hack, Segredo, Método secreto, Escala
@@ -98,13 +99,16 @@ CSS/HTML, seguir esta direção — não reintroduzir o padrão antigo:
 ## Bugs conhecidos (prioridade de correção antes de qualquer refino visual)
 
 ### 1. Posts do blog não aparecem no mobile real (crítico)
+
 Causa raiz identificada em `blog.js`:
+
 ```js
 document.querySelectorAll(".post, section, .blogs").forEach((el) => {
-  el.classList.add("reveal");   // aplica opacity:0 via CSS
-  observer.observe(el);          // só volta a opacity:1 quando IntersectionObserver dispara
+  el.classList.add("reveal"); // aplica opacity:0 via CSS
+  observer.observe(el); // só volta a opacity:1 quando IntersectionObserver dispara
 });
 ```
+
 A classe `.reveal` (CSS) zera `opacity` e depende do `IntersectionObserver`
 pra reverter via `.active`. Em Safari mobile real (não no emulador de
 DevTools) essa combinação, junto com `overflow-x: hidden` no `body` e
@@ -122,15 +126,18 @@ visibilidade — usar CSS puro com fallback visível por padrão, animação com
 progressive enhancement, nunca como gate de visibilidade.
 
 ### 2. Posts despublicados ainda linkados
+
 `growth-hacking.html` e `estrategias-growth-hacking.html` foram despublicados
 mas continuam:
+
 - Linkados em `index.html` (raiz) e em `blog/index.html`.
 - Presentes no repositório (arquivos ainda existem).
-Ação: remover os links de todas as páginas que os referenciam, remover (ou
-redirecionar 301) os arquivos, e conferir `sitemap.xml` / `robots.txt` pra
-garantir que não fiquem indexados.
+  Ação: remover os links de todas as páginas que os referenciam, remover (ou
+  redirecionar 301) os arquivos, e conferir `sitemap.xml` / `robots.txt` pra
+  garantir que não fiquem indexados.
 
 ### 3. Copy com termos banidos já no ar
+
 - `blog.js`: typewriter alterna texto incluindo "Estratégias que
   **Transformam** Negócios" e "**Growth Hacking** para Empresas".
 - Nome de classe `BlogRevolucionario` em `blog.js` — renomear.
@@ -147,6 +154,7 @@ garantir que não fiquem indexados.
   verificar se é garantida antes de manter.
 
 ### 4. `header.html` / `footer.html` são documentos HTML completos
+
 Ambos têm `<!doctype>`, `<html>`, `<head>`, `<body>` e são injetados via
 `fetch().then(el.innerHTML = data)`. Isso é HTML inválido (documento dentro
 de documento) e faz o Google Fonts ser carregado duas vezes (uma no
@@ -205,6 +213,7 @@ Ordem de impacto, do maior pro menor:
 ## Antes de considerar qualquer entrega pronta
 
 Passar pelo checklist do manual da marca:
+
 - Isso transmite organização e segurança, ou tenta convencer?
 - Existe algum termo da lista proibida, mesmo em nome de classe/variável/
   comentário de código?
