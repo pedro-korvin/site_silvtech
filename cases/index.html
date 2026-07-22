@@ -13,8 +13,14 @@
       property="og:description"
       content="Como a Silvtech pensa e trabalha, na prática — setor a setor."
     />
-    <meta property="og:image" content="https://www.silvtech.com.br/assets/logo_silvtech.png" />
-    <meta property="og:url" content="https://www.silvtech.com.br/cases/index.html" />
+    <meta
+      property="og:image"
+      content="https://www.silvtech.com.br/assets/logo_silvtech.png"
+    />
+    <meta
+      property="og:url"
+      content="https://www.silvtech.com.br/cases/index.html"
+    />
     <meta property="og:type" content="website" />
     <title>Cases | Silvtech</title>
 
@@ -45,8 +51,18 @@
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.silvtech.com.br/index.html" },
-          { "@type": "ListItem", "position": 2, "name": "Cases", "item": "https://www.silvtech.com.br/cases/index.html" }
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://www.silvtech.com.br/index.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Cases",
+            "item": "https://www.silvtech.com.br/cases/index.html"
+          }
         ]
       }
     </script>
@@ -56,23 +72,47 @@
       !(function (f, b, e, v, n, t, s) {
         if (f.fbq) return;
         n = f.fbq = function () {
-          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
         };
         if (!f._fbq) f._fbq = n;
-        n.push = n; n.loaded = !0; n.version = "2.0"; n.queue = [];
-        t = b.createElement(e); t.async = !0; t.src = v;
-        s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
-      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js",
+      );
       fbq("init", "654658884374776");
       fbq("track", "PageView");
     </script>
-    <noscript><img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=654658884374776&ev=PageView&noscript=1" /></noscript>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=654658884374776&ev=PageView&noscript=1"
+    /></noscript>
     <!-- End Meta Pixel Code -->
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3Z19LBVSL"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Z3Z19LBVSL"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
+      function gtag() {
+        dataLayer.push(arguments);
+      }
       gtag("js", new Date());
       gtag("config", "G-Z3Z19LBVSL");
     </script>
@@ -81,10 +121,26 @@
   <body>
     <header class="site-header">
       <div class="container site-header__inner">
-        <a class="site-header__logo" href="/index.html">Silvtech</a>
-        <button class="site-header__toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-nav">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-            <line x1="3" y1="7" x2="21" y2="7" /><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="17" x2="21" y2="17" />
+        <a class="site-header__logo" href="/index.html">
+          <img src="/assets/logo_preto.svg" alt="Silvtech" />
+        </a>
+
+        <button
+          class="site-header__toggle"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <line x1="3" y1="7" x2="21" y2="7" />
+            <line x1="3" y1="12" x2="21" y2="12" />
+            <line x1="3" y1="17" x2="21" y2="17" />
           </svg>
         </button>
         <nav class="site-nav" id="site-nav" aria-label="Principal">
@@ -98,7 +154,9 @@
             <li><a href="/blog/index.html">Blog</a></li>
             <li><a href="/fale-conosco.html">Contato</a></li>
           </ul>
-          <a class="btn btn--acento site-nav__cta" href="/fale-conosco.html">Solicitar diagnóstico</a>
+          <a class="btn btn--acento site-nav__cta" href="/fale-conosco.html"
+            >Solicitar diagnóstico</a
+          >
         </nav>
       </div>
     </header>
@@ -120,10 +178,13 @@
         <div class="container reveal">
           <div class="cases-grid">
             <article class="case-card card">
-              <span class="case-card__badge case-card__badge--ilustrativo">Cenário ilustrativo</span>
+              <span class="case-card__badge case-card__badge--ilustrativo"
+                >Cenário ilustrativo</span
+              >
               <h2>
                 <a href="/cases/cenario-provedores-de-internet.html"
-                  >Como um provedor regional pode reduzir a dependência de guerra de preço</a
+                  >Como um provedor regional pode reduzir a dependência de
+                  guerra de preço</a
                 >
               </h2>
               <p>
@@ -131,14 +192,21 @@
                 operadoras e concorrentes locais, aplica o S.C.A.L.E para sair
                 da disputa só por preço.
               </p>
-              <a class="case-card__link" href="/cases/cenario-provedores-de-internet.html">Ler o cenário →</a>
+              <a
+                class="case-card__link"
+                href="/cases/cenario-provedores-de-internet.html"
+                >Ler o cenário →</a
+              >
             </article>
 
             <article class="case-card card">
-              <span class="case-card__badge case-card__badge--ilustrativo">Cenário ilustrativo</span>
+              <span class="case-card__badge case-card__badge--ilustrativo"
+                >Cenário ilustrativo</span
+              >
               <h2>
                 <a href="/cases/cenario-clinicas.html"
-                  >Como uma clínica pode organizar o funil de contato até o retorno do paciente</a
+                  >Como uma clínica pode organizar o funil de contato até o
+                  retorno do paciente</a
                 >
               </h2>
               <p>
@@ -146,19 +214,39 @@
                 recepção que não converte contato em agendamento, aplica o
                 S.C.A.L.E para estruturar o processo.
               </p>
-              <a class="case-card__link" href="/cases/cenario-clinicas.html">Ler o cenário →</a>
+              <a class="case-card__link" href="/cases/cenario-clinicas.html"
+                >Ler o cenário →</a
+              >
             </article>
           </div>
         </div>
       </section>
 
-      <section class="secao cta-final" style="background: var(--cor-acento); color: var(--cor-fundo);">
-        <div class="container reveal" style="max-width: 60ch;">
-          <h2 style="color: var(--cor-fundo);">Quer aplicar o método na sua empresa?</h2>
-          <p style="color: var(--cor-fundo); opacity: 0.85; margin-top: var(--esp-3);">
+      <section
+        class="secao cta-final"
+        style="background: var(--cor-acento); color: var(--cor-fundo)"
+      >
+        <div class="container reveal" style="max-width: 60ch">
+          <h2 style="color: var(--cor-fundo)">
+            Quer aplicar o método na sua empresa?
+          </h2>
+          <p
+            style="
+              color: var(--cor-fundo);
+              opacity: 0.85;
+              margin-top: var(--esp-3);
+            "
+          >
             O ponto de partida é o mesmo para toda empresa: um diagnóstico.
           </p>
-          <a class="btn btn--primario" style="background: var(--cor-fundo); color: var(--cor-acento); margin-top: var(--esp-5);" href="/fale-conosco.html"
+          <a
+            class="btn btn--primario"
+            style="
+              background: var(--cor-fundo);
+              color: var(--cor-acento);
+              margin-top: var(--esp-5);
+            "
+            href="/fale-conosco.html"
             >Solicitar diagnóstico</a
           >
         </div>
@@ -170,7 +258,10 @@
         <div class="site-footer__grid">
           <div class="site-footer__brand">
             <a class="site-header__logo" href="/index.html">Silvtech</a>
-            <p class="site-footer__desc">Marketing orientado por estratégia para empresas que querem crescer com consistência.</p>
+            <p class="site-footer__desc">
+              Marketing orientado por estratégia para empresas que querem
+              crescer com consistência.
+            </p>
           </div>
           <div class="footer-col">
             <h4>Navegação</h4>
@@ -198,10 +289,28 @@
             <h4>Contato</h4>
             <ul>
               <li><a href="tel:+5543988738360">(43) 98873-8360</a></li>
-              <li><a href="mailto:contato@silvtech.com.br">contato@silvtech.com.br</a></li>
+              <li>
+                <a href="mailto:contato@silvtech.com.br"
+                  >contato@silvtech.com.br</a
+                >
+              </li>
               <li>Londrina, Paraná — Brasil</li>
-              <li><a href="https://www.instagram.com/assessoria_silvtech/" target="_blank" rel="noopener">Instagram</a></li>
-              <li><a href="https://wa.me/5543988738360" target="_blank" rel="noopener">WhatsApp</a></li>
+              <li>
+                <a
+                  href="https://www.instagram.com/assessoria_silvtech/"
+                  target="_blank"
+                  rel="noopener"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/5543988738360"
+                  target="_blank"
+                  rel="noopener"
+                  >WhatsApp</a
+                >
+              </li>
             </ul>
           </div>
         </div>
