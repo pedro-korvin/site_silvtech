@@ -1,0 +1,577 @@
+/* ==========================================================================
+   Modelo 09 — Custo-benefício (v3)
+   Ângulo: planos claros, sem letras miúdas, comparação lado a lado.
+   Direção visual: limpo e direto, branco com verde e amarelo "de preço",
+   tabela comparativa em destaque, fotos recortadas em círculo sobre disco
+   amarelo, selos de preço.
+   Carregado DEPOIS de base.css e secoes.css: tokens + pele do modelo.
+   ========================================================================== */
+
+:root {
+  --ff-titulo: "Inter Tight", system-ui, sans-serif;
+  --ff-texto: "Inter", system-ui, sans-serif;
+
+  --cor-fundo: #ffffff;
+  --cor-fundo-alt: #f4f7f5;
+  --cor-superficie: #ffffff;
+  --cor-texto: #0e1a14;
+  --cor-texto-neutro: #4c5a52;
+  --cor-borda: rgba(14, 26, 20, 0.1);
+  --cor-borda-forte: rgba(14, 26, 20, 0.18);
+
+  --cor-acento: color-mix(in srgb, var(--cor-primaria) 92%, #000000);
+  --grad-texto: linear-gradient(95deg, var(--cor-primaria), color-mix(in srgb, var(--cor-primaria) 70%, #000000));
+  --grad-botao: linear-gradient(120deg, var(--cor-primaria), color-mix(in srgb, var(--cor-primaria) 85%, #000000));
+  --grad-faixa: radial-gradient(circle at 88% 12%, color-mix(in srgb, var(--cor-secundaria) 45%, transparent), transparent 50%),
+    linear-gradient(120deg, color-mix(in srgb, var(--cor-primaria) 92%, #02140c), color-mix(in srgb, var(--cor-primaria) 60%, #02140c));
+  --brilho: 0 12px 26px -14px color-mix(in srgb, var(--cor-primaria) 60%, transparent);
+
+  --vidro: rgba(14, 26, 20, 0.035);
+  --vidro-forte: rgba(14, 26, 20, 0.06);
+  --painel: rgba(255, 255, 255, 0.97);
+  --linha-grade: rgba(14, 26, 20, 0.05);
+  --moldura-fundo: color-mix(in srgb, var(--cor-secundaria) 40%, #ffffff);
+  --plano-destaque-fundo: linear-gradient(180deg, #ffffff, color-mix(in srgb, var(--cor-secundaria) 10%, #ffffff));
+  --vel-cor: var(--cor-texto);
+  --esquema: light;
+  --sucesso-texto: #166534;
+  --alerta-texto: #92400e;
+  --cor-sucesso-fundo: #ecfdf3;
+  --cor-alerta-fundo: #fff7e6;
+  --contorno-numero: rgba(14, 26, 20, 0.1);
+  --sombra-card: 0 14px 34px -24px rgba(5, 60, 40, 0.4);
+  --rodape-fundo: #04140d;
+
+  --raio: 18px;
+  --raio-pequeno: 12px;
+
+  --cor-header-fundo: #ffffff;
+  --cor-header-texto: #0e1a14;
+  --cor-header-texto-neutro: #4c5a52;
+  --cor-header-borda: #e6ece8;
+}
+
+h1,
+h2 {
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+/* Destaque com marca-texto amarelo, em vez de texto em degradê */
+.grad {
+  background: linear-gradient(transparent 58%, color-mix(in srgb, var(--cor-secundaria) 75%, transparent) 58%, color-mix(in srgb, var(--cor-secundaria) 75%, transparent) 92%, transparent 92%);
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-text-fill-color: currentColor;
+  color: var(--cor-texto);
+  padding-inline: 2px;
+}
+
+.barra-topo {
+  background: var(--cor-primaria);
+  background: color-mix(in srgb, var(--cor-primaria) 85%, #000000);
+}
+
+.foto--limpa > img {
+  filter: saturate(1.05);
+}
+
+/* ==========================================================================
+   HERO: branco, círculo amarelo, foto redonda, selo de preço, checklist
+   ========================================================================== */
+.hero {
+  background: #ffffff;
+}
+
+.hero__fundo {
+  background: linear-gradient(180deg, transparent 60%, var(--cor-fundo-alt));
+}
+
+.hero__fundo::before,
+.hero__luz {
+  display: none;
+}
+
+.hero__selo {
+  background: #ffffff;
+}
+
+.hero__oferta {
+  background: color-mix(in srgb, var(--cor-secundaria) 22%, #ffffff);
+  border-color: color-mix(in srgb, var(--cor-secundaria) 60%, transparent);
+}
+
+.hero__oferta-rotulo {
+  background: #ffffff;
+  color: var(--cor-acento);
+}
+
+.hero__visual {
+  max-width: 520px;
+  padding: 20px 0 40px;
+}
+
+.hero__disco {
+  position: absolute;
+  inset: 4% 4% auto auto;
+  width: 88%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--cor-secundaria);
+}
+
+.hero__moldura--circulo {
+  width: 84%;
+  margin-left: 2%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 10px solid #ffffff;
+  box-shadow: 0 40px 70px -40px rgba(5, 60, 40, 0.55);
+}
+
+.hero__moldura--circulo .hero__foto {
+  object-position: 40% center;
+}
+
+.selo-preco {
+  position: absolute;
+  top: 6%;
+  right: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: var(--grad-botao);
+  color: var(--cor-texto-botao);
+  box-shadow: var(--brilho);
+  transform: rotate(8deg);
+  text-align: center;
+  line-height: 1.1;
+}
+
+.selo-preco small {
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.selo-preco strong {
+  font-family: var(--ff-titulo);
+  font-size: 34px;
+  letter-spacing: -0.03em;
+}
+
+.selo-preco strong span {
+  margin-right: 2px;
+  font-size: 15px;
+  vertical-align: 12px;
+}
+
+.checklist {
+  position: absolute;
+  left: -6%;
+  bottom: 0;
+  z-index: 3;
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 24px 50px -24px rgba(5, 60, 40, 0.45);
+}
+
+.checklist__titulo {
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cor-texto-neutro);
+}
+
+.checklist ul {
+  display: grid;
+  gap: 7px;
+}
+
+.checklist li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14.5px;
+  font-weight: 600;
+}
+
+.checklist__icone {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--cor-primaria);
+  color: #ffffff;
+}
+
+.checklist__icone svg {
+  width: 13px;
+  height: 13px;
+  stroke-width: 3;
+}
+
+@media (max-width: 599px) {
+  .selo-preco {
+    width: 112px;
+    height: 112px;
+  }
+  .selo-preco strong {
+    font-size: 26px;
+  }
+  .checklist {
+    left: 0;
+  }
+}
+
+/* As vantagens já aparecem no checklist do hero */
+.hero .vantagens {
+  display: none;
+}
+
+/* ==========================================================================
+   TABELA COMPARATIVA (computador) / CARTÕES (celular)
+   ========================================================================== */
+.secao--planos {
+  background: var(--cor-fundo-alt);
+}
+
+.secao--planos::before {
+  display: none;
+}
+
+.tabela-planos {
+  overflow-x: auto;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 30px 60px -40px rgba(5, 60, 40, 0.5);
+}
+
+.tabela-planos table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.tabela-planos th,
+.tabela-planos td {
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--cor-borda);
+  vertical-align: middle;
+}
+
+.tabela-planos tbody th {
+  text-align: left;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--cor-texto-neutro);
+  width: 26%;
+}
+
+.tabela__canto {
+  text-align: left;
+  font-family: var(--ff-titulo);
+  font-size: 22px;
+  color: var(--cor-texto);
+}
+
+.tabela-planos thead th {
+  padding-top: 32px;
+  vertical-align: bottom;
+}
+
+.tabela__nome {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cor-acento);
+}
+
+.tabela__vel {
+  display: block;
+  margin-top: 4px;
+  font-family: var(--ff-titulo);
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+
+.tabela__vel small {
+  font-size: 15px;
+  letter-spacing: 0;
+}
+
+.tabela__selo {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 10px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--cor-secundaria);
+  color: #1a1a00;
+  font-size: 11.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.tabela__selo svg {
+  width: 13px;
+  height: 13px;
+  fill: currentColor;
+}
+
+.tabela__destaque {
+  background: color-mix(in srgb, var(--cor-secundaria) 12%, #ffffff);
+}
+
+.tabela__linha-preco td strong {
+  display: block;
+  font-family: var(--ff-titulo);
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.tabela__linha-preco td small {
+  font-size: 13px;
+  color: var(--cor-texto-neutro);
+}
+
+.tabela__linha-preco td s {
+  display: block;
+  font-size: 13px;
+  color: var(--cor-texto-neutro);
+}
+
+.tabela__linha-preco td em {
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+  font-style: normal;
+  color: var(--cor-texto-neutro);
+}
+
+.tabela__ideal {
+  font-size: 14px;
+  color: var(--cor-texto-neutro);
+}
+
+.tabela__sim {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--cor-primaria) 14%, #ffffff);
+  color: var(--cor-acento);
+}
+
+.tabela__sim svg {
+  width: 16px;
+  height: 16px;
+  stroke-width: 3;
+}
+
+.tabela__nao {
+  color: var(--cor-borda-forte);
+  font-weight: 700;
+}
+
+.tabela__apps {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
+}
+
+.tabela-planos tfoot td,
+.tabela-planos tfoot th {
+  border-bottom: none;
+  padding-bottom: 26px;
+}
+
+.planos-cartoes {
+  display: none;
+}
+
+@media (max-width: 799px) {
+  .tabela-planos {
+    display: none;
+  }
+  .planos-cartoes {
+    display: block;
+  }
+}
+
+.plano {
+  background: #ffffff;
+}
+
+/* ---- Sem letras miúdas ---- */
+.secao--transparencia {
+  background: #ffffff;
+}
+
+.transparencia {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .transparencia {
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 72px;
+  }
+}
+
+.transparencia__texto > p:not(.rotulo) {
+  margin-top: 16px;
+  font-size: 1.08rem;
+  color: var(--cor-texto-neutro);
+}
+
+.transparencia__docs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.transparencia__docs a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--cor-borda-forte);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.transparencia__docs svg {
+  width: 18px;
+  height: 18px;
+  color: var(--cor-acento);
+}
+
+.transparencia__lista {
+  display: grid;
+  gap: 14px;
+}
+
+@media (min-width: 560px) {
+  .transparencia__lista {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.transparencia__lista li {
+  display: flex;
+  gap: 14px;
+  padding: 22px;
+  border-radius: 18px;
+  background: var(--cor-fundo-alt);
+}
+
+.transparencia__lista strong {
+  display: block;
+  font-size: 16px;
+}
+
+.transparencia__lista small {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  color: var(--cor-texto-neutro);
+}
+
+.transparencia__icone {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--cor-secundaria);
+  color: #1a1a00;
+}
+
+.transparencia__icone svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* ---- Perfis: foto redonda ---- */
+.secao--perfis {
+  background: var(--cor-fundo-alt);
+}
+
+.perfil {
+  border: none;
+  text-align: center;
+  padding-top: 26px;
+}
+
+.foto--perfil {
+  width: 150px;
+  height: 150px;
+  aspect-ratio: auto;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 6px solid var(--cor-secundaria);
+}
+
+.perfil__corpo {
+  align-items: center;
+}
+
+.secao--beneficios {
+  background: #ffffff;
+  border: none;
+}
+
+.beneficio {
+  border: none;
+  background: var(--cor-fundo-alt);
+  box-shadow: none;
+}
+
+.beneficio__icone {
+  border-radius: 50%;
+  background: var(--cor-secundaria);
+  color: #1a1a00;
+  border: none;
+}
+
+.secao--passos {
+  background: var(--cor-fundo-alt);
+  border: none;
+}
+
+.passo__icone {
+  border-radius: 50%;
+}
+
+.secao--cliente {
+  background: var(--cor-fundo-alt);
+  border: none;
+}
+
+.depoimento__aspas {
+  color: var(--cor-secundaria);
+  color: color-mix(in srgb, var(--cor-secundaria) 70%, #000000);
+}

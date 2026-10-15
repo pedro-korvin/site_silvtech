@@ -1,0 +1,503 @@
+/* ==========================================================================
+   Modelo 06 — Provedor tradicional / familiar (v3)
+   Ângulo: confiança construída na região (anos de atuação só se fornecidos).
+   Direção visual: clássico — creme, bordô e dourado, serifada nos títulos,
+   fotos em polaroid com fita adesiva e tom levemente envelhecido, filetes
+   finos e ornamentos discretos.
+   Carregado DEPOIS de base.css e secoes.css: tokens + pele do modelo.
+   ========================================================================== */
+
+:root {
+  --ff-titulo: "Lora", Georgia, serif;
+  --ff-texto: "PT Sans", system-ui, sans-serif;
+
+  --cor-fundo: #faf7f2;
+  --cor-fundo-alt: #f2ece2;
+  --cor-superficie: #ffffff;
+  --cor-texto: #2b2522;
+  --cor-texto-neutro: #6b625a;
+  --cor-borda: rgba(43, 37, 34, 0.12);
+  --cor-borda-forte: rgba(43, 37, 34, 0.2);
+
+  --cor-acento: color-mix(in srgb, var(--cor-primaria) 92%, #000000);
+  --grad-texto: linear-gradient(95deg, var(--cor-primaria), color-mix(in srgb, var(--cor-secundaria) 75%, #000000));
+  --grad-botao: linear-gradient(120deg, var(--cor-primaria), color-mix(in srgb, var(--cor-primaria) 82%, #000000));
+  --grad-faixa: radial-gradient(circle at 85% 15%, color-mix(in srgb, var(--cor-secundaria) 35%, transparent), transparent 55%),
+    linear-gradient(120deg, color-mix(in srgb, var(--cor-primaria) 92%, #1a0606), color-mix(in srgb, var(--cor-primaria) 60%, #1a0606));
+  --brilho: 0 12px 26px -14px color-mix(in srgb, var(--cor-primaria) 60%, transparent);
+
+  --vidro: rgba(43, 37, 34, 0.035);
+  --vidro-forte: rgba(43, 37, 34, 0.06);
+  --painel: rgba(255, 255, 255, 0.96);
+  --linha-grade: rgba(43, 37, 34, 0.05);
+  --moldura-fundo: linear-gradient(165deg, #efe6d8, #e5d9c6);
+  --plano-destaque-fundo: linear-gradient(180deg, #ffffff, #fbf6ee);
+  --vel-cor: var(--cor-texto);
+  --esquema: light;
+  --sucesso-texto: #166534;
+  --alerta-texto: #92400e;
+  --cor-sucesso-fundo: #ecfdf3;
+  --cor-alerta-fundo: #fff7e6;
+  --contorno-numero: rgba(43, 37, 34, 0.12);
+  --sombra-card: 0 14px 30px -22px rgba(60, 30, 20, 0.45);
+  --rodape-fundo: #2a1414;
+
+  --raio: 6px;
+  --raio-pequeno: 4px;
+
+  --cor-header-fundo: #ffffff;
+  --cor-header-texto: #2b2522;
+  --cor-header-texto-neutro: #6b625a;
+  --cor-header-borda: #ece4d6;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: clamp(2.3rem, 1.3rem + 3.8vw, 4rem);
+  line-height: 1.1;
+}
+
+.grad {
+  font-style: italic;
+}
+
+/* Rótulo clássico: filetes dos dois lados */
+.rotulo {
+  font-family: var(--ff-texto);
+  letter-spacing: 0.2em;
+  color: var(--cor-secundaria);
+  color: color-mix(in srgb, var(--cor-secundaria) 80%, #000000);
+}
+
+.rotulo::before {
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+}
+
+.titulo-secao--centro .rotulo::after {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+}
+
+.barra-topo {
+  background: color-mix(in srgb, var(--cor-primaria) 90%, #000000);
+}
+
+.btn {
+  letter-spacing: 0.02em;
+}
+
+/* Fotos: tom levemente envelhecido, quente e suave */
+.foto--classica > img,
+.foto--classica .hero__foto,
+.foto--classica .polaroid__foto img {
+  filter: sepia(0.18) saturate(0.92) contrast(1.03);
+}
+
+/* ==========================================================================
+   HERO: creme com textura de papel + colagem de polaroids
+   ========================================================================== */
+.hero {
+  background: var(--cor-fundo);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.hero__fundo {
+  background: radial-gradient(45% 60% at 85% 40%, color-mix(in srgb, var(--cor-secundaria) 16%, transparent), transparent 70%);
+}
+
+.hero__fundo::before,
+.hero__luz {
+  display: none;
+}
+
+.hero__selo {
+  background: #ffffff;
+  border-radius: 4px;
+}
+
+.hero__selo-cidade {
+  border-radius: 3px;
+}
+
+.hero__oferta {
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.hero__visual {
+  max-width: 540px;
+}
+
+.colagem {
+  position: relative;
+  aspect-ratio: 1 / 0.95;
+}
+
+.polaroid {
+  position: absolute;
+  margin: 0;
+  padding: 12px 12px 44px;
+  background: #ffffff;
+  box-shadow: 0 24px 50px -22px rgba(60, 30, 20, 0.55);
+}
+
+.polaroid::before {
+  /* fita adesiva */
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  width: 92px;
+  height: 26px;
+  transform: translateX(-50%) rotate(-3deg);
+  background: color-mix(in srgb, var(--cor-secundaria) 30%, rgba(255, 255, 255, 0.7));
+  opacity: 0.85;
+}
+
+.polaroid__foto {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: var(--moldura-fundo);
+}
+
+.polaroid__foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.polaroid figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 12px;
+  text-align: center;
+  font-family: var(--ff-titulo);
+  font-style: italic;
+  font-size: 17px;
+  color: var(--cor-texto);
+}
+
+.polaroid--principal {
+  left: 2%;
+  top: 2%;
+  width: 66%;
+  z-index: 2;
+  transform: rotate(-3deg);
+}
+
+.polaroid--2 {
+  right: 0;
+  top: 0;
+  width: 44%;
+  z-index: 1;
+  transform: rotate(6deg);
+}
+
+.polaroid--3 {
+  right: 0;
+  bottom: -6%;
+  width: 44%;
+  z-index: 3;
+  transform: rotate(4deg);
+}
+
+.polaroid--principal .foto__icone {
+  width: 80px;
+  height: 80px;
+}
+
+.colagem__selo {
+  position: absolute;
+  left: 0;
+  bottom: 6%;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 118px;
+  height: 118px;
+  border-radius: 50%;
+  background: var(--cor-acento);
+  color: #ffffff;
+  border: 3px double rgba(255, 255, 255, 0.7);
+  outline: 2px solid var(--cor-acento);
+  box-shadow: 0 18px 40px -16px rgba(60, 20, 10, 0.6);
+  transform: rotate(-8deg);
+  font-family: var(--ff-titulo);
+  line-height: 1;
+}
+
+.colagem__selo strong {
+  font-size: 2.6rem;
+}
+
+.colagem__selo span {
+  font-size: 13px;
+  font-style: italic;
+}
+
+.vantagens {
+  background: #ffffff;
+  border-radius: 6px;
+  border-color: var(--cor-borda);
+  backdrop-filter: none;
+}
+
+.vantagem {
+  background: transparent;
+}
+
+.vantagem__icone {
+  background: transparent;
+  border: 1px solid color-mix(in srgb, var(--cor-secundaria) 60%, transparent);
+  color: var(--cor-acento);
+  box-shadow: none;
+  border-radius: 50%;
+}
+
+/* ==========================================================================
+   SEÇÕES
+   ========================================================================== */
+.secao--sobre {
+  background: #ffffff;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.foto--sobre {
+  border-radius: 4px;
+  outline: 1px solid var(--cor-borda-forte);
+  outline-offset: 10px;
+}
+
+.foto--sobre-mini {
+  border-radius: 4px;
+}
+
+.sobre__selo {
+  border-radius: 6px;
+}
+
+.sobre__destaque-icone {
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid color-mix(in srgb, var(--cor-secundaria) 60%, transparent);
+}
+
+.secao--planos::before {
+  display: none;
+}
+
+.plano {
+  background: #ffffff;
+  border-radius: 6px;
+  padding-top: 40px;
+}
+
+.plano__nome {
+  font-family: var(--ff-titulo);
+  font-style: italic;
+  font-size: 22px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.plano__vel-numero,
+.plano__preco-reais {
+  font-family: var(--ff-titulo);
+}
+
+.plano__fita {
+  border-radius: 3px;
+}
+
+.secao--perfis {
+  background: var(--cor-fundo-alt);
+}
+
+.perfil {
+  border-radius: 4px;
+  padding: 12px 12px 0;
+  border: none;
+}
+
+.foto--perfil {
+  border-radius: 2px;
+}
+
+.perfil__tag {
+  font-family: var(--ff-titulo);
+  font-style: italic;
+  font-size: 15px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.secao--beneficios {
+  background: #ffffff;
+}
+
+.beneficio,
+.beneficio--destaque {
+  border-radius: 6px;
+}
+
+.beneficio__icone {
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid color-mix(in srgb, var(--cor-secundaria) 60%, transparent);
+}
+
+.secao--prova {
+  background: var(--cor-fundo-alt);
+}
+
+.depoimento {
+  border-radius: 4px;
+}
+
+.depoimento blockquote p {
+  font-family: var(--ff-titulo);
+  font-style: italic;
+  font-size: 17.5px;
+}
+
+.depoimento__aspas {
+  color: var(--cor-secundaria);
+}
+
+.numeros {
+  border-radius: 6px;
+}
+
+/* ---- Cobertura: cartão da loja ---- */
+.cartao-loja {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  margin-inline: auto;
+  padding: 36px 32px;
+  border-radius: 4px;
+  background: #ffffff;
+  border: 1px solid var(--cor-borda);
+  outline: 1px solid var(--cor-borda);
+  outline-offset: -10px;
+  box-shadow: var(--sombra-card);
+}
+
+.cartao-loja__rotulo {
+  margin-bottom: 20px;
+  font-family: var(--ff-titulo);
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: italic;
+  text-align: center;
+  color: var(--cor-acento);
+}
+
+.cartao-loja__lista {
+  display: grid;
+  gap: 16px;
+}
+
+.cartao-loja__lista li {
+  display: flex;
+  gap: 14px;
+  padding-bottom: 16px;
+  border-bottom: 1px dashed var(--cor-borda-forte);
+  font-size: 15px;
+}
+
+.cartao-loja__lista li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.cartao-loja__lista svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  color: color-mix(in srgb, var(--cor-secundaria) 80%, #000000);
+}
+
+.cartao-loja__lista strong {
+  display: block;
+  font-size: 12.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cor-texto-neutro);
+}
+
+.cartao-loja__lista a {
+  font-weight: 700;
+  color: var(--cor-acento);
+  text-decoration: underline;
+}
+
+.cartao-loja__rodape {
+  margin: 20px auto 0;
+  text-align: center;
+  font-size: 13.5px;
+  color: var(--cor-texto-neutro);
+}
+
+.secao--passos {
+  background: var(--cor-fundo-alt);
+  border: none;
+}
+
+.passo {
+  border-radius: 4px;
+}
+
+.passo__icone {
+  border-radius: 50%;
+}
+
+.passo__numero {
+  font-family: var(--ff-titulo);
+}
+
+.secao--cliente {
+  background: #ffffff;
+}
+
+.atalho,
+.faq__lista .faq__item,
+.faq__ajuda,
+.cta-final,
+.promo {
+  border-radius: 6px;
+}
+
+@media (max-width: 599px) {
+  .colagem {
+    aspect-ratio: 1 / 1.05;
+  }
+  .polaroid {
+    padding: 8px 8px 34px;
+  }
+  .polaroid figcaption {
+    font-size: 14px;
+    bottom: 8px;
+  }
+  .colagem__selo {
+    width: 92px;
+    height: 92px;
+  }
+  .colagem__selo strong {
+    font-size: 2rem;
+  }
+}

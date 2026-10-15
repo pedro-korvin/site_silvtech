@@ -7,19 +7,24 @@
   "use strict";
 
   var EMAILJS_CONFIG = {
-    serviceID: "service_8nyjhue",
-    templateID: "template_silvtech_lead",
-    publicKey: "8WFy5YeQDUK8GYz1d",
+    publicKey: "tAdAYvLXjMnBVt55G",
+    serviceId: "service_zb4k10g",
+    templateId: "template_norkezq",
   };
 
   function init() {
     if (typeof emailjs === "undefined") return;
-    emailjs.init(EMAILJS_CONFIG.publicKey);
+    emailjs.init({ publicKey: EMAILJS_CONFIG.publicKey });
 
     var form = document.getElementById("contact-form");
     if (!form) return;
 
     form.addEventListener("submit", handleSubmit);
+  }
+
+  // "(48) 99999-0000" -> "48999990000"
+  function onlyDigits(value) {
+    return (value || "").replace(/\D/g, "");
   }
 
   function handleSubmit(e) {
@@ -39,11 +44,15 @@
       from_email: form.from_email.value,
       whatsapp: form.whatsapp.value,
       message: form.message.value,
-      submission_date: new Date().toLocaleString("pt-BR"),
+      whatsapp_digits: onlyDigits(form.whatsapp.value),
+      page_url: window.location.href,
+      sent_at: new Date().toLocaleString("pt-BR", {
+        timeZone: "America/Sao_Paulo",
+      }),
     };
 
     emailjs
-      .send(EMAILJS_CONFIG.serviceID, EMAILJS_CONFIG.templateID, data)
+      .send(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.templateId, data)
       .then(function () {
         setFeedback(
           feedback,
@@ -52,7 +61,8 @@
         );
         form.reset();
       })
-      .catch(function () {
+      .catch(function (error) {
+        console.error("EmailJS error:", error);
         setFeedback(
           feedback,
           "Não foi possível enviar agora. Tente novamente ou fale pelo WhatsApp.",

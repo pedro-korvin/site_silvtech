@@ -1,0 +1,261 @@
+/* ==========================================================================
+   Silvtech — Página-catálogo "Sites para Provedores" (SPEC 2.8)
+   Depende de tokens.css + base.css. Segue o ritmo A/B/C do design-system-v2.
+   ========================================================================== */
+
+.hero {
+  padding-block: var(--esp-7) var(--respiro-secao);
+}
+
+.hero h1 {
+  max-width: 22ch;
+}
+
+.hero__apoio {
+  margin-top: var(--esp-4);
+  max-width: 60ch;
+}
+
+.hero__cta {
+  margin-top: var(--esp-5);
+}
+
+/* ---- Galeria dos 10 modelos ---- */
+.modelos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--esp-4);
+}
+
+@media (min-width: 640px) {
+  .modelos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .modelos-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.modelo-card {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Pré-visualização de estilo (paleta + tipografia do modelo) — não é
+   captura de tela, é um resumo visual honesto de cada direção. */
+.modelo-card__preview {
+  display: block;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-bottom: 1px solid var(--cor-borda);
+  background: var(--cor-fundo-alt, #f4f4f2);
+}
+
+.modelo-card__preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.modelo-card__corpo {
+  padding: var(--esp-3) var(--esp-3) var(--esp-4);
+}
+
+.modelo-card__numero {
+  display: inline-block;
+  font-family: var(--ff-texto);
+  font-size: var(--fs-legenda);
+  font-weight: 600;
+  color: var(--cor-neutro);
+  margin-bottom: var(--esp-1);
+}
+
+.modelo-card h2 {
+  font-size: var(--fs-h3);
+  margin-bottom: var(--esp-2);
+}
+
+.modelo-card h2 a {
+  color: var(--cor-texto);
+}
+
+.modelo-card h2 a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.modelo-card p {
+  color: var(--cor-neutro);
+  margin-bottom: var(--esp-3);
+}
+
+.modelo-card__link {
+  font-weight: 500;
+  color: var(--cor-acento);
+}
+
+.modelo-card__link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ---- O que está incluso ---- */
+.incluso-lista {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--esp-3);
+  margin-top: var(--esp-5);
+}
+
+@media (min-width: 640px) {
+  .incluso-lista {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .incluso-lista {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.incluso-item {
+  display: flex;
+  gap: var(--esp-2);
+  align-items: flex-start;
+}
+
+.incluso-item svg {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  color: var(--cor-acento);
+  margin-top: 2px;
+}
+
+.incluso-item p {
+  margin: 0;
+  color: var(--cor-texto);
+}
+
+/* ---- Investimento ---- */
+.investimento-card {
+  margin-top: var(--esp-5);
+  max-width: 44rem;
+}
+
+.investimento-card__preco {
+  font-family: var(--ff-titulo);
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  margin-bottom: var(--esp-1);
+}
+
+.investimento-card__preco small {
+  font-family: var(--ff-texto);
+  font-size: var(--fs-corpo);
+  font-weight: 500;
+  color: var(--cor-neutro);
+}
+
+/* ---- Como funciona ---- */
+.passos-lista {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--esp-4);
+  counter-reset: passo;
+  margin-top: var(--esp-5);
+}
+
+@media (min-width: 768px) {
+  .passos-lista {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.passo-item {
+  position: relative;
+  padding-top: var(--esp-5);
+}
+
+.passo-item::before {
+  counter-increment: passo;
+  content: counter(passo);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--cor-acento);
+  color: var(--cor-fundo);
+  font-family: var(--ff-titulo);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---- Ponte para serviços estratégicos ---- */
+.ponte-estrategia {
+  margin-top: var(--esp-6);
+  padding-top: var(--esp-5);
+  border-top: 1px solid var(--cor-borda-alt);
+}
+
+/* ---- FAQ (details/summary — funciona sem JS) ----
+   Mesmo componente de css/setores.css; duplicado aqui porque esta página
+   não carrega setores.css (convenção do projeto: cada página tem seu CSS). */
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+}
+
+.faq details {
+  border-top: 1px solid var(--cor-borda);
+  padding-block: var(--esp-3);
+}
+
+.faq details:first-child {
+  border-top: none;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: var(--fs-destaque);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--esp-2);
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::after {
+  content: "+";
+  font-family: var(--ff-titulo);
+  font-size: 22px;
+  color: var(--cor-acento);
+  flex-shrink: 0;
+}
+
+.faq details[open] summary::after {
+  content: "–";
+}
+
+.faq p {
+  margin-top: var(--esp-2);
+  color: var(--cor-neutro);
+  max-width: 68ch;
+}

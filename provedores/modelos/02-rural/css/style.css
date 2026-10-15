@@ -1,0 +1,458 @@
+/* ==========================================================================
+   Modelo 02 — Foco rural (v3)
+   Ângulo: internet de qualidade onde os outros não chegam — sítio, chácara,
+   fazenda, interior.
+   Direção visual: paisagem em tela cheia, verdes e terrosos, tipografia
+   serifada robusta (Bitter), cantos firmes, fotos naturais com granulação.
+   Carregado DEPOIS de base.css e secoes.css: tokens + pele do modelo.
+   ========================================================================== */
+
+:root {
+  --ff-titulo: "Bitter", Georgia, serif;
+  --ff-texto: "Source Sans 3", system-ui, sans-serif;
+
+  --cor-fundo: #f6f4ec;
+  --cor-fundo-alt: #ece8da;
+  --cor-superficie: #ffffff;
+  --cor-texto: #1c2617;
+  --cor-texto-neutro: #5b6453;
+  --cor-borda: rgba(28, 38, 23, 0.1);
+  --cor-borda-forte: rgba(28, 38, 23, 0.2);
+
+  --cor-acento: color-mix(in srgb, var(--cor-primaria) 88%, #000000);
+  --grad-texto: linear-gradient(95deg, color-mix(in srgb, var(--cor-primaria) 95%, #000000), color-mix(in srgb, var(--cor-secundaria) 65%, #000000));
+  --grad-faixa: radial-gradient(circle at 85% 15%, color-mix(in srgb, var(--cor-secundaria) 45%, transparent), transparent 55%),
+    linear-gradient(120deg, color-mix(in srgb, var(--cor-primaria) 80%, #08140b), color-mix(in srgb, var(--cor-primaria) 45%, #08140b));
+  --brilho: 0 14px 30px -14px color-mix(in srgb, var(--cor-primaria) 70%, transparent);
+
+  --vidro: rgba(28, 38, 23, 0.04);
+  --vidro-forte: rgba(28, 38, 23, 0.07);
+  --painel: rgba(255, 255, 255, 0.95);
+  --linha-grade: rgba(28, 38, 23, 0.05);
+  --moldura-fundo: linear-gradient(165deg, color-mix(in srgb, var(--cor-primaria) 20%, #f6f4ec), color-mix(in srgb, var(--cor-secundaria) 20%, #f6f4ec));
+  --plano-destaque-fundo: linear-gradient(180deg, #ffffff, color-mix(in srgb, var(--cor-primaria) 6%, #ffffff));
+  --vel-cor: var(--cor-texto);
+  --esquema: light;
+  --sucesso-texto: #166534;
+  --alerta-texto: #92400e;
+  --cor-sucesso-fundo: #ecfdf3;
+  --cor-alerta-fundo: #fff7e6;
+  --contorno-numero: rgba(28, 38, 23, 0.12);
+  --sombra-card: 0 16px 34px -24px rgba(20, 40, 15, 0.45);
+  --rodape-fundo: #102516;
+
+  --raio: 14px;
+  --raio-pequeno: 10px;
+
+  --cor-header-fundo: #ffffff;
+  --cor-header-texto: #1c2617;
+  --cor-header-texto-neutro: #5b6453;
+  --cor-header-borda: #e4e0d2;
+}
+
+h1,
+h2 {
+  font-weight: 800;
+  letter-spacing: -0.015em;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 1.3rem + 4.2vw, 4.5rem);
+  line-height: 1.04;
+}
+
+.barra-topo {
+  background: #102516;
+}
+
+/* ==========================================================================
+   HERO: paisagem em tela cheia + cartão "atendemos a zona rural de"
+   ========================================================================== */
+.hero--paisagem {
+  /* textos claros sobre a foto */
+  --cor-texto: #ffffff;
+  --cor-texto-neutro: rgba(255, 255, 255, 0.86);
+  --cor-borda: rgba(255, 255, 255, 0.18);
+  --cor-borda-forte: rgba(255, 255, 255, 0.3);
+  --cor-acento: color-mix(in srgb, var(--cor-secundaria) 55%, #ffffff);
+  --grad-texto: linear-gradient(95deg, color-mix(in srgb, var(--cor-secundaria) 65%, #ffffff), #ffffff);
+  --vidro: rgba(255, 255, 255, 0.1);
+  --vidro-forte: rgba(255, 255, 255, 0.14);
+  --painel: rgba(10, 22, 12, 0.55);
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: 64px 48px;
+  color: var(--cor-texto);
+  background: #102516;
+}
+
+.hero__paisagem {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: linear-gradient(160deg, color-mix(in srgb, var(--cor-primaria) 60%, #0b1a0e), #0b1a0e);
+}
+
+.hero__paisagem .hero__foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 60%;
+}
+
+.hero__paisagem::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(90deg, rgba(8, 20, 10, 0.88) 0%, rgba(8, 20, 10, 0.62) 45%, rgba(8, 20, 10, 0.25) 100%),
+    linear-gradient(0deg, rgba(8, 20, 10, 0.75), transparent 40%);
+}
+
+.hero__paisagem .foto__etiqueta {
+  right: 16px;
+  left: auto;
+  top: 16px;
+  bottom: auto;
+  z-index: 3;
+}
+
+.hero--paisagem .hero__grid {
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .hero--paisagem {
+    padding-block: 110px 56px;
+    min-height: 760px;
+  }
+  .hero--paisagem .hero__grid {
+    grid-template-columns: 1.3fr 0.7fr;
+  }
+}
+
+.hero--paisagem h1 {
+  color: #ffffff;
+  text-shadow: 0 2px 30px rgba(0, 0, 0, 0.35);
+}
+
+.hero--paisagem .hero__selo {
+  backdrop-filter: blur(8px);
+}
+
+.hero--paisagem .hero__oferta {
+  backdrop-filter: blur(10px);
+}
+
+.hero--paisagem .btn--vidro {
+  color: #ffffff;
+}
+
+.hero__cartao {
+  /* cartão branco: volta aos tokens escuros de texto */
+  --cor-texto: #1c2617;
+  --cor-texto-neutro: #5b6453;
+  position: relative;
+  padding: 28px;
+  border-radius: 18px;
+  background: #ffffff;
+  color: var(--cor-texto);
+  box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.55);
+}
+
+.hero__cartao-icone {
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  margin-bottom: 16px;
+  border-radius: 14px;
+  background: var(--grad-botao);
+  color: var(--cor-texto-botao);
+}
+
+.hero__cartao-icone svg {
+  width: 26px;
+  height: 26px;
+}
+
+.hero__cartao-titulo {
+  font-family: var(--ff-titulo);
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.hero__cartao-cidades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.hero__cartao-cidades li {
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--cor-primaria) 10%, #ffffff);
+  color: color-mix(in srgb, var(--cor-primaria) 85%, #000000);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.hero__cartao-texto {
+  margin-bottom: 18px;
+  font-size: 15px;
+  color: var(--cor-texto-neutro);
+}
+
+.hero--paisagem .vantagens {
+  backdrop-filter: blur(12px);
+}
+
+.hero--paisagem .vantagem {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ==========================================================================
+   SEÇÕES
+   ========================================================================== */
+.secao--planos::before {
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--cor-primaria) 14%, transparent), transparent);
+}
+
+.plano {
+  background: #ffffff;
+}
+
+.plano__nome {
+  font-family: var(--ff-titulo);
+  font-size: 20px;
+  letter-spacing: 0.02em;
+}
+
+.plano__vel-numero,
+.plano__preco-reais {
+  font-family: var(--ff-titulo);
+  font-weight: 800;
+}
+
+.secao--perfis {
+  background: var(--cor-fundo-alt);
+}
+
+.perfil {
+  border: none;
+}
+
+.foto--perfil {
+  aspect-ratio: 4 / 3.2;
+}
+
+/* ---- Faixa "como a internet chega" ---- */
+.chegada {
+  --cor-texto: #ffffff;
+  --cor-texto-neutro: rgba(255, 255, 255, 0.82);
+  --cor-acento: color-mix(in srgb, var(--cor-secundaria) 55%, #ffffff);
+  --grad-texto: linear-gradient(95deg, color-mix(in srgb, var(--cor-secundaria) 65%, #ffffff), #ffffff);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: var(--respiro-secao);
+  background: #102516;
+  color: var(--cor-texto);
+}
+
+.chegada__foto {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.chegada__foto .hero__foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.32;
+  filter: grayscale(0.4);
+}
+
+.chegada__foto::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(16, 37, 22, 0.6), rgba(16, 37, 22, 0.92));
+}
+
+.chegada h2 {
+  color: #ffffff;
+}
+
+.chegada__lista {
+  position: relative;
+  display: grid;
+  gap: 22px;
+}
+
+@media (min-width: 860px) {
+  .chegada__lista {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+  .chegada__lista::before {
+    content: "";
+    position: absolute;
+    top: 34px;
+    left: 10%;
+    right: 10%;
+    border-top: 2px dashed color-mix(in srgb, var(--cor-secundaria) 60%, transparent);
+  }
+}
+
+.chegada__item {
+  position: relative;
+  padding: 0 4px;
+}
+
+.chegada__icone {
+  display: grid;
+  place-items: center;
+  width: 68px;
+  height: 68px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background: var(--cor-secundaria);
+  color: #1c2617;
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.08);
+}
+
+.chegada__icone svg {
+  width: 30px;
+  height: 30px;
+}
+
+.chegada__item h3 {
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+
+.chegada__item p {
+  margin-top: 10px;
+  color: var(--cor-texto-neutro);
+}
+
+.secao--beneficios {
+  background: var(--cor-fundo);
+  border: none;
+}
+
+.beneficio {
+  border: none;
+}
+
+/* ---- Cobertura: foto do sítio com ondas de sinal ---- */
+.cobertura-campo {
+  position: relative;
+  max-width: 560px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.foto--cobertura {
+  aspect-ratio: 4 / 3.3;
+  border-radius: 18px;
+  box-shadow: 0 40px 80px -40px rgba(20, 40, 15, 0.6);
+}
+
+.cobertura-campo__sinal {
+  position: absolute;
+  left: 50%;
+  top: 34%;
+  z-index: 2;
+  width: 24px;
+  height: 24px;
+  margin: -12px 0 0 -12px;
+  border-radius: 50%;
+  background: var(--cor-secundaria);
+  box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.5);
+}
+
+.cobertura-campo__sinal span {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  animation: onda 3s ease-out infinite;
+}
+
+.cobertura-campo__sinal span:nth-child(2) {
+  animation-delay: -1s;
+}
+
+.cobertura-campo__sinal span:nth-child(3) {
+  animation-delay: -2s;
+}
+
+.cobertura-campo__cartao {
+  position: absolute;
+  right: -14px;
+  bottom: -22px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px 14px 14px;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: var(--sombra-card);
+}
+
+.cobertura-campo__cartao strong {
+  display: block;
+  font-family: var(--ff-titulo);
+  font-size: 17px;
+}
+
+.cobertura-campo__cartao small {
+  display: block;
+  font-size: 13px;
+  color: var(--cor-texto-neutro);
+}
+
+.cobertura-campo__icone {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--grad-botao);
+  color: var(--cor-texto-botao);
+}
+
+.cobertura-campo__icone svg {
+  width: 22px;
+  height: 22px;
+}
+
+@media (max-width: 599px) {
+  .cobertura-campo__cartao {
+    right: 8px;
+  }
+}
+
+.secao--passos {
+  background: var(--cor-fundo-alt);
+  border: none;
+}
+
+.secao--cliente {
+  background: var(--cor-fundo-alt);
+  border: none;
+}
+
+.depoimento__aspas {
+  color: var(--cor-secundaria);
+}

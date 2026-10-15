@@ -1,0 +1,1102 @@
+/* ==========================================================================
+   Silvtech — Sites para Provedores: base compartilhada
+   Carregada por TODOS os modelos, antes do style.css do modelo.
+   Contrato de variáveis que o modelo pode sobrescrever:
+     --cor-primaria / --cor-secundaria  (vêm do cliente, injetadas inline)
+     --cor-texto-botao                  (calculada no build, contraste AA)
+     --ff-titulo / --ff-texto           (cada modelo define a sua)
+     --cor-fundo / --cor-superficie / --cor-texto / --cor-borda / --cor-fundo-alt
+       (cada modelo pode escurecer/clarear conforme a direção visual dele)
+   Layout, espaçamento e comportamento dos componentes ficam fixos aqui —
+   não mudam por cliente nem por modelo, só a pele visual muda.
+   ========================================================================== */
+
+:root {
+  /* ---- Identidade do cliente (sobrescrita inline por cliente, ver build.js) ---- */
+  --cor-primaria: #0b3d91;
+  --cor-secundaria: #1b6fd1;
+  --cor-texto-botao: #ffffff;
+
+  /* ---- WhatsApp: cor de reconhecimento universal da ação, fixa em todo modelo ---- */
+  --cor-whatsapp: #25d366;
+  --cor-whatsapp-escuro: #1da851;
+  --cor-whatsapp-texto: #ffffff;
+
+  /* ---- Paleta neutra padrão (modelo sobrescreve para temas escuros/rústicos/etc.) ---- */
+  --cor-fundo: #ffffff;
+  --cor-fundo-alt: #f4f5f7;
+  --cor-superficie: #ffffff;
+  --cor-texto: #14171a;
+  --cor-texto-neutro: #5b6066;
+  --cor-borda: #e3e5e9;
+
+  /* ---- Estado (cobertura, sucesso/alerta) ---- */
+  --cor-sucesso: #1a7f37;
+  --cor-sucesso-fundo: #e9f7ee;
+  --cor-alerta: #9a6700;
+  --cor-alerta-fundo: #fff6e5;
+
+  /* ---- Espaçamento — grade de 8px ---- */
+  --esp-1: 8px;
+  --esp-2: 16px;
+  --esp-3: 24px;
+  --esp-4: 32px;
+  --esp-5: 48px;
+  --esp-6: 64px;
+  --esp-7: 96px;
+
+  /* ---- Tipografia: cada modelo define os valores reais ---- */
+  --ff-titulo: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ff-texto: system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --fs-h1: 32px;
+  --fs-h2: 26px;
+  --fs-h3: 20px;
+  --fs-destaque: 18px;
+  --fs-corpo: 16px;
+  --fs-legenda: 14px;
+  --fs-rotulo: 12px;
+
+  /* ---- Layout ---- */
+  --container-max: 1180px;
+  --container-pad: 20px;
+  --respiro-secao: 56px;
+  --raio: 12px;
+  --raio-pequeno: 8px;
+  --sombra: 0 2px 16px rgba(20, 23, 26, 0.08);
+  --header-altura: 64px;
+
+  /* ---- Cabeçalho: tokens próprios, não os neutros da página ----
+     O logo do cliente é fornecido pronto (cores fixas, pensadas quase
+     sempre para fundo claro). Um modelo de tema escuro NÃO deve escurecer
+     o cabeçalho junto com o resto da página — faria qualquer logo comum
+     sumir. Por padrão herdam dos tokens neutros (tema claro); um modelo
+     escuro sobrescreve só estes 4, mantendo o cabeçalho sempre claro. */
+  --cor-header-fundo: var(--cor-superficie);
+  --cor-header-texto: var(--cor-texto);
+  --cor-header-texto-neutro: var(--cor-texto-neutro);
+  --cor-header-borda: var(--cor-borda);
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --fs-h1: 48px;
+    --fs-h2: 34px;
+    --fs-h3: 22px;
+    --fs-destaque: 20px;
+    --fs-corpo: 17px;
+
+    --container-pad: 40px;
+    --respiro-secao: 88px;
+    --header-altura: 76px;
+  }
+}
+
+/* ---- Reset ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  font-family: var(--ff-texto);
+  font-size: var(--fs-corpo);
+  font-weight: 400;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  padding-top: var(--header-altura);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+/* ---- Tipografia ---- */
+h1,
+h2,
+h3 {
+  font-family: var(--ff-titulo);
+  font-weight: 700;
+  color: var(--cor-texto);
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  line-height: 1.18;
+}
+
+h3 {
+  font-size: var(--fs-h3);
+  line-height: 1.3;
+}
+
+p {
+  max-width: 62ch;
+}
+
+.destaque {
+  font-size: var(--fs-destaque);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.legenda {
+  font-size: var(--fs-legenda);
+  color: var(--cor-texto-neutro);
+}
+
+.rotulo {
+  display: inline-block;
+  font-size: var(--fs-rotulo);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cor-primaria);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: var(--esp-2);
+  z-index: 100;
+  background: var(--cor-primaria);
+  color: var(--cor-texto-botao);
+  padding: var(--esp-1) var(--esp-2);
+  border-radius: var(--raio-pequeno);
+  transition: top 150ms ease;
+}
+
+.skip-link:focus {
+  top: var(--esp-2);
+}
+
+:focus-visible {
+  outline: 3px solid var(--cor-primaria);
+  outline-offset: 2px;
+}
+
+/* ---- Layout ---- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-pad);
+}
+
+.secao {
+  padding-block: var(--respiro-secao);
+}
+
+.secao__cabecalho {
+  max-width: 62ch;
+  margin-bottom: var(--esp-5);
+}
+
+.secao__cabecalho .rotulo {
+  display: block;
+  margin-bottom: var(--esp-2);
+}
+
+.secao--alt {
+  background: var(--cor-fundo-alt);
+}
+
+.texto-centro {
+  text-align: center;
+  margin-inline: auto;
+}
+
+/* ---- Botões ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--esp-1);
+  border: 2px solid transparent;
+  border-radius: var(--raio-pequeno);
+  padding: 14px 26px;
+  font-family: var(--ff-texto);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  transition: transform 150ms ease, opacity 150ms ease, background-color 150ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn--primario {
+  background: var(--cor-primaria);
+  color: var(--cor-texto-botao);
+}
+
+.btn--primario:hover {
+  opacity: 0.92;
+}
+
+.btn--secundario {
+  background: transparent;
+  color: var(--cor-texto);
+  border-color: var(--cor-borda);
+}
+
+.btn--secundario:hover {
+  border-color: var(--cor-primaria);
+}
+
+.btn--whatsapp {
+  background: var(--cor-whatsapp);
+  color: var(--cor-whatsapp-texto);
+}
+
+.btn--whatsapp:hover {
+  background: var(--cor-whatsapp-escuro);
+}
+
+/* Botão de conversão com a cor da marca do cliente, não o verde do
+   WhatsApp — reservar o verde só pra bolha flutuante (padrão observado nos
+   sites de provedor reais: CTA principal é sempre a cor da marca). */
+.btn--gradiente {
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+  color: var(--cor-texto-botao);
+}
+
+.btn--gradiente:hover {
+  filter: brightness(1.08);
+  opacity: 1;
+}
+
+.btn--bloco {
+  display: flex;
+  width: 100%;
+}
+
+.btn svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* ---- Card ---- */
+.card {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: var(--esp-4);
+}
+
+/* ==========================================================================
+   HEADER fixo e compacto
+   ========================================================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 70;
+  height: var(--header-altura);
+  display: flex;
+  align-items: center;
+  background: var(--cor-header-fundo);
+  border-bottom: 1px solid var(--cor-header-borda);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--esp-2);
+  width: 100%;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-1);
+  min-width: 0;
+}
+
+.header__logo img {
+  height: 32px;
+  width: auto;
+}
+
+.header__logo-texto {
+  font-family: var(--ff-titulo);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--cor-header-texto);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header__nav {
+  display: none;
+}
+
+.header__acoes {
+  display: flex;
+  align-items: center;
+  gap: var(--esp-1);
+}
+
+.header__acoes .btn {
+  padding: 10px 14px;
+  font-size: 14px;
+}
+
+.header__acoes .btn--secundario {
+  color: var(--cor-header-texto);
+  border-color: var(--cor-header-borda);
+}
+
+.header__acao-cliente {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .header__acao-cliente {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__nav {
+    display: flex;
+    gap: var(--esp-3);
+    margin-inline: auto;
+  }
+
+  .header__nav a {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--cor-header-texto-neutro);
+    transition: color 150ms ease;
+  }
+
+  .header__nav a:hover,
+  .header__nav a[aria-current="true"] {
+    color: var(--cor-primaria);
+  }
+}
+
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+.hero {
+  padding-block: var(--esp-6) var(--esp-6);
+}
+
+.hero__grid {
+  display: grid;
+  gap: var(--esp-4);
+  align-items: center;
+}
+
+/* Selo/badge do hero: pílula com ícone, tingida na cor secundária do
+   cliente — componente padrão de todos os modelos, não decoração isolada
+   de um só. */
+.hero__selo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: color-mix(in srgb, var(--cor-secundaria) 14%, var(--cor-superficie));
+  border: 1px solid color-mix(in srgb, var(--cor-secundaria) 40%, transparent);
+  border-radius: 999px;
+  padding: 7px 16px;
+  margin-bottom: var(--esp-2);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cor-secundaria);
+}
+
+.hero__selo svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.hero__ctas {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+  margin-top: var(--esp-4);
+}
+
+@media (min-width: 480px) {
+  .hero__ctas {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+/* ==========================================================================
+   PLANOS
+   ========================================================================== */
+.planos__grid {
+  display: grid;
+  gap: var(--esp-3);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .planos__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .planos__grid {
+    grid-template-columns: repeat(var(--n-planos, 3), 1fr);
+  }
+}
+
+.plano-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: var(--esp-4);
+}
+
+.plano-card--destaque {
+  border-color: var(--cor-primaria);
+  border-width: 2px;
+  /* Glow na cor da marca — é o card que o provedor mais quer vender,
+     precisa chamar mais atenção que os outros, não só ter borda diferente. */
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--cor-primaria) 45%, transparent),
+    0 12px 36px -10px color-mix(in srgb, var(--cor-primaria) 50%, transparent);
+}
+
+.plano-card__selo {
+  position: absolute;
+  top: -13px;
+  left: var(--esp-3);
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+  color: var(--cor-texto-botao);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.plano-card__velocidade {
+  font-family: var(--ff-titulo);
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  margin-top: var(--esp-1);
+}
+
+.plano-card__preco {
+  margin-top: var(--esp-1);
+  font-size: var(--fs-destaque);
+  color: var(--cor-primaria);
+  font-weight: 700;
+}
+
+.plano-card__beneficios {
+  margin-top: var(--esp-3);
+  margin-bottom: var(--esp-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-1);
+  flex-grow: 1;
+}
+
+.plano-card__beneficios li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--esp-1);
+  font-size: 15px;
+}
+
+.plano-card__beneficios svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--cor-sucesso);
+  margin-top: 2px;
+}
+
+/* ---- Chip genérico (badge de característica, app incluso, etc.) ---- */
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--cor-fundo-alt);
+  color: var(--cor-texto-neutro);
+  border: 1px solid var(--cor-borda);
+}
+
+/* Linha de características fixas do plano (ex. "100% Fibra", "Wi-Fi 6") —
+   usa a cor do cliente de leve, não compete com o preço. */
+.plano-card__caracteristicas {
+  margin-top: var(--esp-2);
+}
+
+.plano-card__caracteristicas .chip {
+  background: color-mix(in srgb, var(--cor-primaria) 12%, var(--cor-superficie));
+  color: var(--cor-primaria);
+  border-color: color-mix(in srgb, var(--cor-primaria) 30%, transparent);
+}
+
+/* Apps inclusos: só aparece quando o plano realmente tem (campo opcional
+   apps_inclusos no JSON do cliente) — nunca texto vazio. */
+.plano-card__apps {
+  margin-top: var(--esp-3);
+  padding-top: var(--esp-3);
+  border-top: 1px dashed var(--cor-borda);
+}
+
+.plano-card__apps-rotulo {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--cor-texto-neutro);
+  margin-bottom: 6px;
+}
+
+/* ==========================================================================
+   COBERTURA
+   ========================================================================== */
+.cobertura__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-2);
+  max-width: 480px;
+}
+
+@media (min-width: 560px) {
+  .cobertura__form {
+    flex-direction: row;
+  }
+}
+
+.cobertura__select {
+  flex: 1;
+  padding: 14px 16px;
+  font-size: 16px;
+  font-family: var(--ff-texto);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio-pequeno);
+  background: var(--cor-superficie);
+  color: var(--cor-texto);
+}
+
+.cobertura__resultado {
+  margin-top: var(--esp-3);
+  padding: var(--esp-3);
+  border-radius: var(--raio);
+  display: none;
+}
+
+.cobertura__resultado.is-visivel {
+  display: block;
+}
+
+.cobertura__resultado--ok {
+  background: var(--cor-sucesso-fundo);
+  color: var(--cor-sucesso);
+}
+
+.cobertura__resultado--fora {
+  background: var(--cor-alerta-fundo);
+  color: var(--cor-alerta);
+}
+
+.cobertura__resultado p {
+  max-width: none;
+  margin-bottom: var(--esp-2);
+  color: inherit;
+}
+
+.cobertura__resultado:last-child p {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   DIFERENCIAIS
+   ========================================================================== */
+.diferenciais__grid {
+  display: grid;
+  gap: var(--esp-3);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .diferenciais__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.diferencial-card {
+  display: flex;
+  gap: var(--esp-2);
+}
+
+.diferencial-card__icone {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--raio-pequeno);
+  background: var(--cor-fundo-alt);
+  color: var(--cor-primaria);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.diferencial-card__icone svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* ==========================================================================
+   PASSOS (como contratar)
+   ========================================================================== */
+.passos__lista {
+  display: grid;
+  gap: var(--esp-3);
+  grid-template-columns: 1fr;
+  counter-reset: passo;
+}
+
+@media (min-width: 768px) {
+  .passos__lista {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.passo {
+  position: relative;
+  padding-top: var(--esp-5);
+}
+
+.passo::before {
+  counter-increment: passo;
+  content: counter(passo);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--cor-primaria);
+  color: var(--cor-texto-botao);
+  font-family: var(--ff-titulo);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   PROVA SOCIAL
+   ========================================================================== */
+.prova__numeros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-5);
+  margin-bottom: var(--esp-5);
+}
+
+.prova__numero {
+  font-family: var(--ff-titulo);
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  color: var(--cor-primaria);
+  line-height: 1;
+}
+
+.prova__numero-rotulo {
+  margin-top: var(--esp-1);
+  color: var(--cor-texto-neutro);
+}
+
+/* Variante "tira": faixa de destaque com divisórias — usada por modelos
+   que querem os números logo após o hero, como vitrine de credibilidade. */
+.prova__numeros--tira {
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: var(--esp-4);
+  gap: 0;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.prova__numeros--tira .prova__numero-item {
+  flex: 1 0 auto;
+  padding-inline: var(--esp-4);
+  border-left: 1px solid var(--cor-borda);
+}
+
+.prova__numeros--tira .prova__numero-item:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+.prova__numeros--tira .prova__numero {
+  font-size: var(--fs-h2);
+  white-space: nowrap;
+}
+
+.depoimentos__grid {
+  display: grid;
+  gap: var(--esp-3);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .depoimentos__grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+}
+
+.depoimento-card__autor {
+  margin-top: var(--esp-2);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* ==========================================================================
+   FAQ
+   ========================================================================== */
+.faq__item {
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.faq__pergunta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--esp-2);
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: var(--esp-3) 0;
+  font-family: var(--ff-titulo);
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--cor-texto);
+}
+
+.faq__pergunta-icone {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  transition: transform 200ms ease;
+}
+
+.faq__item.is-aberto .faq__pergunta-icone {
+  transform: rotate(45deg);
+}
+
+.faq__resposta {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 200ms ease;
+}
+
+.faq__item.is-aberto .faq__resposta {
+  grid-template-rows: 1fr;
+}
+
+.faq__resposta-inner {
+  overflow: hidden;
+}
+
+.faq__resposta p {
+  padding-bottom: var(--esp-3);
+  color: var(--cor-texto-neutro);
+}
+
+/* Sem JS: todas as respostas ficam visíveis (progressive enhancement) */
+.no-js .faq__resposta {
+  grid-template-rows: 1fr;
+}
+
+/* ==========================================================================
+   ÁREA DO CLIENTE
+   ========================================================================== */
+.area-cliente__grid {
+  display: grid;
+  gap: var(--esp-2);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+  .area-cliente__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.area-cliente__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--esp-1);
+  text-align: center;
+  padding: var(--esp-3) var(--esp-2);
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  transition: border-color 150ms ease;
+}
+
+.area-cliente__item:hover {
+  border-color: var(--cor-primaria);
+}
+
+.area-cliente__item svg {
+  width: 28px;
+  height: 28px;
+  color: var(--cor-primaria);
+}
+
+/* ==========================================================================
+   RODAPÉ
+   ========================================================================== */
+.rodape {
+  background: var(--cor-fundo-alt);
+  border-top: 1px solid var(--cor-borda);
+  padding-block: var(--esp-5);
+}
+
+.rodape__grid {
+  display: grid;
+  gap: var(--esp-4);
+}
+
+@media (min-width: 768px) {
+  .rodape__grid {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+
+.rodape__info p {
+  color: var(--cor-texto-neutro);
+  font-size: 14px;
+  margin-top: var(--esp-1);
+  max-width: 48ch;
+}
+
+.rodape__titulo {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--cor-texto-neutro);
+  margin-bottom: var(--esp-2);
+}
+
+.rodape__links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-1);
+}
+
+.rodape__links a {
+  font-size: 14px;
+  color: var(--cor-texto-neutro);
+  transition: color 150ms ease;
+}
+
+.rodape__links a:hover {
+  color: var(--cor-primaria);
+}
+
+.rodape__redes {
+  display: flex;
+  gap: var(--esp-2);
+  margin-top: var(--esp-2);
+}
+
+.rodape__redes a {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--cor-superficie);
+  border: 1px solid var(--cor-borda);
+  color: var(--cor-texto);
+}
+
+.rodape__redes svg {
+  width: 18px;
+  height: 18px;
+}
+
+.rodape__base {
+  margin-top: var(--esp-5);
+  padding-top: var(--esp-3);
+  border-top: 1px solid var(--cor-borda);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--esp-2);
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--cor-texto-neutro);
+}
+
+.rodape__assinatura a {
+  font-weight: 600;
+  color: var(--cor-texto-neutro);
+}
+
+.rodape__assinatura a:hover {
+  color: var(--cor-primaria);
+}
+
+/* ==========================================================================
+   WHATSAPP flutuante
+   ========================================================================== */
+.whatsapp-float {
+  position: fixed;
+  right: var(--esp-2);
+  bottom: var(--esp-2);
+  z-index: 80;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--cor-whatsapp);
+  color: var(--cor-whatsapp-texto);
+  box-shadow: 0 4px 14px rgba(20, 23, 26, 0.25);
+  transition: transform 150ms ease, background-color 150ms ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.06);
+  background: var(--cor-whatsapp-escuro);
+}
+
+.whatsapp-float svg {
+  width: 28px;
+  height: 28px;
+}
+
+@media (min-width: 640px) {
+  .whatsapp-float {
+    right: var(--esp-3);
+    bottom: var(--esp-3);
+  }
+}
+
+/* ==========================================================================
+   FAIXA DE DEMONSTRAÇÃO (só nos modelos publicados como demo)
+   ========================================================================== */
+.demo-faixa {
+  position: fixed;
+  top: var(--header-altura);
+  left: 0;
+  right: 0;
+  z-index: 69;
+  background: #14171a;
+  color: #ffffff;
+  font-size: 13px;
+  text-align: center;
+  padding: 8px var(--esp-2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.demo-faixa a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+body.tem-demo-faixa {
+  padding-top: calc(var(--header-altura) + 40px);
+}
+
+@media (min-width: 640px) {
+  body.tem-demo-faixa {
+    padding-top: calc(var(--header-altura) + 32px);
+  }
+}

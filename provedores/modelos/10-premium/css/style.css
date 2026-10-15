@@ -1,0 +1,534 @@
+/* ==========================================================================
+   Modelo 10 — Premium / atendimento humano (v3)
+   Ângulo: atendimento de verdade, instalação cuidadosa, suporte que resolve.
+   Direção visual: minimalista e editorial — marfim, preto e dourado,
+   serifada em peso médio com itálicos, muito espaço, filetes finos, fotos
+   com tratamento de cinema e zoom lento no hero.
+   Carregado DEPOIS de base.css e secoes.css: tokens + pele do modelo.
+   ========================================================================== */
+
+:root {
+  --ff-titulo: "Newsreader", Georgia, serif;
+  --ff-texto: "Inter", system-ui, sans-serif;
+
+  --cor-fundo: #f7f4ee;
+  --cor-fundo-alt: #efeae1;
+  --cor-superficie: #fcfbf8;
+  --cor-texto: #1c1917;
+  --cor-texto-neutro: #6b645c;
+  --cor-borda: rgba(28, 25, 23, 0.12);
+  --cor-borda-forte: rgba(28, 25, 23, 0.22);
+
+  --cor-acento: color-mix(in srgb, var(--cor-secundaria) 70%, #000000);
+  --grad-texto: linear-gradient(95deg, color-mix(in srgb, var(--cor-secundaria) 80%, #000000), color-mix(in srgb, var(--cor-secundaria) 60%, #000000));
+  --grad-botao: linear-gradient(120deg, var(--cor-primaria), var(--cor-primaria));
+  --grad-marca: linear-gradient(120deg, var(--cor-primaria), color-mix(in srgb, var(--cor-secundaria) 60%, var(--cor-primaria)));
+  --grad-faixa: radial-gradient(circle at 85% 15%, color-mix(in srgb, var(--cor-secundaria) 28%, transparent), transparent 55%),
+    linear-gradient(120deg, #1c1917, #0f0d0c);
+  --brilho: 0 18px 36px -22px rgba(28, 25, 23, 0.6);
+
+  --vidro: rgba(28, 25, 23, 0.03);
+  --vidro-forte: rgba(28, 25, 23, 0.05);
+  --painel: rgba(252, 251, 248, 0.97);
+  --linha-grade: rgba(28, 25, 23, 0.05);
+  --moldura-fundo: linear-gradient(165deg, #e9e2d6, #ddd3c3);
+  --plano-destaque-fundo: linear-gradient(180deg, #fcfbf8, #f5efe4);
+  --vel-cor: var(--cor-texto);
+  --esquema: light;
+  --sucesso-texto: #166534;
+  --alerta-texto: #92400e;
+  --cor-sucesso-fundo: #ecfdf3;
+  --cor-alerta-fundo: #fff7e6;
+  --contorno-numero: rgba(28, 25, 23, 0.12);
+  --sombra-card: none;
+  --rodape-fundo: #141210;
+
+  --raio: 2px;
+  --raio-pequeno: 2px;
+  --respiro-secao: 84px;
+
+  --cor-header-fundo: #fcfbf8;
+  --cor-header-texto: #1c1917;
+  --cor-header-texto-neutro: #6b645c;
+  --cor-header-borda: #e7e1d6;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --respiro-secao: 136px;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.6rem, 1.3rem + 4.6vw, 5rem);
+  line-height: 1.04;
+}
+
+h2 {
+  font-size: clamp(2rem, 1.3rem + 2.8vw, 3.4rem);
+  line-height: 1.08;
+}
+
+h3 {
+  font-size: 1.45rem;
+}
+
+.grad {
+  font-style: italic;
+}
+
+.rotulo {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  color: var(--cor-acento);
+}
+
+.rotulo::before {
+  width: 40px;
+  height: 1px;
+  background: currentColor;
+}
+
+.btn {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.btn--gradiente {
+  box-shadow: none;
+}
+
+.btn--gradiente:hover {
+  background: color-mix(in srgb, var(--cor-primaria) 85%, var(--cor-secundaria));
+}
+
+.btn--vidro {
+  border-color: var(--cor-texto);
+  backdrop-filter: none;
+}
+
+.barra-topo {
+  background: #1c1917;
+}
+
+/* ==========================================================================
+   HERO EDITORIAL: título centralizado + foto de cinema larga
+   ========================================================================== */
+.hero--editorial {
+  padding-block: 72px 0;
+  background: var(--cor-fundo);
+  text-align: center;
+}
+
+.hero__cabeca {
+  max-width: 860px;
+  margin-inline: auto;
+}
+
+.hero--editorial .hero__selo {
+  background: transparent;
+  border-radius: 0;
+  border-color: var(--cor-borda-forte);
+}
+
+.hero--editorial .hero__selo-cidade {
+  border-radius: 0;
+  background: var(--cor-primaria);
+  color: var(--cor-texto-botao);
+}
+
+.hero--editorial .hero__sub {
+  margin-inline: auto;
+  max-width: 40em;
+}
+
+.hero--editorial .hero__ctas {
+  justify-content: center;
+}
+
+.hero__a-partir {
+  margin: 22px auto 0;
+  font-size: 14px;
+  color: var(--cor-texto-neutro);
+}
+
+.hero__a-partir strong {
+  font-family: var(--ff-titulo);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--cor-texto);
+}
+
+.hero__cinema {
+  position: relative;
+  margin: 56px 0 0;
+}
+
+.hero__moldura--cinema {
+  aspect-ratio: 21 / 9;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.hero__moldura--cinema::before {
+  /* filete dourado deslocado */
+  content: "";
+  position: absolute;
+  inset: 16px;
+  z-index: 2;
+  border: 1px solid color-mix(in srgb, var(--cor-secundaria) 70%, transparent);
+  pointer-events: none;
+}
+
+.hero__legenda {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  max-width: 560px;
+  margin: 18px 0 0 auto;
+  font-family: var(--ff-titulo);
+  font-style: italic;
+  font-size: 17px;
+  text-align: left;
+  color: var(--cor-texto-neutro);
+}
+
+.hero__legenda-linha {
+  flex-shrink: 0;
+  width: 56px;
+  height: 1px;
+  background: var(--cor-secundaria);
+}
+
+@media (max-width: 699px) {
+  .hero__moldura--cinema {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+.hero--editorial .vantagens {
+  margin-top: 64px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--cor-borda-forte);
+  border-bottom: 1px solid var(--cor-borda-forte);
+  border-radius: 0;
+  backdrop-filter: none;
+  text-align: left;
+  gap: 0;
+}
+
+.hero--editorial .vantagem {
+  background: transparent;
+  border-radius: 0;
+  padding: 24px 18px;
+}
+
+.hero--editorial .vantagem + .vantagem {
+  border-left: 1px solid var(--cor-borda);
+}
+
+.vantagem__icone {
+  background: transparent;
+  color: var(--cor-acento);
+  box-shadow: none;
+  border: 1px solid color-mix(in srgb, var(--cor-secundaria) 60%, transparent);
+  border-radius: 50%;
+}
+
+.vantagem__titulo {
+  font-family: var(--ff-titulo);
+  font-weight: 500;
+  font-size: 19px;
+}
+
+.hero--editorial {
+  padding-bottom: 72px;
+}
+
+/* ==========================================================================
+   ATENDIMENTO
+   ========================================================================== */
+.secao--atendimento {
+  background: var(--cor-superficie);
+}
+
+.atendimento {
+  display: grid;
+  gap: 56px;
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .atendimento {
+    grid-template-columns: 1fr 1fr;
+    gap: 96px;
+  }
+}
+
+.foto--atendimento {
+  aspect-ratio: 4 / 5;
+}
+
+.atendimento__paragrafo {
+  margin-top: 20px;
+  font-size: 1.12rem;
+  color: var(--cor-texto-neutro);
+}
+
+.atendimento__lista {
+  margin: 36px 0 40px;
+  border-top: 1px solid var(--cor-borda-forte);
+}
+
+.atendimento__lista li {
+  display: flex;
+  gap: 24px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.atendimento__numero {
+  flex-shrink: 0;
+  width: 44px;
+  font-family: var(--ff-titulo);
+  font-size: 28px;
+  font-style: italic;
+  line-height: 1;
+  color: var(--cor-acento);
+}
+
+.atendimento__lista strong {
+  display: block;
+  font-family: var(--ff-titulo);
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.atendimento__lista small {
+  display: block;
+  margin-top: 4px;
+  font-size: 15px;
+  color: var(--cor-texto-neutro);
+}
+
+/* ==========================================================================
+   SEÇÕES: sem caixas, só filetes e espaço
+   ========================================================================== */
+.secao--planos::before {
+  display: none;
+}
+
+.plano,
+.perfil,
+.beneficio,
+.passo,
+.depoimento,
+.atalho,
+.faq__lista .faq__item {
+  border-radius: 2px;
+  background: var(--cor-superficie);
+}
+
+.plano {
+  padding-top: 44px;
+}
+
+.plano--destaque {
+  border: 1px solid var(--cor-primaria);
+  background: var(--cor-superficie);
+  box-shadow: 0 30px 60px -40px rgba(28, 25, 23, 0.5);
+}
+
+.plano__fita {
+  border-radius: 0;
+  background: var(--cor-primaria);
+  box-shadow: none;
+}
+
+.plano__nome {
+  font-family: var(--ff-titulo);
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.plano__vel-numero,
+.plano__preco-reais {
+  font-family: var(--ff-titulo);
+  font-weight: 500;
+}
+
+.plano__vel-numero {
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  color: var(--cor-texto);
+}
+
+.plano__check {
+  background: transparent;
+  border: 1px solid color-mix(in srgb, var(--cor-secundaria) 60%, transparent);
+}
+
+.secao--perfis {
+  background: var(--cor-fundo);
+}
+
+.perfil {
+  border: none;
+  background: transparent;
+}
+
+.foto--perfil {
+  aspect-ratio: 3 / 4;
+}
+
+.perfil__corpo {
+  padding: 20px 0 0;
+}
+
+.perfil h3 {
+  font-size: 1.5rem;
+}
+
+.perfil__tag {
+  color: var(--cor-acento);
+  font-size: 11.5px;
+  letter-spacing: 0.22em;
+}
+
+.secao--beneficios {
+  background: var(--cor-superficie);
+  border-color: var(--cor-borda);
+}
+
+.beneficio {
+  border-color: var(--cor-borda);
+}
+
+.beneficio__icone {
+  background: transparent;
+  border: 1px solid color-mix(in srgb, var(--cor-secundaria) 60%, transparent);
+  border-radius: 50%;
+}
+
+.secao--prova {
+  background: var(--cor-fundo);
+}
+
+.numeros {
+  border-radius: 0;
+  background: transparent;
+  border: none;
+  border-top: 1px solid var(--cor-borda-forte);
+  border-bottom: 1px solid var(--cor-borda-forte);
+  box-shadow: none;
+}
+
+.numero {
+  color: var(--cor-texto-neutro);
+}
+
+.numero strong {
+  font-family: var(--ff-titulo);
+  font-weight: 500;
+  color: var(--cor-texto);
+}
+
+.numero + .numero {
+  border-left-color: var(--cor-borda);
+}
+
+.numero__icone {
+  background: transparent;
+  color: var(--cor-acento);
+  border: 1px solid color-mix(in srgb, var(--cor-secundaria) 60%, transparent);
+}
+
+.depoimento blockquote p {
+  font-family: var(--ff-titulo);
+  font-size: 19px;
+  font-style: italic;
+}
+
+.depoimento__aspas {
+  color: var(--cor-secundaria);
+}
+
+.depoimento__avatar {
+  background: var(--cor-primaria);
+}
+
+/* ---- Cobertura editorial ---- */
+.cobertura-editorial {
+  margin: 0;
+  width: 100%;
+}
+
+.foto--cobertura {
+  aspect-ratio: 4 / 4.4;
+}
+
+.cobertura-editorial figcaption {
+  margin-top: 14px;
+  font-family: var(--ff-titulo);
+  font-style: italic;
+  font-size: 17px;
+  color: var(--cor-texto-neutro);
+}
+
+.secao--passos {
+  background: var(--cor-superficie);
+  border-color: var(--cor-borda);
+}
+
+.passo__icone {
+  background: transparent;
+  color: var(--cor-acento);
+  border: 1px solid color-mix(in srgb, var(--cor-secundaria) 60%, transparent);
+  border-radius: 50%;
+  box-shadow: none;
+}
+
+.passo__numero {
+  font-family: var(--ff-titulo);
+  font-style: italic;
+}
+
+.passos::before {
+  background: color-mix(in srgb, var(--cor-secundaria) 60%, transparent);
+  height: 1px;
+  opacity: 1;
+}
+
+.secao--cliente {
+  background: var(--cor-fundo);
+}
+
+.atalho__icone,
+.planos__ajuda-icone,
+.faq__ajuda-icone {
+  background: var(--cor-primaria);
+  border-radius: 50%;
+}
+
+.cta-final,
+.promo {
+  border-radius: 0;
+}
+
+.cta-final h2 {
+  font-style: normal;
+}

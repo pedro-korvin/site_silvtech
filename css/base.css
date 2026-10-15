@@ -261,13 +261,17 @@ p {
   .site-header.is-open .site-nav {
     display: flex;
     align-items: center;
-    gap: var(--esp-4);
+    gap: var(--esp-3);
     padding-bottom: 0;
   }
 
   .site-nav__list {
     flex-direction: row;
-    gap: var(--esp-4);
+    /* 20px, não esp-4 (32px) nem esp-3 (24px): com 9 itens no menu —
+       Home..Contato + "Sites para Provedores" —, 24px deixa 0px de folga
+       em 1024px (mínimo da versão desktop), risco de estourar por diferença
+       de fonte entre navegadores. Testado: 20px deixa ~20px de folga. */
+    gap: 20px;
   }
 
   .site-nav__cta {

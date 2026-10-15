@@ -1,0 +1,411 @@
+/* ==========================================================================
+   Modelo 08 — Regional multicidades (v3)
+   Ângulo: presente em várias cidades — a consulta de cobertura é a
+   protagonista.
+   Direção visual: claro, verde-água + lima, hero de busca centralizado
+   sobre foto aérea em duotone, cartões de cidade com foto, bairros e botão
+   de contratar com a cidade na mensagem.
+   Carregado DEPOIS de base.css e secoes.css: tokens + pele do modelo.
+   ========================================================================== */
+
+:root {
+  --ff-titulo: "Manrope", system-ui, sans-serif;
+  --ff-texto: "Inter", system-ui, sans-serif;
+
+  --cor-fundo: #f4faf8;
+  --cor-fundo-alt: #e6f3ef;
+  --cor-superficie: #ffffff;
+  --cor-texto: #0b2420;
+  --cor-texto-neutro: #4f6661;
+  --cor-borda: rgba(11, 36, 32, 0.1);
+  --cor-borda-forte: rgba(11, 36, 32, 0.18);
+
+  --cor-acento: color-mix(in srgb, var(--cor-primaria) 92%, #000000);
+  --grad-texto: linear-gradient(95deg, var(--cor-primaria), color-mix(in srgb, var(--cor-secundaria) 55%, #000000));
+  --grad-faixa: radial-gradient(circle at 85% 15%, color-mix(in srgb, var(--cor-secundaria) 40%, transparent), transparent 55%),
+    linear-gradient(120deg, color-mix(in srgb, var(--cor-primaria) 85%, #031512), color-mix(in srgb, var(--cor-primaria) 50%, #031512));
+  --brilho: 0 14px 30px -14px color-mix(in srgb, var(--cor-primaria) 65%, transparent);
+
+  --vidro: rgba(11, 36, 32, 0.035);
+  --vidro-forte: rgba(11, 36, 32, 0.06);
+  --painel: rgba(255, 255, 255, 0.96);
+  --linha-grade: rgba(11, 36, 32, 0.05);
+  --moldura-fundo: linear-gradient(165deg, color-mix(in srgb, var(--cor-primaria) 25%, #ffffff), color-mix(in srgb, var(--cor-secundaria) 25%, #ffffff));
+  --plano-destaque-fundo: linear-gradient(180deg, #ffffff, color-mix(in srgb, var(--cor-secundaria) 8%, #ffffff));
+  --vel-cor: var(--cor-texto);
+  --esquema: light;
+  --sucesso-texto: #166534;
+  --alerta-texto: #92400e;
+  --cor-sucesso-fundo: #ecfdf3;
+  --cor-alerta-fundo: #fff7e6;
+  --contorno-numero: rgba(11, 36, 32, 0.1);
+  --sombra-card: 0 18px 40px -26px rgba(8, 60, 50, 0.45);
+  --rodape-fundo: #061a17;
+
+  --raio: 20px;
+  --raio-pequeno: 12px;
+
+  --cor-header-fundo: #ffffff;
+  --cor-header-texto: #0b2420;
+  --cor-header-texto-neutro: #4f6661;
+  --cor-header-borda: #dcebe6;
+}
+
+h1,
+h2 {
+  font-weight: 800;
+  letter-spacing: -0.035em;
+}
+
+.barra-topo {
+  background: #061a17;
+}
+
+/* ==========================================================================
+   HERO DE BUSCA
+   ========================================================================== */
+.hero--busca {
+  --cor-texto: #ffffff;
+  --cor-texto-neutro: rgba(255, 255, 255, 0.86);
+  --cor-borda: rgba(255, 255, 255, 0.18);
+  --cor-borda-forte: rgba(255, 255, 255, 0.3);
+  --vidro: rgba(255, 255, 255, 0.1);
+  --grad-texto: linear-gradient(95deg, color-mix(in srgb, var(--cor-secundaria) 80%, #ffffff), #ffffff);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-block: 80px 48px;
+  background: #061a17;
+  color: var(--cor-texto);
+  text-align: center;
+}
+
+.hero__paisagem {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.hero__paisagem .hero__foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__paisagem::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: radial-gradient(ellipse at center, rgba(4, 22, 19, 0.55), rgba(4, 22, 19, 0.88) 75%),
+    linear-gradient(0deg, rgba(4, 22, 19, 0.9), transparent 40%);
+}
+
+.hero__paisagem .foto__etiqueta {
+  left: auto;
+  right: 16px;
+  top: 16px;
+  bottom: auto;
+  z-index: 3;
+}
+
+/* pinos pulsando por cima da foto aérea */
+.hero__paisagem::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background-image: radial-gradient(circle, var(--cor-secundaria) 0 4px, transparent 5px), radial-gradient(circle, var(--cor-secundaria) 0 4px, transparent 5px),
+    radial-gradient(circle, var(--cor-secundaria) 0 4px, transparent 5px), radial-gradient(circle, var(--cor-secundaria) 0 4px, transparent 5px);
+  background-size: 100% 100%;
+  background-position: 12% 30%, 86% 22%, 78% 78%, 20% 80%;
+  background-repeat: no-repeat;
+  opacity: 0.85;
+}
+
+.hero__busca {
+  max-width: 880px;
+  margin-inline: auto;
+}
+
+.hero--busca .hero__selo {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.hero--busca h1 {
+  color: #ffffff;
+  font-size: clamp(2.4rem, 1.2rem + 4.6vw, 4.6rem);
+}
+
+.hero--busca .hero__sub {
+  margin-inline: auto;
+}
+
+.busca {
+  --cor-texto: #0b2420;
+  --cor-texto-neutro: #4f6661;
+  --cor-borda: rgba(11, 36, 32, 0.1);
+  --cor-borda-forte: rgba(11, 36, 32, 0.18);
+  --cor-superficie: #ffffff;
+  scroll-margin-top: calc(var(--header-altura) + 20px);
+  margin: 36px auto 0;
+  max-width: 720px;
+  padding: 24px;
+  border-radius: 22px;
+  background: #ffffff;
+  color: var(--cor-texto);
+  text-align: left;
+  box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.6);
+}
+
+.busca__titulo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: none;
+  font-family: var(--ff-titulo);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.busca__titulo svg {
+  width: 22px;
+  height: 22px;
+  color: var(--cor-acento);
+}
+
+.busca .cobertura__form {
+  max-width: none;
+  margin-top: 14px;
+}
+
+.busca .cobertura__resultado {
+  max-width: none;
+}
+
+.busca__cidades {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  font-size: 13px;
+  color: var(--cor-texto-neutro);
+}
+
+.busca__cidades a {
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--cor-primaria) 9%, #ffffff);
+  color: var(--cor-acento);
+  font-weight: 700;
+}
+
+.busca__cidades a:hover {
+  background: color-mix(in srgb, var(--cor-primaria) 16%, #ffffff);
+}
+
+.hero__rodape {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px 28px;
+  margin-top: 26px;
+  font-size: 15px;
+}
+
+.hero__a-partir strong {
+  font-family: var(--ff-titulo);
+  font-size: 18px;
+}
+
+.hero__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.hero__link svg {
+  width: 18px;
+  height: 18px;
+}
+
+.hero--busca .vantagens {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  text-align: left;
+}
+
+.hero--busca .vantagem {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ==========================================================================
+   CIDADES
+   ========================================================================== */
+.secao--cidades {
+  background: var(--cor-fundo);
+}
+
+.cidades {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.cidade-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid var(--cor-borda);
+  box-shadow: var(--sombra-card);
+  transition: transform 200ms ease;
+}
+
+.cidade-card:hover {
+  transform: translateY(-4px);
+}
+
+.foto--cidade {
+  aspect-ratio: 16 / 10;
+}
+
+.cidade-card__status {
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #15803d;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cidade-card__corpo {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  padding: 20px;
+}
+
+.cidade-card__corpo h3 {
+  font-size: 1.3rem;
+}
+
+.cidade-card__bairros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.cidade-card__bairros li {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--cor-fundo-alt);
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.cidade-card__todos {
+  font-size: 14px;
+  color: var(--cor-texto-neutro);
+}
+
+.cidade-card .btn {
+  margin-top: auto;
+}
+
+.cidades__fora {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 22px;
+  margin-top: 36px;
+  padding: 22px 26px;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 1px dashed var(--cor-borda-forte);
+}
+
+.cidades__fora p {
+  flex: 1 1 320px;
+  max-width: none;
+  color: var(--cor-texto-neutro);
+}
+
+.cidades__fora strong {
+  color: var(--cor-texto);
+}
+
+.cidades__fora-icone {
+  display: grid;
+  place-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: var(--grad-botao);
+  color: var(--cor-texto-botao);
+}
+
+.cidades__fora-icone svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* ==========================================================================
+   SEÇÕES
+   ========================================================================== */
+.secao--planos {
+  background: #ffffff;
+}
+
+.plano {
+  background: #ffffff;
+}
+
+.secao--perfis {
+  background: var(--cor-fundo-alt);
+}
+
+.perfil {
+  border: none;
+}
+
+.secao--beneficios {
+  background: #ffffff;
+  border: none;
+}
+
+.secao--passos {
+  background: var(--cor-fundo-alt);
+  border: none;
+}
+
+.secao--cliente {
+  background: var(--cor-fundo-alt);
+  border: none;
+}
+
+.depoimento__aspas {
+  color: var(--cor-primaria);
+}
+
+.cidade-card .btn {
+  text-align: center;
+  line-height: 1.25;
+  padding-block: 13px;
+}

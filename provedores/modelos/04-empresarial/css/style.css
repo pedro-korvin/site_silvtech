@@ -1,0 +1,479 @@
+/* ==========================================================================
+   Modelo 04 — Linha empresarial (v3)
+   Ângulo: conexão para empresas — link dedicado, IP fixo, suporte
+   prioritário, consultor.
+   Direção visual: corporativo, azul-marinho e grafite, grid rigoroso,
+   cantos retos, linhas finas, fotos com tom azul da marca.
+   Carregado DEPOIS de base.css e secoes.css: tokens + pele do modelo.
+   ========================================================================== */
+
+:root {
+  --ff-titulo: "Sora", system-ui, sans-serif;
+  --ff-texto: "Inter", system-ui, sans-serif;
+
+  --cor-fundo: #f5f7fa;
+  --cor-fundo-alt: #eaeef4;
+  --cor-superficie: #ffffff;
+  --cor-texto: #0f172a;
+  --cor-texto-neutro: #475569;
+  --cor-borda: rgba(15, 23, 42, 0.1);
+  --cor-borda-forte: rgba(15, 23, 42, 0.2);
+
+  --cor-acento: color-mix(in srgb, var(--cor-primaria) 92%, #000000);
+  --grad-texto: linear-gradient(95deg, var(--cor-primaria), color-mix(in srgb, var(--cor-secundaria) 75%, #000000));
+  --grad-faixa: radial-gradient(circle at 90% 10%, color-mix(in srgb, var(--cor-secundaria) 40%, transparent), transparent 55%),
+    linear-gradient(120deg, color-mix(in srgb, var(--cor-primaria) 85%, #050a18), #0b1224);
+  --brilho: 0 12px 28px -14px color-mix(in srgb, var(--cor-primaria) 70%, transparent);
+
+  --vidro: rgba(15, 23, 42, 0.035);
+  --vidro-forte: rgba(15, 23, 42, 0.06);
+  --painel: rgba(255, 255, 255, 0.96);
+  --linha-grade: rgba(15, 23, 42, 0.06);
+  --moldura-fundo: linear-gradient(165deg, color-mix(in srgb, var(--cor-primaria) 18%, #ffffff), #eaeef4);
+  --plano-destaque-fundo: linear-gradient(180deg, #ffffff, color-mix(in srgb, var(--cor-primaria) 5%, #ffffff));
+  --vel-cor: var(--cor-texto);
+  --esquema: light;
+  --sucesso-texto: #166534;
+  --alerta-texto: #92400e;
+  --cor-sucesso-fundo: #ecfdf3;
+  --cor-alerta-fundo: #fff7e6;
+  --contorno-numero: rgba(15, 23, 42, 0.1);
+  --sombra-card: 0 1px 2px rgba(15, 23, 42, 0.06), 0 12px 30px -20px rgba(15, 23, 42, 0.3);
+  --rodape-fundo: #0b1224;
+  --mapa-fundo: #0b1430;
+  --mapa-linha: rgba(255, 255, 255, 0.08);
+
+  --raio: 10px;
+  --raio-pequeno: 8px;
+
+  --cor-header-fundo: #ffffff;
+  --cor-header-texto: #0f172a;
+  --cor-header-texto-neutro: #475569;
+  --cor-header-borda: #e2e8f0;
+}
+
+h1,
+h2 {
+  letter-spacing: -0.03em;
+}
+
+h1 {
+  font-size: clamp(2.3rem, 1.3rem + 3.8vw, 4rem);
+  line-height: 1.06;
+}
+
+/* Rótulo com quadradinho em vez de traço: mais "sistema" */
+.rotulo::before {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+.barra-topo {
+  background: #0b1224;
+}
+
+/* Fotos: tom azul da marca, mais discreto que o duotone padrão */
+.foto--duotone::after {
+  opacity: 0.55;
+}
+
+.foto--duotone > img,
+.foto--duotone > .hero__foto {
+  filter: grayscale(0.85) contrast(1.05) brightness(1.04);
+}
+
+/* ==========================================================================
+   HERO: grade técnica + foto com moldura deslocada + painel do link
+   ========================================================================== */
+.hero {
+  background: #ffffff;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.hero__fundo {
+  background: radial-gradient(45% 60% at 90% 30%, color-mix(in srgb, var(--cor-secundaria) 14%, transparent), transparent 70%);
+}
+
+.hero__fundo::before {
+  background-size: 48px 48px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 40%, #000 80%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 40%, #000 80%, transparent);
+}
+
+.hero__luz {
+  display: none;
+}
+
+.hero__selo {
+  background: #ffffff;
+  border-color: var(--cor-borda-forte);
+}
+
+.hero__visual {
+  max-width: 560px;
+  padding: 0 0 70px 0;
+}
+
+.hero__moldura--corp {
+  aspect-ratio: 4 / 3.6;
+  border-radius: 6px;
+  border: none;
+  overflow: visible;
+  box-shadow: none;
+}
+
+.hero__moldura--corp::before {
+  /* moldura deslocada em linha fina */
+  content: "";
+  position: absolute;
+  inset: 22px -22px -22px 22px;
+  z-index: -1;
+  border: 2px solid var(--cor-secundaria);
+  border-radius: 6px;
+}
+
+.hero__moldura--corp .hero__foto {
+  border-radius: 6px;
+}
+
+.hero__moldura--corp.foto--duotone::after {
+  border-radius: 6px;
+}
+
+.painel-link {
+  position: absolute;
+  left: -40px;
+  bottom: 0;
+  z-index: 3;
+  width: 290px;
+  padding: 18px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid var(--cor-borda);
+  box-shadow: 0 30px 60px -24px rgba(15, 23, 42, 0.45);
+  animation: flutuar 7s ease-in-out infinite;
+}
+
+.painel-link__topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--cor-borda);
+  font-family: var(--ff-titulo);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.painel-link__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--ff-texto);
+  font-size: 12px;
+  font-weight: 700;
+  color: #15803d;
+}
+
+.painel-link__lista {
+  display: grid;
+  gap: 9px;
+}
+
+.painel-link__lista li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.painel-link__icone {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: color-mix(in srgb, var(--cor-primaria) 10%, #ffffff);
+  color: var(--cor-acento);
+}
+
+.painel-link__icone svg {
+  width: 16px;
+  height: 16px;
+}
+
+.painel-link__velocidade {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 14px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--grad-botao);
+  color: var(--cor-texto-botao);
+}
+
+.painel-link__velocidade small {
+  font-size: 12px;
+  opacity: 0.85;
+}
+
+.painel-link__velocidade strong {
+  font-family: var(--ff-titulo);
+  font-size: 18px;
+}
+
+@media (max-width: 699px) {
+  .painel-link {
+    position: relative;
+    left: auto;
+    width: auto;
+    margin: -40px 12px 0;
+  }
+  .hero__visual {
+    padding-bottom: 0;
+  }
+  .hero__moldura--corp::before {
+    inset: 12px -10px -12px 10px;
+  }
+}
+
+.vantagens {
+  background: #ffffff;
+  border-color: var(--cor-borda);
+  border-radius: 10px;
+  backdrop-filter: none;
+}
+
+.vantagem {
+  background: transparent;
+  border-radius: 8px;
+}
+
+.vantagem__icone,
+.passo__icone,
+.atalho__icone,
+.flutuante__icone,
+.planos__ajuda-icone,
+.faq__ajuda-icone {
+  border-radius: 8px;
+}
+
+/* ==========================================================================
+   SEÇÕES: blocos separados por linhas finas, cartões retos
+   ========================================================================== */
+.secao {
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.secao--perfis {
+  background: var(--cor-fundo);
+}
+
+.perfil {
+  border-radius: 10px;
+}
+
+.perfil__link {
+  color: var(--cor-acento);
+}
+
+.secao--planos {
+  background: #ffffff;
+}
+
+.secao--planos::before {
+  display: none;
+}
+
+.plano {
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.plano--destaque {
+  background: linear-gradient(180deg, #ffffff, color-mix(in srgb, var(--cor-primaria) 4%, #ffffff)) padding-box, var(--grad-marca) border-box;
+}
+
+@media (min-width: 980px) {
+  .plano--destaque {
+    transform: none;
+  }
+  .plano--destaque:hover {
+    transform: translateY(-4px);
+  }
+}
+
+.plano__fita {
+  border-radius: 4px;
+}
+
+.plano__vel-numero {
+  font-size: clamp(56px, 4vw + 28px, 72px);
+}
+
+/* ---- Consultor ---- */
+.secao--consultor {
+  background: var(--cor-fundo);
+}
+
+.consultor {
+  display: grid;
+  gap: 56px;
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .consultor {
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 80px;
+  }
+}
+
+.consultor__foto {
+  position: relative;
+}
+
+.foto--consultor {
+  aspect-ratio: 4 / 3.4;
+  border-radius: 10px;
+}
+
+.consultor__selo {
+  position: absolute;
+  right: -16px;
+  bottom: -20px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 18px;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid var(--cor-borda);
+  box-shadow: var(--sombra-card);
+  max-width: 280px;
+}
+
+.consultor__selo strong {
+  display: block;
+  font-size: 14.5px;
+}
+
+.consultor__selo small {
+  display: block;
+  font-size: 12px;
+  color: var(--cor-texto-neutro);
+}
+
+@media (max-width: 599px) {
+  .consultor__selo {
+    right: 8px;
+  }
+}
+
+.consultor__paragrafo {
+  margin-top: 16px;
+  font-size: 1.08rem;
+  color: var(--cor-texto-neutro);
+}
+
+.consultor__lista {
+  display: grid;
+  gap: 1px;
+  margin: 28px 0 32px;
+  background: var(--cor-borda);
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+@media (min-width: 560px) {
+  .consultor__lista {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.consultor__lista li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 18px;
+  background: #ffffff;
+}
+
+.consultor__lista strong {
+  display: block;
+  font-size: 15px;
+}
+
+.consultor__lista small {
+  display: block;
+  margin-top: 3px;
+  font-size: 13.5px;
+  color: var(--cor-texto-neutro);
+}
+
+.consultor__icone {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--cor-primaria) 10%, #ffffff);
+  color: var(--cor-acento);
+}
+
+.consultor__icone svg {
+  width: 20px;
+  height: 20px;
+}
+
+.secao--beneficios {
+  background: #ffffff;
+  border-top: none;
+}
+
+.beneficio,
+.beneficio--destaque {
+  border-radius: 10px;
+}
+
+.beneficio__icone {
+  border-radius: 8px;
+}
+
+.secao--cobertura {
+  background: var(--cor-fundo);
+}
+
+.secao--passos {
+  background: #ffffff;
+  border-top: none;
+}
+
+.passo {
+  border-radius: 10px;
+}
+
+.numeros,
+.promo,
+.cta-final {
+  border-radius: 12px;
+}
+
+.depoimento,
+.atalho,
+.faq__lista .faq__item,
+.faq__ajuda {
+  border-radius: 10px;
+}
+
+.secao--cliente {
+  background: var(--cor-fundo);
+  border-top: none;
+}

@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Modelo 03 — Fibra urbana de alta velocidade (v3)
+   Perfil: velocidade e estabilidade para uma casa com muitos aparelhos.
+   Direção visual: tecnológico, escuro, acentos vibrantes e "linhas de luz".
+   Gradiente, glow e vidro são permitidos aqui (produto para provedores — o
+   sistema sóbrio vale só para as páginas da própria Silvtech).
+   Carregado DEPOIS de css/base.css.
+   ========================================================================== */
+
+:root {
+  --ff-titulo: "Space Grotesk", system-ui, sans-serif;
+  --ff-texto: "Inter", system-ui, sans-serif;
+
+  --cor-fundo: #070a12;
+  --cor-fundo-alt: #0b101b;
+  --cor-superficie: #111827;
+  --cor-texto: #f4f6fb;
+  --cor-texto-neutro: #a6b0c3;
+  --cor-borda: rgba(255, 255, 255, 0.09);
+  --cor-borda-forte: rgba(255, 255, 255, 0.16);
+
+  /* Cor de destaque para TEXTO sobre fundo escuro: a secundária do cliente
+     clareada, para continuar legível qualquer que seja a cor da marca. */
+  --cor-acento: color-mix(in srgb, var(--cor-secundaria) 72%, #ffffff);
+  --grad-marca: linear-gradient(120deg, var(--cor-primaria), var(--cor-secundaria));
+  /* Botões e selos COM TEXTO: a secundária entra só como reflexo, para o
+     texto calculado no build (--cor-texto-botao) seguir legível. */
+  --grad-botao: linear-gradient(120deg, var(--cor-primaria), color-mix(in srgb, var(--cor-primaria) 70%, var(--cor-secundaria)));
+  --grad-texto: linear-gradient(
+    95deg,
+    color-mix(in srgb, var(--cor-secundaria) 80%, #ffffff),
+    color-mix(in srgb, var(--cor-primaria) 55%, #ffffff)
+  );
+  /* Faixas de cor cheia (promoção, números, CTA final): base escura com a
+     marca por cima — texto branco sempre legível, até com marca clara. */
+  --grad-faixa: radial-gradient(circle at 85% 15%, color-mix(in srgb, var(--cor-secundaria) 55%, transparent), transparent 55%),
+    linear-gradient(120deg, color-mix(in srgb, var(--cor-primaria) 62%, #050814), color-mix(in srgb, var(--cor-primaria) 30%, #050814));
+  --brilho: 0 14px 40px -12px color-mix(in srgb, var(--cor-primaria) 75%, transparent);
+
+  --cor-sucesso-fundo: rgba(34, 197, 94, 0.12);
+  --cor-alerta-fundo: rgba(245, 158, 11, 0.12);
+
+  --raio: 22px;
+  --raio-pequeno: 14px;
+  --respiro-secao: 72px;
+  --header-altura: 64px;
+
+  /* Cabeçalho claro mesmo no tema escuro: protege qualquer logo de cliente. */
+  --cor-header-fundo: #ffffff;
+  --cor-header-texto: #0d1220;
+  --cor-header-texto-neutro: #4a5263;
+  --cor-header-borda: #e6e8ee;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --respiro-secao: 112px;
+    --header-altura: 76px;
+  }
+}
