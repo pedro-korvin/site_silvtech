@@ -3,7 +3,7 @@
 # arquivo .ftp-deploy-sync-state.json, criado na pasta do site no servidor).
 #
 # Dados de acesso ficam nos "Secrets" do repositório no GitHub (nunca aqui):
-#   FTP_SERVER    servidor FTP (ex. ftp.silvtech.com.br)
+#   (o servidor está fixo abaixo; o secret FTP_SERVER não é mais usado)
 #   FTP_USERNAME  usuário da conta FTP criada no cPanel
 #   FTP_PASSWORD  senha dessa conta FTP
 name: Publicar na HostGator
@@ -27,10 +27,17 @@ jobs:
       - name: Enviar por FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          # Endereço direto do servidor da HostGator (não é segredo: é o mesmo
+          # IP público do site). Usado no lugar de um nome de domínio porque o
+          # domínio principal da conta (assessoriagrowth.com.br) não existe
+          # mais e o DNS do silvtech.com.br ainda estava saindo do Cloudflare.
+          server: 108.179.192.243
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
+          # O certificado do FTP é *.hostgator.com.br (não bate com o IP):
+          # a conexão continua criptografada, só não confere o nome.
+          security: loose
           # A conta FTP já aponta para a pasta do site (public_html),
           # então o destino é a raiz dela.
           server-dir: ./
