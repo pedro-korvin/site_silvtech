@@ -1,0 +1,43 @@
+# Publica o site na HostGator automaticamente a cada push no main.
+# Envia por FTP só o que mudou desde o último envio (o controle fica no
+# arquivo .ftp-deploy-sync-state.json, criado na pasta do site no servidor).
+#
+# Dados de acesso ficam nos "Secrets" do repositório no GitHub (nunca aqui):
+#   FTP_SERVER    servidor FTP (ex. ftp.silvtech.com.br)
+#   FTP_USERNAME  usuário da conta FTP criada no cPanel
+#   FTP_PASSWORD  senha dessa conta FTP
+name: Publicar na HostGator
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: # permite publicar manualmente pela aba Actions
+
+concurrency:
+  group: publicar-hostgator
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v4
+
+      - name: Enviar por FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          # A conta FTP já aponta para a pasta do site (public_html),
+          # então o destino é a raiz dela.
+          server-dir: ./
+          # Arquivos de trabalho que NÃO podem ir para o ar
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            **/*.md
+            **/node_modules/**
