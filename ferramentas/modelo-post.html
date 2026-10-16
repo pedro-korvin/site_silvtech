@@ -1,0 +1,129 @@
+<!--
+  MODELO DE POST: copie para blog/posts/<slug>.html, troque tudo que está em
+  MAIÚSCULAS e SLUG, escreva o texto dentro de <article class="prosa">,
+  acrescente o post no TOPO de ferramentas/posts.json e rode:
+      node ferramentas/montar.mjs
+  A imagem de compartilhamento vai em assets/capas/SLUG.jpg. A foto do topo
+  vem do campo "foto" do posts.json (um nome de arquivo de assets/fotos).
+-->
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TÍTULO DO ARTIGO | Blog Silvtech</title>
+    <meta name="description" content="RESUMO EM UMA FRASE (até ~155 caracteres)" />
+    <link rel="canonical" href="https://www.silvtech.com.br/blog/posts/SLUG.html" />
+    <meta property="og:title" content="TÍTULO DO ARTIGO | Blog Silvtech" />
+    <meta property="og:description" content="RESUMO EM UMA FRASE" />
+    <meta property="og:image" content="https://www.silvtech.com.br/assets/SLUG.jpg" />
+    <meta property="og:url" content="https://www.silvtech.com.br/blog/posts/SLUG.html" />
+    <meta property="og:type" content="article" />
+    <!-- @head-comum --><!-- /@head-comum -->
+    <link rel="stylesheet" href="/css/blog.css" />
+    <script src="/js/blog.js" defer></script>
+    <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "TÍTULO DO ARTIGO",
+            "description": "RESUMO EM UMA FRASE",
+            "image": "https://www.silvtech.com.br/assets/SLUG.jpg",
+            "author": { "@type": "Person", "name": "Pedro Korvin" },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Silvtech",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.silvtech.com.br/assets/logo_silvtech.png"
+              }
+            },
+            "datePublished": "AAAA-MM-DD",
+            "dateModified": "AAAA-MM-DD",
+            "mainEntityOfPage": "https://www.silvtech.com.br/blog/posts/SLUG.html"
+          }
+        </script>
+    <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.silvtech.com.br/index.html"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://www.silvtech.com.br/blog/index.html"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "TÍTULO DO ARTIGO",
+                "item": "https://www.silvtech.com.br/blog/posts/SLUG.html"
+              }
+            ]
+          }
+        </script>
+  </head>
+
+  <body>
+    <div class="leitura" aria-hidden="true"><i></i></div>
+    <!-- @cabecalho --><!-- /@cabecalho -->
+
+    <main id="conteudo">
+      <!-- @post-topo --><!-- /@post-topo -->
+
+      <div class="post-corpo">
+        <div class="container post-grade">
+          <article class="prosa">
+            <p>
+              Primeiro parágrafo: aparece maior, como abertura do artigo.
+            </p>
+
+            <h2>Subtítulo</h2>
+            <p>Texto. Use h2 para seções, h3 para subseções e listas com ul/ol.</p>
+          </article>
+
+          <!-- @post-lateral --><!-- /@post-lateral -->
+        </div>
+      </div>
+
+      <section class="secao secao--clara relacionados">
+        <div class="container">
+          <div class="secao__topo secao__topo--lado">
+            <div>
+              <p class="mono mono--linha">Continue lendo</p>
+              <h2>Mais conteúdo para quem decide.</h2>
+            </div>
+            <a class="link-seta" href="/blog/index.html">Ver todos os artigos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+          </div>
+          <div class="artigos-grade">
+            <!-- @relacionados --><!-- /@relacionados -->
+          </div>
+        </div>
+      </section>
+
+      <section class="cta cta--frase">
+        <figure class="cta__fundo foto foto--azul foto--grao" aria-hidden="true">
+          <img src="/assets/fotos/estrategia-parede-p.webp" srcset="/assets/fotos/estrategia-parede-p.webp 800w, /assets/fotos/estrategia-parede.webp 1600w" sizes="100vw" width="1600" height="1066" alt="" loading="lazy" />
+        </figure>
+        <div class="container cta__dentro">
+          <p class="mono revelar"><span class="ponto" aria-hidden="true"></span> 2 vagas de diagnóstico gratuito por mês</p>
+          <h2 class="revelar" style="--atraso: 80ms">PERGUNTA DA CHAMADA FINAL (ex.: Quer um diagnóstico do seu funil?)</h2>
+          <p class="texto-grande revelar" style="--atraso: 160ms">Analisamos o seu negócio, o mercado e a sua comunicação e mostramos onde estão as oportunidades de crescimento, antes de qualquer proposta.</p>
+          <div class="cta__acoes revelar" style="--atraso: 240ms">
+            <a class="btn btn--primario" href="/fale-conosco.html">Solicitar diagnóstico <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+            <a class="btn btn--vidro" href="https://wa.me/5543988738360" target="_blank" rel="noopener">Falar no WhatsApp</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- @rodape --><!-- /@rodape -->
+  </body>
+</html>

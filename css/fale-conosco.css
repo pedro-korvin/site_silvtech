@@ -1,124 +1,239 @@
 /* ==========================================================================
-   Silvtech — Fale conosco (novo design system)
-   Depende de tokens.css + base.css. Só esta página usa este arquivo.
+   Silvtech — Fale conosco (depende de nucleo.css)
    ========================================================================== */
 
-/* ---- Hero (tipo A) ---- */
-.hero {
-  padding-block: var(--esp-7) var(--respiro-secao);
-}
-
-.hero h1 {
-  max-width: 16ch;
-}
-
-.hero__apoio {
-  margin-top: var(--esp-4);
-  max-width: 52ch;
-}
-
-/* ---- Contato (tipo B — página curta/funcional, sem seção C) ---- */
-.contato {
-  background: var(--cor-fundo-alt);
-}
-
-.contato__grid {
+.contato__grade {
+  position: relative;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--esp-6);
+  gap: 48px;
+  align-items: start;
 }
 
-.expectativa .rotulo {
-  margin-bottom: var(--esp-2);
+.contato__texto {
+  min-width: 0;
+  display: grid;
+  gap: 22px;
+  justify-items: start;
 }
 
-.expectativa__lista {
-  margin-top: var(--esp-4);
-  display: flex;
-  flex-direction: column;
-  gap: var(--esp-4);
-}
-
-.expectativa__item h3 {
-  margin-bottom: var(--esp-1);
-}
-
-.expectativa__item p {
-  color: var(--cor-neutro);
-}
-
-.expectativa__canal {
-  margin-top: var(--esp-5);
-  padding-top: var(--esp-4);
-  border-top: 1px solid var(--cor-borda);
-}
-
-.expectativa__canal p {
-  color: var(--cor-neutro);
-  margin-bottom: var(--esp-1);
-}
-
-/* ---- Formulário ---- */
-.form-contato {
-  background: var(--cor-superficie);
-  border: 1px solid var(--cor-borda-alt);
-  border-radius: var(--raio);
-  padding: var(--esp-4);
-}
-
-.campo {
-  margin-bottom: var(--esp-3);
-}
-
-.campo label {
-  display: block;
-  font-size: var(--fs-legenda);
-  font-weight: 500;
-  margin-bottom: var(--esp-1);
-}
-
-.campo input,
-.campo textarea {
-  width: 100%;
-  background: var(--cor-superficie);
-  border: 1px solid var(--cor-borda);
-  border-radius: var(--raio);
-  padding: 12px 16px;
-  font-family: var(--ff-texto);
-  font-size: 16px;
-  color: var(--cor-texto);
-}
-
-.campo input:focus,
-.campo textarea:focus {
-  outline: 2px solid var(--cor-acento);
-  outline-offset: 2px;
-  border-color: var(--cor-acento);
-}
-
-.campo textarea {
-  resize: vertical;
-  min-height: 96px;
-}
-
-.form-contato .btn {
-  width: 100%;
-  justify-content: center;
-  margin-top: var(--esp-2);
-}
-
-.form-feedback {
-  margin-top: var(--esp-3);
-  font-size: var(--fs-legenda);
-  color: var(--cor-acento);
-}
-
-.form-feedback--erro {
-  color: #8a2b2b;
+.contato h1 {
+  font-size: clamp(44px, 5.8vw, 92px);
 }
 
 @media (min-width: 1024px) {
-  .contato__grid {
-    grid-template-columns: 5fr 7fr;
+  .contato__grade {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+    gap: 64px;
+  }
+
+  .contato__cartao {
+    position: sticky;
+    top: calc(var(--cabecalho-h) + 24px);
+  }
+}
+
+/* O que esperar */
+.expectativas {
+  display: grid;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.expectativas li {
+  display: flex;
+  gap: 16px;
+  color: var(--texto-2);
+  font-size: 15px;
+}
+
+.expectativas strong {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 17px;
+  color: var(--texto);
+}
+
+.expectativas__icone {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  border: 1px solid rgba(75, 125, 255, 0.38);
+  background: rgba(42, 99, 255, 0.14);
+  color: var(--azul-claro);
+}
+
+.expectativas__icone svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Canais diretos */
+.canais {
+  display: grid;
+  gap: 12px;
+  width: 100%;
+  margin-top: 12px;
+  padding-top: 26px;
+  border-top: 1px solid var(--borda);
+}
+
+.canais__lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.canal {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border-radius: 16px;
+  border: 1px solid var(--borda);
+  transition: border-color 250ms, background-color 250ms;
+}
+
+.canal:hover {
+  border-color: var(--azul-claro);
+  background: rgba(42, 99, 255, 0.08);
+}
+
+.canal svg {
+  width: 22px;
+  height: 22px;
+  flex: none;
+  color: var(--azul-claro);
+}
+
+.canal span {
+  font-weight: 600;
+}
+
+.canal small {
+  display: block;
+  font-family: var(--ff-mono);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--texto-3);
+}
+
+
+/* Formulário */
+.contato__cartao {
+  padding: clamp(22px, 3vw, 36px);
+  border-radius: calc(var(--raio-g) + 6px);
+  border: 1px solid var(--borda-forte);
+  background:
+    radial-gradient(80% 60% at 100% 0%, rgba(42, 99, 255, 0.22), transparent 70%),
+    linear-gradient(180deg, rgba(16, 26, 48, 0.9), rgba(10, 16, 30, 0.95));
+  box-shadow: 0 50px 120px -50px rgba(42, 99, 255, 0.5);
+}
+
+.form-contato {
+  display: grid;
+  gap: 18px;
+}
+
+.form-contato h2 {
+  font-size: clamp(28px, 2.8vw, 40px);
+}
+
+.form-contato__duplo {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 640px) {
+  .form-contato__duplo {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.desafios {
+  display: grid;
+  gap: 10px;
+  border: 0;
+}
+
+.desafios legend {
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--texto-2);
+}
+
+.desafios small {
+  font-weight: 400;
+  color: var(--texto-3);
+}
+
+.form-contato__enviar {
+  width: 100%;
+  min-height: 56px;
+  margin-top: 4px;
+}
+
+.form-contato__enviar:disabled {
+  opacity: 0.7;
+  cursor: progress;
+}
+
+.form-feedback {
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(63, 216, 255, 0.35);
+  background: rgba(63, 216, 255, 0.08);
+  font-size: 15px;
+}
+
+.form-feedback--erro {
+  border-color: rgba(255, 154, 154, 0.45);
+  background: rgba(255, 120, 120, 0.1);
+}
+
+.form-contato.tentou .campo input:invalid {
+  border-color: rgba(255, 154, 154, 0.6);
+}
+
+/* Passos */
+.passos-contato {
+  display: grid;
+  gap: 16px;
+}
+
+.passos-contato li {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  padding: 12px 12px 26px;
+  border-radius: var(--raio-g);
+  border: 1px solid var(--borda);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.passos-contato .foto {
+  aspect-ratio: 16 / 10;
+  margin-bottom: 10px;
+  border-radius: 18px;
+}
+
+.passos-contato .mono,
+.passos-contato h3,
+.passos-contato p {
+  padding: 0 12px;
+}
+
+.passos-contato p {
+  color: var(--texto-2);
+}
+
+@media (min-width: 900px) {
+  .passos-contato {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

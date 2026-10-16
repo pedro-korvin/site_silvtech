@@ -3,110 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Soluções de marketing da Silvtech organizadas por problema de negócio: gestão de marketing, estruturação comercial, posicionamento e branding, e marketing digital."
-    />
+    <title>Soluções de Marketing | Silvtech</title>
+    <meta name="description" content="Soluções de marketing da Silvtech organizadas por problema de negócio: gestão de marketing, estruturação comercial, posicionamento e branding, e marketing digital." />
     <link rel="canonical" href="https://www.silvtech.com.br/servicos.html" />
     <meta property="og:title" content="Soluções de Marketing | Silvtech" />
-    <meta
-      property="og:description"
-      content="Cada solução parte de um diagnóstico do seu negócio — sem preço público, sem comparativo de planos."
-    />
-    <meta
-      property="og:image"
-      content="https://www.silvtech.com.br/assets/logo_silvtech.png"
-    />
-    <meta
-      property="og:url"
-      content="https://www.silvtech.com.br/servicos.html"
-    />
+    <meta property="og:description" content="Cada solução parte de um diagnóstico do seu negócio — sem preço público, sem comparativo de planos." />
+    <meta property="og:image" content="https://www.silvtech.com.br/assets/compartilhar.jpg" />
+    <meta property="og:url" content="https://www.silvtech.com.br/servicos.html" />
     <meta property="og:type" content="website" />
-    <title>Soluções de Marketing | Silvtech</title>
-
+    <!-- @head-comum -->
+    <meta name="theme-color" content="#05070d" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@500&display=swap"
     />
-
-    <link rel="stylesheet" href="/css/tokens.css" />
-    <link rel="stylesheet" href="/css/base.css" />
-    <link rel="stylesheet" href="/css/servicos.css" />
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.silvtech.com.br/index.html"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Serviços",
-            "item": "https://www.silvtech.com.br/servicos.html"
-          }
-        ]
-      }
-    </script>
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        "itemListElement": [
-          {
-            "@type": "Service",
-            "position": 1,
-            "name": "Gestão de Marketing",
-            "provider": { "@type": "Organization", "name": "Silvtech" },
-            "areaServed": "BR",
-            "description": "Equipe de marketing dedicada, orientada pelos objetivos do negócio."
-          },
-          {
-            "@type": "Service",
-            "position": 2,
-            "name": "Estruturação Comercial",
-            "provider": { "@type": "Organization", "name": "Silvtech" },
-            "areaServed": "BR",
-            "description": "Marketing e comercial integrados, com automação da jornada do cliente."
-          },
-          {
-            "@type": "Service",
-            "position": 3,
-            "name": "Posicionamento e Branding",
-            "provider": { "@type": "Organization", "name": "Silvtech" },
-            "areaServed": "BR",
-            "description": "Gestão de redes sociais com foco em reconhecimento de marca e autoridade digital."
-          },
-          {
-            "@type": "Service",
-            "position": 4,
-            "name": "Marketing Digital",
-            "provider": { "@type": "Organization", "name": "Silvtech" },
-            "areaServed": "BR",
-            "description": "Campanhas pagas e sites personalizados a serviço da estratégia do negócio."
-          }
-        ]
-      }
-    </script>
+    <link rel="stylesheet" href="/css/nucleo.css" />
+    <script src="/js/nucleo.js" defer></script>
 
     <!-- Meta Pixel Code -->
     <script>
       !(function (f, b, e, v, n, t, s) {
         if (f.fbq) return;
         n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
         };
         if (!f._fbq) f._fbq = n;
         n.push = n;
@@ -118,12 +40,7 @@
         t.src = v;
         s = b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js",
-      );
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
       fbq("init", "654658884374776");
       fbq("track", "PageView");
     </script>
@@ -137,106 +54,194 @@
     <!-- End Meta Pixel Code -->
 
     <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-CXBEJDWY21"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CXBEJDWY21"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-CXBEJDWY21");
     </script>
     <!-- End Google tag -->
+    <!-- /@head-comum -->
+    <link rel="stylesheet" href="/css/servicos.css" />
+    <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.silvtech.com.br/index.html"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Soluções",
+                "item": "https://www.silvtech.com.br/servicos.html"
+              }
+            ]
+          }
+        </script>
+    <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "itemListElement": [
+              {
+                "@type": "Service",
+                "position": 1,
+                "name": "Gestão de Marketing",
+                "provider": { "@type": "Organization", "name": "Silvtech" },
+                "areaServed": "BR",
+                "description": "Equipe de marketing dedicada, orientada pelos objetivos do negócio."
+              },
+              {
+                "@type": "Service",
+                "position": 2,
+                "name": "Estruturação Comercial",
+                "provider": { "@type": "Organization", "name": "Silvtech" },
+                "areaServed": "BR",
+                "description": "Marketing e comercial integrados, com automação da jornada do cliente."
+              },
+              {
+                "@type": "Service",
+                "position": 3,
+                "name": "Posicionamento e Branding",
+                "provider": { "@type": "Organization", "name": "Silvtech" },
+                "areaServed": "BR",
+                "description": "Gestão de redes sociais com foco em reconhecimento de marca e autoridade digital."
+              },
+              {
+                "@type": "Service",
+                "position": 4,
+                "name": "Marketing Digital",
+                "provider": { "@type": "Organization", "name": "Silvtech" },
+                "areaServed": "BR",
+                "description": "Campanhas pagas e sites personalizados a serviço da estratégia do negócio."
+              }
+            ]
+          }
+        </script>
   </head>
 
   <body>
-    <header class="site-header">
-      <div class="container site-header__inner">
-        <a class="site-header__logo" href="/index.html">
-          <img src="/assets/logo_preto.svg" alt="Silvtech" />
+    <!-- @cabecalho -->
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="cabecalho">
+      <div class="container cabecalho__dentro">
+        <a class="cabecalho__logo" href="/" aria-label="Silvtech, página inicial">
+          <img src="/assets/logo-silvtech-escuro.webp" alt="Silvtech" width="223" height="112" />
         </a>
 
-        <button
-          class="site-header__toggle"
-          aria-label="Abrir menu"
-          aria-expanded="false"
-          aria-controls="site-nav"
-        >
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            aria-hidden="true"
-          >
-            <line x1="3" y1="7" x2="21" y2="7" />
-            <line x1="3" y1="12" x2="21" y2="12" />
-            <line x1="3" y1="17" x2="21" y2="17" />
-          </svg>
-        </button>
-
-        <nav class="site-nav" id="site-nav" aria-label="Principal">
-          <ul class="site-nav__list">
-            <li><a href="/index.html">Home</a></li>
+        <nav class="nav" aria-label="Principal">
+          <ul class="nav__lista">
             <li><a href="/quemsomos.html">Quem somos</a></li>
-            <li><a href="/servicos.html" aria-current="page">Serviços</a></li>
+            <li><a href="/servicos.html" aria-current="page">Soluções</a></li>
             <li><a href="/metodologia.html">Metodologia</a></li>
-            <li><a href="/setores/index.html">Setores</a></li>
-            <li><a href="/cases/index.html">Cases</a></li>
             <li><a href="/blog/index.html">Blog</a></li>
-            <li><a href="/provedores/sites/">Sites para Provedores</a></li>
+            <li><a href="/provedores/sites/">Sites para provedores</a></li>
             <li><a href="/fale-conosco.html">Contato</a></li>
           </ul>
-          <a class="btn btn--acento site-nav__cta" href="/fale-conosco.html"
-            >Solicitar diagnóstico</a
-          >
         </nav>
+
+        <div class="cabecalho__acoes">
+          <a class="btn btn--primario btn--pequeno cabecalho__cta" href="/fale-conosco.html">Solicitar diagnóstico</a>
+          <button class="menu-botao" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+            <span></span>
+          </button>
+        </div>
       </div>
     </header>
 
-    <main>
-      <!-- ================= HERO ================= -->
-      <section class="hero">
-        <div class="container reveal">
-          <span class="rotulo rotulo--acento">Soluções</span>
-          <h1>Soluções organizadas a partir do seu negócio.</h1>
-          <p class="destaque hero__apoio">
-            Cada empresa enfrenta desafios diferentes. Por isso, antes de
-            recomendar qualquer solução, buscamos compreender o cenário atual do
-            negócio — e conectamos cada solução ao método S.C.A.L.E.
-          </p>
-          <div class="hero__acoes">
-            <a class="btn btn--acento" href="/fale-conosco.html"
-              >Solicitar diagnóstico</a
-            >
-            <a class="btn btn--secundario" href="/metodologia.html"
-              >Conhecer o método</a
-            >
+    <div class="menu" id="menu">
+      <ul class="menu__lista">
+        <li><a href="/">Início</a></li>
+        <li><a href="/quemsomos.html">Quem somos</a></li>
+        <li><a href="/servicos.html" aria-current="page">Soluções</a></li>
+        <li><a href="/metodologia.html">Metodologia</a></li>
+        <li><a href="/blog/index.html">Blog</a></li>
+        <li><a href="/provedores/sites/">Sites para provedores</a></li>
+        <li><a href="/fale-conosco.html">Contato</a></li>
+      </ul>
+      <div class="menu__rodape">
+        <a class="btn btn--primario" href="/fale-conosco.html">Solicitar diagnóstico</a>
+        <div class="menu__contato">
+          <a href="https://wa.me/5543988738360" target="_blank" rel="noopener">WhatsApp (43) 98873-8360</a>
+          <a href="mailto:contato@silvtech.com.br">contato@silvtech.com.br</a>
+        </div>
+      </div>
+    </div>
+    <!-- /@cabecalho -->
+
+    <main id="conteudo">
+      <!-- ================= TOPO ================= -->
+      <section class="pagina-topo">
+        <div class="container pagina-topo__dentro">
+          <div class="pagina-topo__texto">
+            <nav class="migalhas revelar" aria-label="Você está em">
+              <a href="/">Início</a><span aria-hidden="true">/</span><span>Soluções</span>
+            </nav>
+            <h1 class="revelar" style="--atraso: 80ms">Soluções organizadas a partir do <span class="grad">seu negócio.</span></h1>
+            <p class="texto-grande revelar" style="--atraso: 160ms">
+              Cada empresa enfrenta desafios diferentes. Por isso, antes de recomendar qualquer
+              solução, buscamos compreender o cenário atual do negócio e conectamos cada solução ao
+              método S.C.A.L.E.
+            </p>
+            <div class="pagina-topo__acoes revelar" style="--atraso: 240ms">
+              <a class="btn btn--primario" href="/fale-conosco.html">
+                Solicitar diagnóstico
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+              </a>
+              <a class="btn btn--vidro" href="/#diagnostico">Montar meu diagnóstico</a>
+            </div>
+          </div>
+
+          <div class="colagem" aria-hidden="true">
+            <figure class="colagem__principal foto foto--azul foto--grao" data-profundidade="0.3">
+              <img src="/assets/fotos/estrategia-post-its-p.webp" srcset="/assets/fotos/estrategia-post-its-p.webp 800w, /assets/fotos/estrategia-post-its.webp 1600w" sizes="(min-width: 1024px) 40vw, 90vw" width="1600" height="900" alt="" fetchpriority="high" />
+              <span class="visor"></span>
+            </figure>
+            <figure class="colagem__secundaria foto foto--noite" data-profundidade="0.7">
+              <img src="/assets/fotos/monitor-dados-p.webp" width="800" height="576" alt="" />
+            </figure>
+            <div class="etiqueta" data-profundidade="1">
+              <span class="ponto"></span>
+              <span><small>4 soluções</small>Um único método por trás</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- ================= SOLUÇÕES ================= -->
-      <section class="secao solucoes">
+      <!-- ================= ATALHOS ================= -->
+      <nav class="atalhos" aria-label="Soluções nesta página">
         <div class="container">
-          <article class="solucao reveal">
-            <div class="solucao__cabecalho">
-              <span class="rotulo">Problema comum</span>
-              <h2>Sua empresa não tem uma equipe de marketing dedicada.</h2>
-              <p class="solucao__problema">
-                Ou tem, mas as ações não seguem uma estratégia — cada mês é uma
-                prioridade diferente, sem conexão com a anterior.
-              </p>
-            </div>
-            <h3>Gestão de Marketing</h3>
-            <div class="solucao__grid">
-              <div class="solucao__bloco">
-                <h4>Onde atuamos</h4>
-                <ul>
+          <ul class="atalhos__lista">
+            <li><a href="#gestao"><b>01</b> Gestão de Marketing</a></li>
+            <li><a href="#comercial"><b>02</b> Estruturação Comercial</a></li>
+            <li><a href="#marca"><b>03</b> Posicionamento e Branding</a></li>
+            <li><a href="#digital"><b>04</b> Marketing Digital</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- ================= 01 GESTÃO ================= -->
+      <section class="secao solucao" id="gestao">
+        <div class="container dividido">
+          <div class="dividido__texto">
+            <p class="mono mono--linha revelar">01 · Problema comum</p>
+            <p class="solucao__problema revelar" style="--atraso: 80ms">“Sua empresa não tem uma equipe de marketing dedicada.”</p>
+            <p class="revelar" style="--atraso: 120ms">Ou tem, mas as ações não seguem uma estratégia: cada mês é uma prioridade diferente, sem conexão com a anterior.</p>
+            <h2 class="solucao__nome revelar" style="--atraso: 160ms"><span class="grad">Gestão de Marketing</span></h2>
+            <p class="texto-grande revelar" style="--atraso: 200ms">Seu marketing conduzido de ponta a ponta, orientado pelos objetivos do negócio.</p>
+            <div class="solucao__blocos revelar" style="--atraso: 240ms">
+              <div>
+                <h3>Onde atuamos</h3>
+                <ul class="lista-check">
                   <li>Gestão de redes sociais</li>
                   <li>Gestão de campanha paga</li>
                   <li>Geração de conteúdo (digital e físico)</li>
@@ -244,74 +249,83 @@
                   <li>Acompanhamento de indicadores (KPIs)</li>
                 </ul>
               </div>
-              <div class="solucao__bloco">
-                <h4>Conexão com o método</h4>
-                <p>
-                  Cada ação nasce do diagnóstico (Scan) e segue o plano definido
-                  em Create — executado e revisado continuamente em Amplify e
-                  Leverage.
-                </p>
+              <div>
+                <h3>Conexão com o método</h3>
+                <p>Cada ação nasce do diagnóstico (Scan) e segue o plano definido em Create, executado e revisado continuamente em Amplify e Leverage.</p>
               </div>
             </div>
-            <p class="solucao__garantia">
-              <strong>Implementação da equipe em 7 dias.</strong>
+            <p class="selo revelar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
+              <span><strong>Implementação da equipe em 7 dias.</strong></span>
             </p>
-          </article>
+          </div>
+          <div class="colagem" aria-hidden="true">
+            <figure class="colagem__principal foto foto--azul foto--grao revelar-foto"><img src="/assets/fotos/reuniao-lideranca-p.webp" width="800" height="533" alt="" loading="lazy" /></figure>
+            <figure class="colagem__secundaria foto foto--noite"><img src="/assets/fotos/edicao-video-p.webp" width="800" height="533" alt="" loading="lazy" /></figure>
+            <div class="etiqueta"><span class="ponto"></span><span><small>S.C.A.L.E</small>Scan · Create · Amplify · Leverage</span></div>
+          </div>
+        </div>
+      </section>
 
-          <article class="solucao reveal">
-            <div class="solucao__cabecalho">
-              <span class="rotulo">Problema comum</span>
-              <h2>Marketing e comercial não conversam.</h2>
-              <p class="solucao__problema">
-                Leads gerados pelo marketing se perdem antes de virar
-                oportunidade de venda.
-              </p>
-            </div>
-            <h3>Estruturação Comercial</h3>
-            <div class="solucao__grid">
-              <div class="solucao__bloco">
-                <h4>O que fazemos</h4>
-                <ul>
-                  <li>
-                    Automação do processo comercial em toda a jornada do cliente
-                  </li>
+      <!-- ================= 02 COMERCIAL ================= -->
+      <section class="secao secao--painel solucao" id="comercial">
+        <div class="container dividido dividido--inverso">
+          <div class="dividido__texto">
+            <p class="mono mono--linha revelar">02 · Problema comum</p>
+            <p class="solucao__problema revelar" style="--atraso: 80ms">“Marketing e comercial não conversam.”</p>
+            <p class="revelar" style="--atraso: 120ms">Leads gerados pelo marketing se perdem antes de virar oportunidade de venda.</p>
+            <h2 class="solucao__nome revelar" style="--atraso: 160ms"><span class="grad">Estruturação Comercial</span></h2>
+            <p class="texto-grande revelar" style="--atraso: 200ms">Marketing e comercial trabalhando como um só sistema, do primeiro contato ao fechamento.</p>
+            <div class="solucao__blocos revelar" style="--atraso: 240ms">
+              <div>
+                <h3>O que fazemos</h3>
+                <ul class="lista-check">
+                  <li>Automação do processo comercial em toda a jornada do cliente</li>
                   <li>Qualificação de leads gerados pelo marketing</li>
                   <li>Recuperação de propostas paradas</li>
                 </ul>
               </div>
-              <div class="solucao__bloco">
-                <h4>Como funciona</h4>
-                <p>Atração → Qualificação → Nutrição → Conversão.</p>
-                <p>
-                  Um fluxo único entre marketing e comercial, acompanhado dentro
-                  do S.C.A.L.E.
-                </p>
+              <div>
+                <h3>Como funciona</h3>
+                <ol class="fluxo" aria-label="Fluxo comercial">
+                  <li>Atração</li>
+                  <li>Qualificação</li>
+                  <li>Nutrição</li>
+                  <li>Conversão</li>
+                </ol>
+                <p>Um fluxo único entre marketing e comercial, acompanhado dentro do S.C.A.L.E.</p>
               </div>
             </div>
-          </article>
+          </div>
+          <div class="colagem" aria-hidden="true">
+            <figure class="colagem__principal foto foto--azul foto--grao revelar-foto"><img src="/assets/fotos/colegas-laptop-p.webp" width="800" height="534" alt="" loading="lazy" /></figure>
+            <figure class="colagem__secundaria foto foto--noite"><img src="/assets/fotos/laptop-dashboard-p.webp" width="800" height="600" alt="" loading="lazy" /></figure>
+            <div class="etiqueta"><span class="ponto"></span><span><small>Fluxo único</small>Marketing + comercial</span></div>
+          </div>
+        </div>
+      </section>
 
-          <article class="solucao reveal">
-            <div class="solucao__cabecalho">
-              <span class="rotulo">Problema comum</span>
-              <h2>Sua marca não tem reconhecimento no mercado.</h2>
-              <p class="solucao__problema">
-                Mesmo com um bom produto ou serviço, a empresa não é reconhecida
-                como referência no seu segmento.
-              </p>
-            </div>
-            <h3>Posicionamento e Branding</h3>
-            <div class="solucao__grid">
-              <div class="solucao__bloco">
-                <h4>O que fazemos</h4>
-                <ul>
+      <!-- ================= 03 MARCA ================= -->
+      <section class="secao solucao" id="marca">
+        <div class="container dividido">
+          <div class="dividido__texto">
+            <p class="mono mono--linha revelar">03 · Problema comum</p>
+            <p class="solucao__problema revelar" style="--atraso: 80ms">“Sua marca não tem reconhecimento no mercado.”</p>
+            <p class="revelar" style="--atraso: 120ms">Mesmo com um bom produto ou serviço, a empresa não é reconhecida como referência no seu segmento.</p>
+            <h2 class="solucao__nome revelar" style="--atraso: 160ms"><span class="grad">Posicionamento e Branding</span></h2>
+            <p class="texto-grande revelar" style="--atraso: 200ms">Clareza sobre o que a empresa é, para quem fala e por que é escolhida.</p>
+            <div class="solucao__blocos revelar" style="--atraso: 240ms">
+              <div>
+                <h3>O que fazemos</h3>
+                <ul class="lista-check">
                   <li>Gestão de redes sociais com foco em posicionamento</li>
                   <li>Criação de material e definição da comunicação</li>
                   <li>Acompanhamento mensal de métricas de engajamento</li>
                 </ul>
               </div>
-              <div class="solucao__bloco">
-                <h4>Plataformas</h4>
-                <ul>
+              <div>
+                <h3>Plataformas</h3>
+                <ul class="fichas">
                   <li>Instagram</li>
                   <li>LinkedIn</li>
                   <li>Facebook</li>
@@ -319,163 +333,135 @@
                 </ul>
               </div>
             </div>
-          </article>
+          </div>
+          <div class="colagem" aria-hidden="true">
+            <figure class="colagem__principal foto foto--azul foto--grao revelar-foto"><img src="/assets/fotos/gravacao-entrevista-p.webp" width="800" height="450" alt="" loading="lazy" /></figure>
+            <figure class="colagem__secundaria foto foto--noite"><img src="/assets/fotos/estrategia-parede-p.webp" width="800" height="533" alt="" loading="lazy" /></figure>
+            <div class="etiqueta"><span class="ponto"></span><span><small>Posicionamento</small>Clareza sobre quem você é</span></div>
+          </div>
+        </div>
+      </section>
 
-          <article class="solucao reveal">
-            <div class="solucao__cabecalho">
-              <span class="rotulo">Problema comum</span>
-              <h2>Sua presença digital não gera resultado.</h2>
-              <p class="solucao__problema">
-                Tráfego sem conversão, ou um site que não gera leads
-                qualificados.
-              </p>
-            </div>
-            <h3>Marketing Digital</h3>
-            <div class="solucao__grid">
-              <div class="solucao__bloco">
-                <h4>Campanhas pagas</h4>
-                <ul>
-                  <li>Google Ads, Facebook Ads, Instagram Ads, LinkedIn Ads</li>
+      <!-- ================= 04 DIGITAL ================= -->
+      <section class="secao secao--painel solucao" id="digital">
+        <div class="container dividido dividido--inverso">
+          <div class="dividido__texto">
+            <p class="mono mono--linha revelar">04 · Problema comum</p>
+            <p class="solucao__problema revelar" style="--atraso: 80ms">“Sua presença digital não gera resultado.”</p>
+            <p class="revelar" style="--atraso: 120ms">Tráfego sem conversão, ou um site que não gera leads qualificados.</p>
+            <h2 class="solucao__nome revelar" style="--atraso: 160ms"><span class="grad">Marketing Digital</span></h2>
+            <p class="texto-grande revelar" style="--atraso: 200ms">Campanhas, conteúdo e presença digital a serviço da estratégia, não o contrário.</p>
+            <div class="solucao__blocos revelar" style="--atraso: 240ms">
+              <div>
+                <h3>Campanhas pagas</h3>
+                <ul class="lista-check">
+                  <li>Google Ads, Facebook Ads, Instagram Ads e LinkedIn Ads</li>
                   <li>Criativos e copywriting para cada campanha</li>
                   <li>Testes A/B e otimização contínua</li>
                 </ul>
               </div>
-              <div class="solucao__bloco">
-                <h4>Sites personalizados</h4>
-                <ul>
-                  <li>Web design 100% personalizado</li>
-                  <li>Fases: briefing, implementação, execução</li>
+              <div>
+                <h3>Sites personalizados</h3>
+                <ul class="lista-check">
+                  <li>Web design feito sob medida</li>
+                  <li>Fases: briefing, implementação e execução</li>
                 </ul>
               </div>
             </div>
-            <p class="solucao__garantia">
-              <strong>Site completo em 20 dias</strong>, com 12 meses de
-              hospedagem gratuita e 30 dias de suporte técnico gratuito.
+            <p class="selo revelar">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
+              <span><strong>Site completo em 20 dias</strong>, com 12 meses de hospedagem gratuita e 30 dias de suporte técnico gratuito.</span>
             </p>
-          </article>
-        </div>
-      </section>
-
-      <!-- ================= SETORES (interlinking) ================= -->
-      <section class="secao">
-        <div class="container reveal">
-          <p class="destaque">
-            Cada setor tem uma dinâmica própria. Veja como aplicamos essas
-            soluções em
-            <a
-              href="/setores/index.html"
-              style="
-                color: var(--cor-acento);
-                text-decoration: underline;
-                text-underline-offset: 4px;
-              "
-              >clínicas, energia solar, provedores de internet, indústria,
-              segurança eletrônica e SaaS</a
-            >.
-          </p>
+            <a class="link-seta revelar" href="/provedores/sites/">
+              Tem um provedor de internet? Veja os sites prontos
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+          </div>
+          <div class="colagem" aria-hidden="true">
+            <figure class="colagem__principal foto foto--azul foto--grao revelar-foto"><img src="/assets/fotos/dev-dupla-p.webp" width="800" height="533" alt="" loading="lazy" /></figure>
+            <figure class="colagem__secundaria foto foto--noite"><img src="/assets/fotos/dashboard-escuro-p.webp" width="800" height="533" alt="" loading="lazy" /></figure>
+            <div class="etiqueta"><span class="ponto"></span><span><small>Sites sob medida</small>Completo em 20 dias</span></div>
+          </div>
         </div>
       </section>
 
       <!-- ================= CTA FINAL ================= -->
-      <section class="secao cta-final">
-        <div class="container cta-final__inner reveal">
-          <h2>Não sabe qual solução faz sentido para o seu negócio?</h2>
-          <p>
-            É exatamente para isso que existe o diagnóstico. Antes de indicar
-            qualquer solução, entendemos o seu cenário.
+      <section class="cta cta--frase">
+        <figure class="cta__fundo foto foto--azul foto--grao" aria-hidden="true">
+          <img src="/assets/fotos/estrategia-quadro-p.webp" srcset="/assets/fotos/estrategia-quadro-p.webp 800w, /assets/fotos/estrategia-quadro.webp 1600w" sizes="100vw" width="1600" height="900" alt="" loading="lazy" />
+        </figure>
+        <div class="container cta__dentro">
+          <p class="mono revelar"><span class="ponto" aria-hidden="true"></span> 2 vagas de diagnóstico gratuito por mês</p>
+          <h2 class="revelar" style="--atraso: 80ms">Não sabe qual solução faz sentido para o seu negócio?</h2>
+          <p class="texto-grande revelar" style="--atraso: 160ms">
+            É exatamente para isso que existe o diagnóstico. Antes de indicar qualquer solução,
+            entendemos o seu cenário.
           </p>
-          <a class="btn btn--primario" href="/fale-conosco.html"
-            >Solicitar diagnóstico</a
-          >
+          <div class="cta__acoes revelar" style="--atraso: 240ms">
+            <a class="btn btn--primario" href="/fale-conosco.html">
+              Solicitar diagnóstico
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+            <a class="btn btn--vidro" href="/#diagnostico">Montar meu diagnóstico</a>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
+    <!-- @rodape -->
+    <footer class="rodape">
       <div class="container">
-        <div class="site-footer__grid">
-          <div class="site-footer__brand">
-            <a class="site-header__logo" href="/index.html">Silvtech</a>
-            <p class="site-footer__desc">
-              Marketing orientado por estratégia para empresas que querem
-              crescer com consistência.
-            </p>
+        <div class="rodape__topo">
+          <div class="rodape__chamada">
+            <img class="rodape__logo" src="/assets/logo-silvtech-escuro.webp" alt="Silvtech" width="223" height="112" loading="lazy" />
+            <h2>Marketing orientado por estratégia.</h2>
+            <p>Para empresas B2B que querem crescer com consistência. Londrina, Paraná — Brasil.</p>
+            <a class="btn btn--primario" href="/fale-conosco.html">Solicitar diagnóstico</a>
           </div>
-
-          <div class="footer-col">
-            <h4>Navegação</h4>
-            <ul>
-              <li><a href="/index.html">Home</a></li>
-              <li><a href="/quemsomos.html">Quem somos</a></li>
-              <li><a href="/servicos.html">Serviços</a></li>
-              <li><a href="/metodologia.html">Metodologia</a></li>
-              <li><a href="/setores/index.html">Setores</a></li>
-              <li><a href="/cases/index.html">Cases</a></li>
-              <li><a href="/blog/index.html">Blog</a></li>
-              <li><a href="/fale-conosco.html">Contato</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h4>Soluções</h4>
-            <ul>
-              <li><a href="/servicos.html">Gestão de Marketing</a></li>
-              <li><a href="/servicos.html">Estruturação Comercial</a></li>
-              <li><a href="/servicos.html">Posicionamento e Branding</a></li>
-              <li><a href="/servicos.html">Marketing Digital</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h4>Contato</h4>
-            <ul>
-              <li><a href="tel:+5543988738360">(43) 98873-8360</a></li>
-              <li>
-                <a href="mailto:contato@silvtech.com.br"
-                  >contato@silvtech.com.br</a
-                >
-              </li>
-              <li>Londrina, Paraná — Brasil</li>
-              <li>
-                <a
-                  href="https://www.instagram.com/assessoria.silvtech/"
-                  target="_blank"
-                  rel="noopener"
-                  >Instagram</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://wa.me/5543988738360"
-                  target="_blank"
-                  rel="noopener"
-                  >WhatsApp</a
-                >
-              </li>
-            </ul>
+          <div class="rodape__colunas">
+            <div>
+              <h3>Navegação</h3>
+              <ul>
+                <li><a href="/">Início</a></li>
+                <li><a href="/quemsomos.html">Quem somos</a></li>
+                <li><a href="/metodologia.html">Metodologia</a></li>
+                <li><a href="/blog/index.html">Blog</a></li>
+                <li><a href="/provedores/sites/">Sites para provedores</a></li>
+                <li><a href="/fale-conosco.html">Contato</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3>Soluções</h3>
+              <ul>
+                <li><a href="/servicos.html#gestao">Gestão de Marketing</a></li>
+                <li><a href="/servicos.html#comercial">Estruturação Comercial</a></li>
+                <li><a href="/servicos.html#marca">Posicionamento e Branding</a></li>
+                <li><a href="/servicos.html#digital">Marketing Digital</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3>Contato</h3>
+              <ul>
+                <li><a href="https://wa.me/5543988738360" target="_blank" rel="noopener">(43) 98873-8360</a></li>
+                <li><a href="mailto:contato@silvtech.com.br">contato@silvtech.com.br</a></li>
+                <li><a href="https://www.instagram.com/assessoria.silvtech/" target="_blank" rel="noopener">Instagram</a></li>
+              </ul>
+            </div>
           </div>
         </div>
-
-        <div class="site-footer__bottom">
+        <p class="rodape__marca" aria-hidden="true">Silvtech</p>
+        <div class="rodape__base">
           <p>&copy; 2026 Silvtech. Todos os direitos reservados.</p>
+          <p>Marketing orientado por estratégia</p>
         </div>
       </div>
     </footer>
 
-    <a
-      class="whatsapp-float"
-      href="https://wa.me/5543988738360"
-      target="_blank"
-      rel="noopener"
-      aria-label="Falar no WhatsApp"
-    >
+    <a class="whats" href="https://wa.me/5543988738360" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
       <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
-        <path
-          d="M16.001 3C9.383 3 4 8.383 4 15.001c0 2.386.63 4.62 1.833 6.605L4 29l7.59-1.992A11.94 11.94 0 0 0 16 27c6.618 0 12-5.383 12-12S22.619 3 16.001 3zm0 21.6a9.55 9.55 0 0 1-4.868-1.335l-.349-.207-4.504 1.183 1.203-4.391-.228-.362A9.56 9.56 0 0 1 6.4 15c0-5.294 4.307-9.6 9.601-9.6 5.293 0 9.6 4.306 9.6 9.6 0 5.294-4.307 9.6-9.6 9.6zm5.264-7.19c-.288-.144-1.706-.842-1.97-.938-.264-.096-.456-.144-.648.144-.192.288-.744.938-.912 1.13-.168.192-.336.216-.624.072-.288-.144-1.215-.448-2.314-1.428-.855-.762-1.432-1.704-1.6-1.992-.168-.288-.018-.444.126-.588.129-.128.288-.336.432-.504.144-.168.192-.288.288-.48.096-.192.048-.36-.024-.504-.072-.144-.648-1.562-.888-2.14-.234-.562-.472-.486-.648-.495l-.552-.01c-.192 0-.504.072-.768.36-.264.288-1.008.984-1.008 2.4 0 1.416 1.032 2.784 1.176 2.976.144.192 2.03 3.1 4.92 4.346.688.297 1.224.474 1.643.607.69.22 1.318.189 1.814.115.553-.083 1.706-.697 1.946-1.371.24-.674.24-1.252.168-1.372-.072-.12-.264-.192-.552-.336z"
-        />
+        <path d="M16.001 3C9.383 3 4 8.383 4 15.001c0 2.386.63 4.62 1.833 6.605L4 29l7.59-1.992A11.94 11.94 0 0 0 16 27c6.618 0 12-5.383 12-12S22.619 3 16.001 3zm0 21.6a9.55 9.55 0 0 1-4.868-1.335l-.349-.207-4.504 1.183 1.203-4.391-.228-.362A9.56 9.56 0 0 1 6.4 15c0-5.294 4.307-9.6 9.601-9.6 5.293 0 9.6 4.306 9.6 9.6 0 5.294-4.307 9.6-9.6 9.6zm5.264-7.19c-.288-.144-1.706-.842-1.97-.938-.264-.096-.456-.144-.648.144-.192.288-.744.938-.912 1.13-.168.192-.336.216-.624.072-.288-.144-1.215-.448-2.314-1.428-.855-.762-1.432-1.704-1.6-1.992-.168-.288-.018-.444.126-.588.129-.128.288-.336.432-.504.144-.168.192-.288.288-.48.096-.192.048-.36-.024-.504-.072-.144-.648-1.562-.888-2.14-.234-.562-.472-.486-.648-.495l-.552-.01c-.192 0-.504.072-.768.36-.264.288-1.008.984-1.008 2.4 0 1.416 1.032 2.784 1.176 2.976.144.192 2.03 3.1 4.92 4.346.688.297 1.224.474 1.643.607.69.22 1.318.189 1.814.115.553-.083 1.706-.697 1.946-1.371.24-.674.24-1.252.168-1.372-.072-.12-.264-.192-.552-.336z" />
       </svg>
     </a>
-
-    <script src="/js/site.js" defer></script>
+    <!-- /@rodape -->
   </body>
 </html>

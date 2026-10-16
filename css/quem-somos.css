@@ -1,119 +1,194 @@
 /* ==========================================================================
-   Silvtech — Quem somos (novo design system)
-   Depende de tokens.css + base.css. Só esta página usa este arquivo.
+   Silvtech — Quem somos (depende de nucleo.css)
    ========================================================================== */
 
-/* ---- Hero (tipo A) ---- */
-.hero {
-  padding-block: var(--esp-7) var(--respiro-secao);
-}
-
-.hero h1 {
-  max-width: 16ch;
-}
-
-.hero__apoio {
-  margin-top: var(--esp-4);
-  max-width: 52ch;
-}
-
-/* ---- História (tipo B) ---- */
-.historia {
-  background: var(--cor-fundo-alt);
-}
-
-.historia p {
-  max-width: 65ch;
-  margin-bottom: var(--esp-3);
-}
-
-.historia p:last-child {
-  margin-bottom: 0;
-}
-
-/* ---- Missão / Visão / Valores (tipo A, itens em card real) ---- */
-.mvv__grid {
+.historia__texto {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--esp-4);
+  gap: 16px;
+  color: var(--texto-2);
 }
 
-.mvv__item {
-  background: var(--cor-superficie);
-  border: 1px solid var(--cor-borda);
-  border-radius: var(--raio);
-  padding: var(--esp-4);
+.historia__frase {
+  margin-top: clamp(72px, 9vw, 130px);
 }
 
-.mvv__item h3 {
-  margin-bottom: var(--esp-2);
+/* Missão e visão */
+.mv-grade {
+  display: grid;
+  gap: 16px;
 }
 
-.mvv__item p {
-  color: var(--cor-neutro);
-}
-
-.mvv__item ul {
-  list-style: none;
+.mv {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: var(--esp-2);
+  justify-content: flex-end;
+  min-height: 420px;
+  padding: clamp(24px, 3vw, 40px);
+  border-radius: var(--raio-g);
+  border: 1px solid var(--borda);
+  overflow: hidden;
+  isolation: isolate;
 }
 
-.mvv__item li {
-  color: var(--cor-neutro);
+.mv__foto {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
 }
 
-.mvv__item li strong {
-  color: var(--cor-texto);
+.mv::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(5, 7, 13, 0.15) 0%, rgba(5, 7, 13, 0.92) 70%);
 }
 
-@media (min-width: 1024px) {
-  .mvv__grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--esp-5);
+.mv__texto {
+  display: grid;
+  gap: 12px;
+  max-width: 46ch;
+}
+
+.mv__texto .mono {
+  color: var(--ciano);
+}
+
+.mv h2 {
+  font-size: clamp(30px, 3.2vw, 46px);
+}
+
+.mv__texto p:not(.mono) {
+  color: var(--texto-2);
+}
+
+@media (min-width: 900px) {
+  .mv-grade {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .mv {
+    min-height: 520px;
   }
 }
 
-/* ---- Metodologia (tipo B, resumo, sem duplicar a página) ---- */
-.metodologia-resumo {
-  background: var(--cor-fundo-alt);
+/* Valores em 5 colunas */
+@media (min-width: 640px) and (max-width: 1199px) {
+  .pilares--5 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-.metodologia-resumo p {
-  max-width: 60ch;
+@media (min-width: 1200px) {
+  .pilares--5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .pilares--5 .pilar {
+    padding: 28px 22px 26px;
+  }
 }
 
-.metodologia-resumo__link {
-  margin-top: var(--esp-4);
-  display: inline-flex;
+/* É / não é */
+.eh-grade {
+  display: grid;
+  gap: 16px;
 }
 
-/* ---- CTA final ---- */
-.cta-final {
-  background: var(--cor-acento);
-  color: var(--cor-fundo);
+.eh {
+  padding: clamp(26px, 3vw, 40px);
+  border-radius: var(--raio-g);
+  border: 1px solid var(--borda);
 }
 
-.cta-final h2,
-.cta-final p {
-  color: var(--cor-fundo);
+.eh h3 {
+  margin-bottom: 22px;
+  font-size: clamp(30px, 3vw, 42px);
+  font-weight: 800;
+  font-stretch: 74%;
 }
 
-.cta-final__inner {
-  max-width: 60ch;
+.eh--sim {
+  border-color: rgba(75, 125, 255, 0.4);
+  background: linear-gradient(160deg, rgba(42, 99, 255, 0.18), rgba(42, 99, 255, 0.02));
 }
 
-.cta-final p {
-  margin-top: var(--esp-3);
-  opacity: 0.85;
+.eh--sim .lista-check li {
+  font-size: 17px;
 }
 
-.cta-final .btn {
-  margin-top: var(--esp-5);
+.eh--nao {
+  background: rgba(255, 255, 255, 0.015);
 }
 
-.cta-final .btn--primario {
-  background: var(--cor-fundo);
-  color: var(--cor-acento);
+.eh--nao .lista-x li {
+  font-size: 17px;
+  text-decoration: line-through;
+  text-decoration-color: rgba(255, 154, 154, 0.45);
+}
+
+@media (min-width: 900px) {
+  .eh-grade {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Trilha S.C.A.L.E resumida */
+.trilha-scale {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 36px;
+  counter-reset: etapa;
+}
+
+.trilha-scale li {
+  position: relative;
+  display: grid;
+  gap: 8px;
+  padding: 28px 24px;
+  border-radius: var(--raio-g);
+  border: 1px solid var(--borda);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent);
+  overflow: hidden;
+}
+
+.trilha-scale b {
+  position: absolute;
+  right: 18px;
+  top: -0.12em;
+  font-size: 110px;
+  font-weight: 900;
+  font-stretch: 62%;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(147, 178, 255, 0.28);
+  pointer-events: none;
+}
+
+.trilha-scale h3 {
+  font-size: 30px;
+  font-weight: 800;
+  font-stretch: 74%;
+}
+
+.trilha-scale p {
+  max-width: 26ch;
+  color: var(--texto-2);
+}
+
+@media (min-width: 700px) {
+  .trilha-scale {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .trilha-scale {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .trilha-scale li {
+    min-height: 260px;
+  }
 }

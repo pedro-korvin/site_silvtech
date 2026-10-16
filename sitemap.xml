@@ -1,259 +1,195 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-<url>
-  <loc>https://www.silvtech.com.br/index.html</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/provedores/sites/</loc>
-  <lastmod>2026-10-12</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/metodologia.html</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/servicos.html</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.90</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/quemsomos.html</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/fale-conosco.html</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/blog/index.html</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>weekly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/blog/posts/marketing-de-performance.html</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/blog/posts/5-tipos-de-marketing.html</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/blog/posts/marketing-digital-energia-solar.html</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/blog/posts/branding-performance.html</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/blog/posts/como-atrair-clientes-com-marketing-digital.html</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/blog/posts/consultoria-de-marketing.html</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/blog/posts/crm-sistema-de-vendas.html</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/blog/posts/impacto-das-redes-sociais.html</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/blog/posts/importancia-marketing-empresas.html</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/blog/posts/inbound-outbound.html</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/blog/posts/marketing-medico-o-que-e-permitido-2026.html</loc>
-  <lastmod>2026-07-21</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/blog/posts/como-vender-energia-solar-fio-b-60.html</loc>
-  <lastmod>2026-07-21</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/blog/posts/reforma-tributaria-impacto-industria-b2b.html</loc>
-  <lastmod>2026-07-21</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/blog/posts/agencia-marketing-seguranca-eletronica-monitoramento.html</loc>
-  <lastmod>2026-07-21</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/blog/posts/consultoria-marketing-provedores-internet.html</loc>
-  <lastmod>2026-07-21</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/blog/posts/consultoria-marketing-saas-brasil.html</loc>
-  <lastmod>2026-07-22</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/blog/posts/agencia-marketing-focada-em-negocios.html</loc>
-  <lastmod>2026-07-22</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/blog/posts/marketing-clinica-estetica-cfm.html</loc>
-  <lastmod>2026-07-22</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/blog/posts/portaria-remota-como-vender-a-solucao.html</loc>
-  <lastmod>2026-07-22</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/blog/posts/lgpd-cameras-seguranca-venda-monitoramento.html</loc>
-  <lastmod>2026-07-22</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/blog/posts/como-escalar-resultados-de-marketing.html</loc>
-  <lastmod>2026-07-22</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/blog/posts/linkedin-ads-para-industria.html</loc>
-  <lastmod>2026-07-22</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/blog/posts/leads-para-energia-solar.html</loc>
-  <lastmod>2026-07-22</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/blog/posts/ideias-promocao-provedor-internet.html</loc>
-  <lastmod>2026-07-22</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/blog/posts/reduzir-cac-saas-b2b.html</loc>
-  <lastmod>2026-07-22</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.60</priority>
-</url>
-
-<url>
-  <loc>https://www.silvtech.com.br/setores/index.html</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.85</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/setores/provedores-de-internet.html</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/setores/clinicas.html</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/setores/energia-solar.html</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/setores/industria.html</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/setores/seguranca-eletronica.html</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/setores/saas.html</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.80</priority>
-</url>
-
-<url>
-  <loc>https://www.silvtech.com.br/cases/index.html</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.75</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/cases/cenario-provedores-de-internet.html</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.65</priority>
-</url>
-<url>
-  <loc>https://www.silvtech.com.br/cases/cenario-clinicas.html</loc>
-  <lastmod>2026-07-19</lastmod>
-  <changefreq>yearly</changefreq>
-  <priority>0.65</priority>
-</url>
-
+  <url>
+    <loc>https://www.silvtech.com.br/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/servicos.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/metodologia.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/provedores/sites/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/fale-conosco.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/blog/index.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/quemsomos.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/blog/posts/consultoria-marketing-saas-brasil.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/blog/posts/agencia-marketing-focada-em-negocios.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/blog/posts/marketing-clinica-estetica-cfm.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/blog/posts/portaria-remota-como-vender-a-solucao.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/blog/posts/lgpd-cameras-seguranca-venda-monitoramento.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/blog/posts/como-escalar-resultados-de-marketing.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/blog/posts/linkedin-ads-para-industria.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/blog/posts/leads-para-energia-solar.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/blog/posts/ideias-promocao-provedor-internet.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/blog/posts/reduzir-cac-saas-b2b.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/blog/posts/marketing-medico-o-que-e-permitido-2026.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/blog/posts/como-vender-energia-solar-fio-b-60.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/blog/posts/reforma-tributaria-impacto-industria-b2b.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/blog/posts/agencia-marketing-seguranca-eletronica-monitoramento.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/blog/posts/consultoria-marketing-provedores-internet.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/blog/posts/marketing-digital-energia-solar.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/blog/posts/marketing-de-performance.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/blog/posts/5-tipos-de-marketing.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/blog/posts/branding-performance.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/blog/posts/como-atrair-clientes-com-marketing-digital.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/blog/posts/consultoria-de-marketing.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/blog/posts/crm-sistema-de-vendas.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/blog/posts/impacto-das-redes-sociais.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/blog/posts/inbound-outbound.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.silvtech.com.br/blog/posts/importancia-marketing-empresas.html</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.60</priority>
+  </url>
 </urlset>

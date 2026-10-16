@@ -3,69 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Conheça a metodologia S.C.A.L.E da Silvtech: Scan, Create, Amplify e Leverage. O processo que organiza o marketing de uma empresa antes de qualquer execução."
-    />
+    <title>Metodologia S.C.A.L.E | Silvtech</title>
+    <meta name="description" content="Conheça a metodologia S.C.A.L.E da Silvtech: Scan, Create, Amplify e Leverage. O processo que organiza o marketing de uma empresa antes de qualquer execução." />
     <link rel="canonical" href="https://www.silvtech.com.br/metodologia.html" />
     <meta property="og:title" content="Metodologia S.C.A.L.E | Silvtech" />
-    <meta
-      property="og:description"
-      content="O processo que organiza cada decisão de marketing: diagnóstico, planejamento, execução e melhoria contínua."
-    />
-    <meta
-      property="og:image"
-      content="https://www.silvtech.com.br/assets/logo_silvtech.png"
-    />
-    <meta
-      property="og:url"
-      content="https://www.silvtech.com.br/metodologia.html"
-    />
+    <meta property="og:description" content="O processo que organiza cada decisão de marketing: diagnóstico, planejamento, execução e melhoria contínua." />
+    <meta property="og:image" content="https://www.silvtech.com.br/assets/compartilhar.jpg" />
+    <meta property="og:url" content="https://www.silvtech.com.br/metodologia.html" />
     <meta property="og:type" content="website" />
-    <title>Metodologia S.C.A.L.E | Silvtech</title>
-
+    <!-- @head-comum -->
+    <meta name="theme-color" content="#05070d" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@500&display=swap"
     />
-
-    <link rel="stylesheet" href="/css/tokens.css" />
-    <link rel="stylesheet" href="/css/base.css" />
-    <link rel="stylesheet" href="/css/metodologia.css" />
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.silvtech.com.br/index.html"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Metodologia",
-            "item": "https://www.silvtech.com.br/metodologia.html"
-          }
-        ]
-      }
-    </script>
+    <link rel="stylesheet" href="/css/nucleo.css" />
+    <script src="/js/nucleo.js" defer></script>
 
     <!-- Meta Pixel Code -->
     <script>
       !(function (f, b, e, v, n, t, s) {
         if (f.fbq) return;
         n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
         };
         if (!f._fbq) f._fbq = n;
         n.push = n;
@@ -77,12 +40,7 @@
         t.src = v;
         s = b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js",
-      );
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
       fbq("init", "654658884374776");
       fbq("track", "PageView");
     </script>
@@ -96,462 +54,441 @@
     <!-- End Meta Pixel Code -->
 
     <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-CXBEJDWY21"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CXBEJDWY21"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-CXBEJDWY21");
     </script>
     <!-- End Google tag -->
+    <!-- /@head-comum -->
+    <link rel="stylesheet" href="/css/metodologia.css" />
+    <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.silvtech.com.br/index.html"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Metodologia",
+                "item": "https://www.silvtech.com.br/metodologia.html"
+              }
+            ]
+          }
+        </script>
   </head>
 
   <body>
-    <header class="site-header">
-      <div class="container site-header__inner">
-        <a class="site-header__logo" href="/index.html">
-          <img src="/assets/logo_preto.svg" alt="Silvtech" />
+    <!-- @cabecalho -->
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="cabecalho">
+      <div class="container cabecalho__dentro">
+        <a class="cabecalho__logo" href="/" aria-label="Silvtech, página inicial">
+          <img src="/assets/logo-silvtech-escuro.webp" alt="Silvtech" width="223" height="112" />
         </a>
 
-        <button
-          class="site-header__toggle"
-          aria-label="Abrir menu"
-          aria-expanded="false"
-          aria-controls="site-nav"
-        >
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            aria-hidden="true"
-          >
-            <line x1="3" y1="7" x2="21" y2="7" />
-            <line x1="3" y1="12" x2="21" y2="12" />
-            <line x1="3" y1="17" x2="21" y2="17" />
-          </svg>
-        </button>
-
-        <nav class="site-nav" id="site-nav" aria-label="Principal">
-          <ul class="site-nav__list">
-            <li><a href="/index.html">Home</a></li>
+        <nav class="nav" aria-label="Principal">
+          <ul class="nav__lista">
             <li><a href="/quemsomos.html">Quem somos</a></li>
-            <li><a href="/servicos.html">Serviços</a></li>
-            <li>
-              <a href="/metodologia.html" aria-current="page">Metodologia</a>
-            </li>
-            <li><a href="/setores/index.html">Setores</a></li>
-            <li><a href="/cases/index.html">Cases</a></li>
+            <li><a href="/servicos.html">Soluções</a></li>
+            <li><a href="/metodologia.html" aria-current="page">Metodologia</a></li>
             <li><a href="/blog/index.html">Blog</a></li>
-            <li><a href="/provedores/sites/">Sites para Provedores</a></li>
+            <li><a href="/provedores/sites/">Sites para provedores</a></li>
             <li><a href="/fale-conosco.html">Contato</a></li>
           </ul>
-          <a class="btn btn--acento site-nav__cta" href="/fale-conosco.html"
-            >Solicitar diagnóstico</a
-          >
         </nav>
+
+        <div class="cabecalho__acoes">
+          <a class="btn btn--primario btn--pequeno cabecalho__cta" href="/fale-conosco.html">Solicitar diagnóstico</a>
+          <button class="menu-botao" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+            <span></span>
+          </button>
+        </div>
       </div>
     </header>
 
-    <main>
-      <!-- ================= HERO ================= -->
-      <section class="hero">
-        <div class="container reveal">
-          <span class="rotulo rotulo--acento">Metodologia</span>
-          <h1>A metodologia S.C.A.L.E</h1>
-          <p class="destaque hero__apoio">
-            Antes de criar qualquer campanha, entendemos o negócio. O S.C.A.L.E
-            organiza esse processo em quatro etapas — da análise à melhoria
-            contínua — para que o marketing deixe de ser um conjunto de ações
-            soltas e passe a ter direção clara.
-          </p>
-          <div class="hero__acoes">
-            <a class="btn btn--acento" href="/fale-conosco.html"
-              >Solicitar diagnóstico</a
-            >
-            <a class="btn btn--secundario" href="/servicos.html"
-              >Ver soluções</a
-            >
+    <div class="menu" id="menu">
+      <ul class="menu__lista">
+        <li><a href="/">Início</a></li>
+        <li><a href="/quemsomos.html">Quem somos</a></li>
+        <li><a href="/servicos.html">Soluções</a></li>
+        <li><a href="/metodologia.html" aria-current="page">Metodologia</a></li>
+        <li><a href="/blog/index.html">Blog</a></li>
+        <li><a href="/provedores/sites/">Sites para provedores</a></li>
+        <li><a href="/fale-conosco.html">Contato</a></li>
+      </ul>
+      <div class="menu__rodape">
+        <a class="btn btn--primario" href="/fale-conosco.html">Solicitar diagnóstico</a>
+        <div class="menu__contato">
+          <a href="https://wa.me/5543988738360" target="_blank" rel="noopener">WhatsApp (43) 98873-8360</a>
+          <a href="mailto:contato@silvtech.com.br">contato@silvtech.com.br</a>
+        </div>
+      </div>
+    </div>
+    <!-- /@cabecalho -->
+
+    <main id="conteudo">
+      <!-- ================= TOPO ================= -->
+      <section class="pagina-topo">
+        <div class="container pagina-topo__dentro">
+          <div class="pagina-topo__texto">
+            <nav class="migalhas revelar" aria-label="Você está em">
+              <a href="/">Início</a><span aria-hidden="true">/</span><span>Metodologia</span>
+            </nav>
+            <h1 class="revelar" style="--atraso: 80ms">A metodologia <span class="grad">S.C.A.L.E</span></h1>
+            <p class="texto-grande revelar" style="--atraso: 160ms">
+              Antes de criar qualquer campanha, entendemos o negócio. O S.C.A.L.E organiza esse
+              processo em quatro etapas, da análise à melhoria contínua, para que o marketing deixe
+              de ser um conjunto de ações soltas e passe a ter direção clara.
+            </p>
+            <div class="pagina-topo__acoes revelar" style="--atraso: 240ms">
+              <a class="btn btn--primario" href="/fale-conosco.html">
+                Solicitar diagnóstico
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+              </a>
+              <a class="btn btn--vidro" href="/servicos.html">Ver soluções</a>
+            </div>
+          </div>
+
+          <div class="quadrantes" aria-hidden="true" data-quadrantes>
+            <div class="quadrante ativo">
+              <figure class="foto foto--azul"><img src="/assets/fotos/monitor-dados-p.webp" width="800" height="576" alt="" fetchpriority="high" /></figure>
+              <b>S</b><span>Scan</span>
+            </div>
+            <div class="quadrante">
+              <figure class="foto foto--azul"><img src="/assets/fotos/estrategia-quadro-p.webp" width="800" height="450" alt="" /></figure>
+              <b>C</b><span>Create</span>
+            </div>
+            <div class="quadrante">
+              <figure class="foto foto--azul"><img src="/assets/fotos/gravacao-estudio-p.webp" width="800" height="533" alt="" /></figure>
+              <b>A</b><span>Amplify</span>
+            </div>
+            <div class="quadrante">
+              <figure class="foto foto--azul"><img src="/assets/fotos/laptop-dashboard-p.webp" width="800" height="600" alt="" /></figure>
+              <b>L</b><span>Leverage</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- ================= REFLEXÃO ================= -->
-      <section class="secao reflexao">
-        <div class="container reveal">
-          <div>
-            <p>Grande parte do mercado atua por ação isolada.</p>
+      <!-- ================= O PROBLEMA ================= -->
+      <section class="secao">
+        <div class="container">
+          <p class="mono mono--linha revelar">Por que um método</p>
+          <p class="declaracao" data-palavras>
+            Grande parte do mercado atua por ação isolada. Sobe uma campanha aqui, ajusta uma rede
+            social ali, e o resultado depende do volume investido, <strong>não de um plano</strong>.
+          </p>
+          <p class="texto-grande metodo__apoio revelar">
+            A Silvtech trabalha diferente: cada decisão de marketing nasce de um diagnóstico do
+            negócio, e as quatro etapas do S.C.A.L.E existem para que as prioridades sejam
+            definidas antes da execução e revisadas continuamente, com base em indicadores reais.
+          </p>
+        </div>
+      </section>
+
+      <!-- ================= AS 4 ETAPAS ================= -->
+      <section class="secao scale secao--painel" id="etapas" data-scale>
+        <div class="container scale__grade">
+          <div class="scale__fixo">
+            <p class="mono mono--linha">As quatro etapas</p>
+            <h2>Da análise à melhoria contínua.</h2>
+            <p class="texto-grande">
+              Cada etapa tem entregas claras e evita um erro comum. Juntas, fazem o marketing
+              funcionar como parte da operação da empresa.
+            </p>
+            <div class="scale__letra" aria-hidden="true">
+              <span class="ativa">S</span><span>C</span><span>A</span><span>L</span>
+            </div>
+            <ol class="scale__indice" aria-hidden="true">
+              <li class="ativo"><i></i>Scan</li>
+              <li><i></i>Create</li>
+              <li><i></i>Amplify</li>
+              <li><i></i>Leverage</li>
+            </ol>
           </div>
-          <div>
-            <p class="apoio">
-              Sobe uma campanha aqui, ajusta uma rede social ali — e o resultado
-              depende do volume investido, não de um plano. A Silvtech trabalha
-              diferente: cada decisão de marketing nasce de um diagnóstico do
-              negócio, e as quatro etapas do S.C.A.L.E existem para que as
-              prioridades sejam definidas antes da execução — e revisadas
-              continuamente, com base em indicadores reais.
+
+          <div class="scale__etapas">
+            <article class="scale__etapa" data-indice="0">
+              <figure class="scale__foto foto foto--azul foto--scan revelar-foto">
+                <img src="/assets/fotos/monitor-dados-p.webp" srcset="/assets/fotos/monitor-dados-p.webp 800w, /assets/fotos/monitor-dados.webp 1600w" sizes="(min-width: 1024px) 45vw, 90vw" width="1600" height="1151" alt="" loading="lazy" />
+                <span class="scale__marca">S</span>
+              </figure>
+              <p class="mono">Etapa 01 · Scan</p>
+              <h3>Você não pode otimizar o que não mede.</h3>
+              <p>Entendemos o negócio antes de qualquer ação. Analisamos mercado, concorrência, posicionamento, operação comercial e as estratégias que já estão em prática, para identificar o que realmente limita o crescimento.</p>
+              <div class="etapa__listas">
+                <div>
+                  <h4>O que você recebe</h4>
+                  <ul class="lista-check">
+                    <li>Diagnóstico do cenário atual</li>
+                    <li>Mapa de oportunidades de crescimento</li>
+                    <li>Análise da concorrência</li>
+                    <li>Indicadores prioritários definidos</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>O que evita</h4>
+                  <ul class="lista-x">
+                    <li>Campanhas criadas sem diagnóstico prévio</li>
+                    <li>Decisões de marketing baseadas em achismo</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="scale__etapa" data-indice="1">
+              <figure class="scale__foto foto foto--azul foto--scan revelar-foto">
+                <img src="/assets/fotos/estrategia-quadro-p.webp" srcset="/assets/fotos/estrategia-quadro-p.webp 800w, /assets/fotos/estrategia-quadro.webp 1600w" sizes="(min-width: 1024px) 45vw, 90vw" width="1600" height="900" alt="" loading="lazy" />
+                <span class="scale__marca">C</span>
+              </figure>
+              <p class="mono">Etapa 02 · Create</p>
+              <h3>Toda ação de marketing precisa de um motivo para existir.</h3>
+              <p>Planejamos com propósito. Desenvolvemos as estratégias alinhadas aos objetivos do negócio e definimos um plano de execução com prioridades claras.</p>
+              <div class="etapa__listas">
+                <div>
+                  <h4>O que você recebe</h4>
+                  <ul class="lista-check">
+                    <li>Cronograma de ações definido</li>
+                    <li>Campanhas planejadas</li>
+                    <li>Conteúdo estratégico produzido</li>
+                    <li>Processos organizados</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>O que evita</h4>
+                  <ul class="lista-x">
+                    <li>Ações de marketing desconectadas entre si</li>
+                    <li>Prioridades decididas caso a caso</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="scale__etapa" data-indice="2">
+              <figure class="scale__foto foto foto--azul foto--scan revelar-foto">
+                <img src="/assets/fotos/gravacao-estudio-p.webp" srcset="/assets/fotos/gravacao-estudio-p.webp 800w, /assets/fotos/gravacao-estudio.webp 1600w" sizes="(min-width: 1024px) 45vw, 90vw" width="1600" height="1066" alt="" loading="lazy" />
+                <span class="scale__marca">A</span>
+              </figure>
+              <p class="mono">Etapa 03 · Amplify</p>
+              <h3>Crescimento sem sustentabilidade é apenas um pico temporário.</h3>
+              <p>Colocamos as estratégias em prática. Acompanhamos indicadores e ajustamos continuamente aquilo que demonstra potencial de gerar melhores resultados.</p>
+              <div class="etapa__listas">
+                <div>
+                  <h4>O que você recebe</h4>
+                  <ul class="lista-check">
+                    <li>Estratégias em execução</li>
+                    <li>Processos automatizados onde faz sentido</li>
+                    <li>Indicadores acompanhados continuamente</li>
+                    <li>Ações de retenção ativas</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>O que evita</h4>
+                  <ul class="lista-x">
+                    <li>Resultado dependente apenas do volume investido</li>
+                    <li>Execução sem acompanhamento de indicadores</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="scale__etapa" data-indice="3">
+              <figure class="scale__foto foto foto--azul foto--scan revelar-foto">
+                <img src="/assets/fotos/laptop-dashboard-p.webp" srcset="/assets/fotos/laptop-dashboard-p.webp 800w, /assets/fotos/laptop-dashboard.webp 1600w" sizes="(min-width: 1024px) 45vw, 90vw" width="1600" height="1200" alt="" loading="lazy" />
+                <span class="scale__marca">L</span>
+              </figure>
+              <p class="mono">Etapa 04 · Leverage</p>
+              <h3>Nenhuma estratégia continua eficiente para sempre.</h3>
+              <p>Depois de validar o que funciona, estruturamos processos para que o crescimento deixe de depender de ações isoladas e passe a fazer parte da operação da empresa.</p>
+              <div class="etapa__listas">
+                <div>
+                  <h4>O que você recebe</h4>
+                  <ul class="lista-check">
+                    <li>Processo de melhoria contínua implementado</li>
+                    <li>Estratégia revisada com base em indicadores reais</li>
+                    <li>Processos de marketing consolidados na operação</li>
+                    <li>Prioridades reavaliadas periodicamente</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4>O que evita</h4>
+                  <ul class="lista-x">
+                    <li>Crescimento que depende de uma única campanha</li>
+                    <li>Estratégia que nunca é revisada</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= POR SEGMENTO ================= -->
+      <section class="secao segmentos">
+        <div class="container">
+          <div class="secao__topo secao__topo--lado">
+            <div>
+              <p class="mono mono--linha revelar">Por segmento</p>
+              <h2 class="revelar" style="--atraso: 80ms">Mesmo processo, ajustado a cada mercado.</h2>
+            </div>
+            <p class="texto-grande revelar" style="--atraso: 160ms">
+              O método não muda. O que muda é onde cada etapa olha, conforme o jeito como o cliente
+              de cada setor decide.
             </p>
           </div>
-        </div>
-      </section>
 
-      <!-- ================= ETAPAS ================= -->
-      <section class="secao etapas">
-        <div class="container">
-          <article class="etapa reveal">
-            <div class="etapa__cabecalho">
-              <span class="rotulo rotulo--acento">Etapa 01</span>
-              <h2>Scan</h2>
+          <div class="abas revelar" data-abas>
+            <div class="abas__lista">
+              <button class="abas__botao" type="button">Clínicas de saúde</button>
+              <button class="abas__botao" type="button">Telecomunicações</button>
+              <button class="abas__botao" type="button">SaaS</button>
+              <button class="abas__botao" type="button">Energia solar</button>
             </div>
-            <div class="etapa__corpo">
-              <blockquote class="etapa__citacao">
-                Você não pode otimizar o que não mede.
-              </blockquote>
-              <p>
-                Entendemos o negócio antes de qualquer ação. Analisamos mercado,
-                concorrência, posicionamento, operação comercial e as
-                estratégias que já estão em prática, para identificar o que
-                realmente limita o crescimento.
-              </p>
-            </div>
-            <div class="etapa__grid">
-              <div class="etapa__bloco">
-                <h4>O que você recebe</h4>
-                <ul>
-                  <li>Diagnóstico do cenário atual</li>
-                  <li>Mapa de oportunidades de crescimento</li>
-                  <li>Análise da concorrência</li>
-                  <li>Indicadores prioritários definidos</li>
-                </ul>
-              </div>
-              <div class="etapa__bloco">
-                <h4>O que evita</h4>
-                <ul>
-                  <li>Campanhas criadas sem diagnóstico prévio</li>
-                  <li>Decisões de marketing baseadas em achismo</li>
-                </ul>
+
+            <div class="abas__painel segmento">
+              <figure class="segmento__foto foto foto--azul foto--grao"><img src="/assets/fotos/clinica-recepcao-p.webp" width="800" height="529" alt="" loading="lazy" /></figure>
+              <div class="segmento__texto">
+                <h3>Clínicas de saúde</h3>
+                <ol class="segmento__etapas">
+                  <li><b>S</b><span><strong>Scan:</strong> análise da jornada do paciente, da primeira busca até a consulta.</span></li>
+                  <li><b>C</b><span><strong>Create:</strong> conteúdo e captação alinhados à agenda da clínica.</span></li>
+                  <li><b>A</b><span><strong>Amplify:</strong> execução das campanhas e acompanhamento da agenda.</span></li>
+                  <li><b>L</b><span><strong>Leverage:</strong> relacionamento para retorno e indicação.</span></li>
+                </ol>
               </div>
             </div>
-          </article>
 
-          <article class="etapa reveal">
-            <div class="etapa__cabecalho">
-              <span class="rotulo rotulo--acento">Etapa 02</span>
-              <h2>Create</h2>
-            </div>
-            <div class="etapa__corpo">
-              <blockquote class="etapa__citacao">
-                Toda ação de marketing precisa de um motivo para existir.
-              </blockquote>
-              <p>
-                Planejamos com propósito. Desenvolvemos as estratégias alinhadas
-                aos objetivos do negócio e definimos um plano de execução com
-                prioridades claras.
-              </p>
-            </div>
-            <div class="etapa__grid">
-              <div class="etapa__bloco">
-                <h4>O que você recebe</h4>
-                <ul>
-                  <li>Cronograma de ações definido</li>
-                  <li>Campanhas planejadas</li>
-                  <li>Conteúdo estratégico produzido</li>
-                  <li>Processos organizados</li>
-                </ul>
-              </div>
-              <div class="etapa__bloco">
-                <h4>O que evita</h4>
-                <ul>
-                  <li>Ações de marketing desconectadas entre si</li>
-                  <li>Prioridades decididas caso a caso</li>
-                </ul>
+            <div class="abas__painel segmento">
+              <figure class="segmento__foto foto foto--azul foto--grao"><img src="/assets/fotos/tecnicos-poste-caminhao-p.webp" width="800" height="534" alt="" loading="lazy" /></figure>
+              <div class="segmento__texto">
+                <h3>Telecomunicações</h3>
+                <ol class="segmento__etapas">
+                  <li><b>S</b><span><strong>Scan:</strong> análise do processo comercial e da concorrência local.</span></li>
+                  <li><b>C</b><span><strong>Create:</strong> campanhas planejadas por região de atuação.</span></li>
+                  <li><b>A</b><span><strong>Amplify:</strong> execução integrada com o time comercial.</span></li>
+                  <li><b>L</b><span><strong>Leverage:</strong> retenção e redução de cancelamento.</span></li>
+                </ol>
               </div>
             </div>
-          </article>
 
-          <article class="etapa reveal">
-            <div class="etapa__cabecalho">
-              <span class="rotulo rotulo--acento">Etapa 03</span>
-              <h2>Amplify</h2>
-            </div>
-            <div class="etapa__corpo">
-              <blockquote class="etapa__citacao">
-                Crescimento sem sustentabilidade é apenas um pico temporário.
-              </blockquote>
-              <p>
-                Colocamos as estratégias em prática. Acompanhamos indicadores e
-                ajustamos continuamente aquilo que demonstra potencial de gerar
-                melhores resultados.
-              </p>
-            </div>
-            <div class="etapa__grid">
-              <div class="etapa__bloco">
-                <h4>O que você recebe</h4>
-                <ul>
-                  <li>Estratégias em execução</li>
-                  <li>Processos automatizados onde faz sentido</li>
-                  <li>Indicadores acompanhados continuamente</li>
-                  <li>Ações de retenção ativas</li>
-                </ul>
-              </div>
-              <div class="etapa__bloco">
-                <h4>O que evita</h4>
-                <ul>
-                  <li>Resultado dependente apenas do volume investido</li>
-                  <li>Execução sem acompanhamento de indicadores</li>
-                </ul>
+            <div class="abas__painel segmento">
+              <figure class="segmento__foto foto foto--azul foto--grao"><img src="/assets/fotos/dev-noite-p.webp" width="800" height="533" alt="" loading="lazy" /></figure>
+              <div class="segmento__texto">
+                <h3>SaaS</h3>
+                <ol class="segmento__etapas">
+                  <li><b>S</b><span><strong>Scan:</strong> análise de onboarding, ativação e cancelamento.</span></li>
+                  <li><b>C</b><span><strong>Create:</strong> conteúdo e testes de conversão no trial.</span></li>
+                  <li><b>A</b><span><strong>Amplify:</strong> campanhas de aquisição e retenção.</span></li>
+                  <li><b>L</b><span><strong>Leverage:</strong> acompanhamento contínuo da base de clientes.</span></li>
+                </ol>
               </div>
             </div>
-          </article>
 
-          <article class="etapa reveal">
-            <div class="etapa__cabecalho">
-              <span class="rotulo rotulo--acento">Etapa 04</span>
-              <h2>Leverage</h2>
-            </div>
-            <div class="etapa__corpo">
-              <blockquote class="etapa__citacao">
-                Nenhuma estratégia continua eficiente para sempre.
-              </blockquote>
-              <p>
-                Depois de validar o que funciona, estruturamos processos para
-                que o crescimento deixe de depender de ações isoladas e passe a
-                fazer parte da operação da empresa.
-              </p>
-            </div>
-            <div class="etapa__grid">
-              <div class="etapa__bloco">
-                <h4>O que você recebe</h4>
-                <ul>
-                  <li>Processo de melhoria contínua implementado</li>
-                  <li>Estratégia revisada com base em indicadores reais</li>
-                  <li>Processos de marketing consolidados na operação</li>
-                  <li>Prioridades reavaliadas periodicamente</li>
-                </ul>
-              </div>
-              <div class="etapa__bloco">
-                <h4>O que evita</h4>
-                <ul>
-                  <li>Crescimento que depende de uma única campanha</li>
-                  <li>Estratégia que nunca é revisada</li>
-                </ul>
+            <div class="abas__painel segmento">
+              <figure class="segmento__foto foto foto--azul foto--grao"><img src="/assets/fotos/solar-tecnico-p.webp" width="800" height="534" alt="" loading="lazy" /></figure>
+              <div class="segmento__texto">
+                <h3>Energia solar</h3>
+                <ol class="segmento__etapas">
+                  <li><b>S</b><span><strong>Scan:</strong> mapeamento da jornada de decisão do cliente.</span></li>
+                  <li><b>C</b><span><strong>Create:</strong> conteúdo educativo e captação de leads.</span></li>
+                  <li><b>A</b><span><strong>Amplify:</strong> campanhas com acompanhamento comercial.</span></li>
+                  <li><b>L</b><span><strong>Leverage:</strong> indicação e relacionamento pós-instalação.</span></li>
+                </ol>
               </div>
             </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- ================= SEGMENTOS ================= -->
-      <section class="secao segmentos">
-        <div class="container reveal">
-          <div class="secao__cabecalho">
-            <span class="rotulo">Por segmento</span>
-            <h2>Mesmo processo, ajustado a cada mercado.</h2>
-          </div>
-
-          <div class="segmentos__grid">
-            <article class="segmento">
-              <h3>Clínicas de Saúde</h3>
-              <dl>
-                <div>
-                  <dt>Scan —</dt>
-                  <dd>
-                    análise da jornada do paciente, da primeira busca até a
-                    consulta.
-                  </dd>
-                </div>
-                <div>
-                  <dt>Create —</dt>
-                  <dd>conteúdo e captação alinhados à agenda da clínica.</dd>
-                </div>
-                <div>
-                  <dt>Amplify —</dt>
-                  <dd>execução das campanhas e acompanhamento da agenda.</dd>
-                </div>
-                <div>
-                  <dt>Leverage —</dt>
-                  <dd>relacionamento para retorno e indicação.</dd>
-                </div>
-              </dl>
-            </article>
-
-            <article class="segmento">
-              <h3>Telecomunicações</h3>
-              <dl>
-                <div>
-                  <dt>Scan —</dt>
-                  <dd>
-                    análise do processo comercial e da concorrência local.
-                  </dd>
-                </div>
-                <div>
-                  <dt>Create —</dt>
-                  <dd>campanhas planejadas por região de atuação.</dd>
-                </div>
-                <div>
-                  <dt>Amplify —</dt>
-                  <dd>execução integrada com o time comercial.</dd>
-                </div>
-                <div>
-                  <dt>Leverage —</dt>
-                  <dd>retenção e redução de cancelamento.</dd>
-                </div>
-              </dl>
-            </article>
-
-            <article class="segmento">
-              <h3>SaaS</h3>
-              <dl>
-                <div>
-                  <dt>Scan —</dt>
-                  <dd>análise de onboarding, ativação e cancelamento.</dd>
-                </div>
-                <div>
-                  <dt>Create —</dt>
-                  <dd>conteúdo e testes de conversão no trial.</dd>
-                </div>
-                <div>
-                  <dt>Amplify —</dt>
-                  <dd>campanhas de aquisição e retenção.</dd>
-                </div>
-                <div>
-                  <dt>Leverage —</dt>
-                  <dd>acompanhamento contínuo da base de clientes.</dd>
-                </div>
-              </dl>
-            </article>
-
-            <article class="segmento">
-              <h3>Energia Solar</h3>
-              <dl>
-                <div>
-                  <dt>Scan —</dt>
-                  <dd>mapeamento da jornada de decisão do cliente.</dd>
-                </div>
-                <div>
-                  <dt>Create —</dt>
-                  <dd>conteúdo educativo e captação de leads.</dd>
-                </div>
-                <div>
-                  <dt>Amplify —</dt>
-                  <dd>campanhas com acompanhamento comercial.</dd>
-                </div>
-                <div>
-                  <dt>Leverage —</dt>
-                  <dd>indicação e relacionamento pós-instalação.</dd>
-                </div>
-              </dl>
-            </article>
           </div>
         </div>
       </section>
 
       <!-- ================= CTA FINAL ================= -->
-      <section class="secao cta-final">
-        <div class="container cta-final__inner reveal">
-          <h2>Quer estruturar o marketing da sua empresa com esse processo?</h2>
-          <p>
-            Aplicamos a metodologia S.C.A.L.E já no diagnóstico. Você entende,
-            na prática, onde estão as prioridades do marketing da sua empresa.
+      <section class="cta cta--frase">
+        <figure class="cta__fundo foto foto--azul foto--grao" aria-hidden="true">
+          <img src="/assets/fotos/estrategia-parede-p.webp" srcset="/assets/fotos/estrategia-parede-p.webp 800w, /assets/fotos/estrategia-parede.webp 1600w" sizes="100vw" width="1600" height="1066" alt="" loading="lazy" />
+        </figure>
+        <div class="container cta__dentro">
+          <p class="mono revelar"><span class="ponto" aria-hidden="true"></span> 2 vagas de diagnóstico gratuito por mês</p>
+          <h2 class="revelar" style="--atraso: 80ms">Quer estruturar o marketing da sua empresa com esse processo?</h2>
+          <p class="texto-grande revelar" style="--atraso: 160ms">
+            Aplicamos a metodologia S.C.A.L.E já no diagnóstico. Você entende, na prática, onde
+            estão as prioridades do marketing da sua empresa.
           </p>
-          <a class="btn btn--primario" href="/fale-conosco.html"
-            >Solicitar diagnóstico</a
-          >
+          <div class="cta__acoes revelar" style="--atraso: 240ms">
+            <a class="btn btn--primario" href="/fale-conosco.html">
+              Solicitar diagnóstico
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+            </a>
+            <a class="btn btn--vidro" href="https://wa.me/5543988738360" target="_blank" rel="noopener">Falar no WhatsApp</a>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
+    <!-- @rodape -->
+    <footer class="rodape">
       <div class="container">
-        <div class="site-footer__grid">
-          <div class="site-footer__brand">
-            <a class="site-header__logo" href="/index.html">Silvtech</a>
-            <p class="site-footer__desc">
-              Marketing orientado por estratégia para empresas que querem
-              crescer com consistência.
-            </p>
+        <div class="rodape__topo">
+          <div class="rodape__chamada">
+            <img class="rodape__logo" src="/assets/logo-silvtech-escuro.webp" alt="Silvtech" width="223" height="112" loading="lazy" />
+            <h2>Marketing orientado por estratégia.</h2>
+            <p>Para empresas B2B que querem crescer com consistência. Londrina, Paraná — Brasil.</p>
+            <a class="btn btn--primario" href="/fale-conosco.html">Solicitar diagnóstico</a>
           </div>
-
-          <div class="footer-col">
-            <h4>Navegação</h4>
-            <ul>
-              <li><a href="/index.html">Home</a></li>
-              <li><a href="/quemsomos.html">Quem somos</a></li>
-              <li><a href="/servicos.html">Serviços</a></li>
-              <li><a href="/metodologia.html">Metodologia</a></li>
-              <li><a href="/setores/index.html">Setores</a></li>
-              <li><a href="/cases/index.html">Cases</a></li>
-              <li><a href="/blog/index.html">Blog</a></li>
-              <li><a href="/fale-conosco.html">Contato</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h4>Soluções</h4>
-            <ul>
-              <li><a href="/servicos.html">Gestão de Marketing</a></li>
-              <li><a href="/servicos.html">Estruturação Comercial</a></li>
-              <li><a href="/servicos.html">Posicionamento e Branding</a></li>
-              <li><a href="/servicos.html">Marketing Digital</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h4>Contato</h4>
-            <ul>
-              <li><a href="tel:+5543988738360">(43) 98873-8360</a></li>
-              <li>
-                <a href="mailto:contato@silvtech.com.br"
-                  >contato@silvtech.com.br</a
-                >
-              </li>
-              <li>Londrina, Paraná — Brasil</li>
-              <li>
-                <a
-                  href="https://www.instagram.com/assessoria.silvtech/"
-                  target="_blank"
-                  rel="noopener"
-                  >Instagram</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://wa.me/5543988738360"
-                  target="_blank"
-                  rel="noopener"
-                  >WhatsApp</a
-                >
-              </li>
-            </ul>
+          <div class="rodape__colunas">
+            <div>
+              <h3>Navegação</h3>
+              <ul>
+                <li><a href="/">Início</a></li>
+                <li><a href="/quemsomos.html">Quem somos</a></li>
+                <li><a href="/metodologia.html">Metodologia</a></li>
+                <li><a href="/blog/index.html">Blog</a></li>
+                <li><a href="/provedores/sites/">Sites para provedores</a></li>
+                <li><a href="/fale-conosco.html">Contato</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3>Soluções</h3>
+              <ul>
+                <li><a href="/servicos.html#gestao">Gestão de Marketing</a></li>
+                <li><a href="/servicos.html#comercial">Estruturação Comercial</a></li>
+                <li><a href="/servicos.html#marca">Posicionamento e Branding</a></li>
+                <li><a href="/servicos.html#digital">Marketing Digital</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3>Contato</h3>
+              <ul>
+                <li><a href="https://wa.me/5543988738360" target="_blank" rel="noopener">(43) 98873-8360</a></li>
+                <li><a href="mailto:contato@silvtech.com.br">contato@silvtech.com.br</a></li>
+                <li><a href="https://www.instagram.com/assessoria.silvtech/" target="_blank" rel="noopener">Instagram</a></li>
+              </ul>
+            </div>
           </div>
         </div>
-
-        <div class="site-footer__bottom">
+        <p class="rodape__marca" aria-hidden="true">Silvtech</p>
+        <div class="rodape__base">
           <p>&copy; 2026 Silvtech. Todos os direitos reservados.</p>
+          <p>Marketing orientado por estratégia</p>
         </div>
       </div>
     </footer>
 
-    <a
-      class="whatsapp-float"
-      href="https://wa.me/5543988738360"
-      target="_blank"
-      rel="noopener"
-      aria-label="Falar no WhatsApp"
-    >
+    <a class="whats" href="https://wa.me/5543988738360" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
       <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
-        <path
-          d="M16.001 3C9.383 3 4 8.383 4 15.001c0 2.386.63 4.62 1.833 6.605L4 29l7.59-1.992A11.94 11.94 0 0 0 16 27c6.618 0 12-5.383 12-12S22.619 3 16.001 3zm0 21.6a9.55 9.55 0 0 1-4.868-1.335l-.349-.207-4.504 1.183 1.203-4.391-.228-.362A9.56 9.56 0 0 1 6.4 15c0-5.294 4.307-9.6 9.601-9.6 5.293 0 9.6 4.306 9.6 9.6 0 5.294-4.307 9.6-9.6 9.6zm5.264-7.19c-.288-.144-1.706-.842-1.97-.938-.264-.096-.456-.144-.648.144-.192.288-.744.938-.912 1.13-.168.192-.336.216-.624.072-.288-.144-1.215-.448-2.314-1.428-.855-.762-1.432-1.704-1.6-1.992-.168-.288-.018-.444.126-.588.129-.128.288-.336.432-.504.144-.168.192-.288.288-.48.096-.192.048-.36-.024-.504-.072-.144-.648-1.562-.888-2.14-.234-.562-.472-.486-.648-.495l-.552-.01c-.192 0-.504.072-.768.36-.264.288-1.008.984-1.008 2.4 0 1.416 1.032 2.784 1.176 2.976.144.192 2.03 3.1 4.92 4.346.688.297 1.224.474 1.643.607.69.22 1.318.189 1.814.115.553-.083 1.706-.697 1.946-1.371.24-.674.24-1.252.168-1.372-.072-.12-.264-.192-.552-.336z"
-        />
+        <path d="M16.001 3C9.383 3 4 8.383 4 15.001c0 2.386.63 4.62 1.833 6.605L4 29l7.59-1.992A11.94 11.94 0 0 0 16 27c6.618 0 12-5.383 12-12S22.619 3 16.001 3zm0 21.6a9.55 9.55 0 0 1-4.868-1.335l-.349-.207-4.504 1.183 1.203-4.391-.228-.362A9.56 9.56 0 0 1 6.4 15c0-5.294 4.307-9.6 9.601-9.6 5.293 0 9.6 4.306 9.6 9.6 0 5.294-4.307 9.6-9.6 9.6zm5.264-7.19c-.288-.144-1.706-.842-1.97-.938-.264-.096-.456-.144-.648.144-.192.288-.744.938-.912 1.13-.168.192-.336.216-.624.072-.288-.144-1.215-.448-2.314-1.428-.855-.762-1.432-1.704-1.6-1.992-.168-.288-.018-.444.126-.588.129-.128.288-.336.432-.504.144-.168.192-.288.288-.48.096-.192.048-.36-.024-.504-.072-.144-.648-1.562-.888-2.14-.234-.562-.472-.486-.648-.495l-.552-.01c-.192 0-.504.072-.768.36-.264.288-1.008.984-1.008 2.4 0 1.416 1.032 2.784 1.176 2.976.144.192 2.03 3.1 4.92 4.346.688.297 1.224.474 1.643.607.69.22 1.318.189 1.814.115.553-.083 1.706-.697 1.946-1.371.24-.674.24-1.252.168-1.372-.072-.12-.264-.192-.552-.336z" />
       </svg>
     </a>
-
-    <script src="/js/site.js" defer></script>
+    <!-- /@rodape -->
   </body>
 </html>

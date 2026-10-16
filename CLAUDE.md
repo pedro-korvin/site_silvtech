@@ -71,153 +71,77 @@ específico a menos que seja garantidamente cumprível.
 
 ---
 
-## Direção visual do rebranding (em execução)
+## Direção visual (v3, aprovada pelo dono em 2026-10-15)
 
-O site está migrando de uma identidade "startup de growth hacking" (gradiente
-azul-ciano, glassmorphism, glow, animações constantes) para uma identidade
-editorial e sóbria, alinhada ao posicionamento acima. Ao mexer em qualquer
-CSS/HTML, seguir esta direção — não reintroduzir o padrão antigo:
+O visual "editorial e sóbrio" anterior foi abandonado a pedido do dono: não
+convertia e não mostrava capacidade técnica. A direção atual é **escura,
+tecnológica e dinâmica, com fotos em todas as páginas**, sem perder a
+sobriedade do posicionamento. Referências citadas pelo dono: v4company.com,
+helden.com.br, dasckup.com.
 
-- **Paleta reduzida.** Preto/grafite + off-white + um único acento sóbrio
-  usado com parcimônia (nunca em gradiente, nunca como glow).
-- **Zero gradientes coloridos, zero glassmorphism (`backdrop-filter: blur`),
-  zero `box-shadow` com cor de marca (glow).** Sombras discretas neutras ou
-  nenhuma.
-- **Tipografia:** Playfair Display para títulos (sem `background-clip: text`
-  com gradiente) pareada com UMA sans neutra. Descartar a terceira família
-  (o projeto tem 3 famílias carregadas hoje — Lexend Deca, Montserrat,
-  Playfair Display — isso deve virar 2).
-- **Animações mínimas.** Fade curto (~200ms) no máximo. Nada de infinito,
-  nada de bounce/scale/tilt em hover. Sempre respeitar
-  `prefers-reduced-motion` (hoje só `header.css` trata isso — estender pra
-  todo o CSS).
-- **Espaçamento generoso, grid editorial.** Menos seções competindo por
-  atenção na home.
-
----
-
-## Bugs conhecidos (prioridade de correção antes de qualquer refino visual)
-
-### 1. Posts do blog não aparecem no mobile real (crítico)
-
-Causa raiz identificada em `blog.js`:
-
-```js
-document.querySelectorAll(".post, section, .blogs").forEach((el) => {
-  el.classList.add("reveal"); // aplica opacity:0 via CSS
-  observer.observe(el); // só volta a opacity:1 quando IntersectionObserver dispara
-});
-```
-
-A classe `.reveal` (CSS) zera `opacity` e depende do `IntersectionObserver`
-pra reverter via `.active`. Em Safari mobile real (não no emulador de
-DevTools) essa combinação, junto com `overflow-x: hidden` no `body` e
-`rootMargin: "0px 0px -50px 0px"`, frequentemente não dispara pra elementos
-abaixo da dobra inicial — os posts ficam permanentemente invisíveis.
-
-Problema estrutural adicional: no HTML do blog, todos os posts estão dentro
-de um único `<div class="post">` — deveriam ser `<article class="post">`
-individuais. O seletor `.post:nth-child(even)` nunca funciona hoje porque não
-há múltiplos irmãos `.post`.
-
-**Correção esperada:** refatorar cada post pra `<article class="post">`
-próprio + revisar (ou remover) a dependência de `IntersectionObserver` pra
-visibilidade — usar CSS puro com fallback visível por padrão, animação como
-progressive enhancement, nunca como gate de visibilidade.
-
-### 2. Posts despublicados ainda linkados
-
-`growth-hacking.html` e `estrategias-growth-hacking.html` foram despublicados
-mas continuam:
-
-- Linkados em `index.html` (raiz) e em `blog/index.html`.
-- Presentes no repositório (arquivos ainda existem).
-  Ação: remover os links de todas as páginas que os referenciam, remover (ou
-  redirecionar 301) os arquivos, e conferir `sitemap.xml` / `robots.txt` pra
-  garantir que não fiquem indexados.
-
-### 3. Copy com termos banidos já no ar
-
-- `blog.js`: typewriter alterna texto incluindo "Estratégias que
-  **Transformam** Negócios" e "**Growth Hacking** para Empresas".
-- Nome de classe `BlogRevolucionario` em `blog.js` — renomear.
-- `header.js`: CTA mobile usa emoji + "🚀 Solicitar Consultoria",
-  inconsistente com o CTA desktop "Solicitar Diagnóstico".
-- `header.html`: alt do logo é "Silvtech - Marketing de Performance" —
-  desatualizado, trocar por algo alinhado à tagline oficial.
-- `index.html` `<title>`: "Assessoria de Marketing orientado por
-  estratégias." — "Assessoria" enfraquece posicionamento, plural errado.
-  Corrigir para algo como "Silvtech | Marketing orientado por estratégia".
-- Seção "framework" da home com 6 etapas contradiz o S.C.A.L.E oficial
-  (4 etapas) — ver seção de metodologia acima.
-- "Implementação da equipe em 7 dias" — promessa de prazo específico;
-  verificar se é garantida antes de manter.
-
-### 4. `header.html` / `footer.html` são documentos HTML completos
-
-Ambos têm `<!doctype>`, `<html>`, `<head>`, `<body>` e são injetados via
-`fetch().then(el.innerHTML = data)`. Isso é HTML inválido (documento dentro
-de documento) e faz o Google Fonts ser carregado duas vezes (uma no
-`<head>` da página, outra dentro do footer). Corrigir para fragmentos HTML
-puros (sem doctype/html/head/body), com CSS/JS já linkados uma única vez na
-página principal.
+- **Cores** (tokens em `css/nucleo.css`, `:root`): fundo `#05070d`, azul
+  elétrico `#2a63ff`, ciano `#3fd8ff` como apoio. Uma seção clara
+  (`.secao--clara`, `#eef1f8`) quebra o ritmo (blog, corpo dos artigos).
+- **Tipografia:** só duas famílias. Archivo (variável) para tudo, com títulos
+  condensados via `font-stretch` (h1 em caixa alta); JetBrains Mono para
+  rótulos técnicos (`.mono`). Não reintroduzir Playfair/Montserrat.
+- **Fotos:** sempre com tratamento da marca (`.foto--azul`, `.foto--noite`,
+  `.foto--grao`, `.visor`). Banco em `assets/fotos/` (Unsplash, créditos em
+  `assets/fotos/CREDITOS.md`, 2 tamanhos: `nome.webp` 1600 px e
+  `nome-p.webp` 800 px). Foto de banco nunca é apresentada como equipe ou
+  cliente da Silvtech, nem ao lado de depoimento. Baixar fotos novas só com
+  aprovação do dono, lote a lote.
+- **Permitido agora:** degradês da marca, brilho azul, vidro
+  (`backdrop-filter`), revelar ao rolar, parallax leve no mouse, faixa de
+  logos em loop, rede animada no topo da home.
+- **Regras de movimento:** o conteúdo nunca depende de JS para aparecer
+  (`.revelar` só esconde quando `html.js-anima` existe, e há uma checagem de
+  rolagem de reserva); respeitar `prefers-reduced-motion`; `?estatico` no
+  endereço desliga as animações (usado nas capturas de tela).
+- **Prova social:** logos de clientes (`assets/clientes/`, versões brancas).
+  **Sem cases e sem "cenário ilustrativo"**: o dono removeu as páginas Cases
+  e Setores em 2026-10-15 (tiravam credibilidade / pesavam o site). Não
+  recriar sem pedido. Nada de números ou resultados inventados.
 
 ---
 
-## Problemas de performance (causa da nota baixa em PageSpeed/Lighthouse)
+## Como o site é montado
 
-Ordem de impacto, do maior pro menor:
+- HTML/CSS/JS puro, sem framework. `css/nucleo.css` + `js/nucleo.js` em
+  todas as páginas, mais um CSS (e às vezes um JS) por página: `inicio`,
+  `quem-somos`, `servicos`, `metodologia`, `fale-conosco`, `blog`,
+  `provedores-sites`.
+- **Partes repetidas** (head comum com fontes/Pixel/GA, cabeçalho, menu,
+  rodapé, logos, listas do blog) ficam entre marcadores
+  `<!-- @nome --> ... <!-- /@nome -->` e são preenchidas por:
 
-1. **Nenhum script tem `async`/`defer`.** Todos bloqueiam o parse do HTML.
-2. **Header e footer carregam via `fetch()` inline, depois do HTML já ter
-   sido processado** — isso atrasa o LCP e causa layout shift grande (o
-   header "pisca" depois do resto da página já estar visível).
-3. **Font Awesome completo (`all.min.css`, ~100KB)** carregado via CDN pra
-   uso de ~20 ícones. Trocar por SVG inline ou subset.
-4. **3 famílias de fonte, todos os pesos (`100..900` incluindo itálico)**
-   carregadas via Google Fonts, sem `preload`, e carregadas duas vezes
-   (index + footer). Cortar para 2-3 pesos por família realmente usados.
-5. **Zero imagens com `loading="lazy"`.** 31 `<img>` no index, 12 no
-   blog/index — nenhuma lazy.
-6. **Todas as imagens em `.png`.** Migrar para WebP (30-50% menor).
-7. **Carrossel de logos duplica 10 imagens manualmente no HTML** pra
-   simular loop infinito — 20 imagens carregando na home só por isso.
-   Resolver via CSS ou clone via JS, não duplicação manual no markup.
-8. **Vídeo autoplay sem controle de preload**
-   (`marekting_video.mp4` — atenção: nome do arquivo tem typo) carrega no
-   mobile mesmo antes do usuário rolar até a seção. Adicionar
-   `preload="none"` no mínimo, ou lazy-load do vídeo.
-9. **CSS não minificado**, arquivos grandes (`home.css` ~32KB,
-   `servicos.css` ~40KB) sem code splitting por página.
-10. **`background-attachment: fixed`** no hero da home — notoriamente lento
-    em Safari mobile, contribui pra jank de scroll.
-11. **Animações infinitas rodando sempre** (`pulseGlow`, `float`) mesmo fora
-    de viewport — consroem CPU/bateria sem necessidade.
+      node ferramentas/montar.mjs
 
----
-
-## Convenções já existentes no projeto (manter consistência)
-
-- HTML/CSS/JS vanilla, sem framework/bundler. Cada página tem seu próprio
-  `.css` e `.js` (ex.: `home.css`/`home.js`, `metodologia.css`/`metodologia.js`).
-- Header e footer são parciais compartilhados, injetados via `fetch()` em
-  cada página (ver bug #4 acima sobre a estrutura desses arquivos).
-- Paths de asset variam por profundidade de pasta (`./assets/...` na raiz,
-  `../assets/...` dentro de `/blog/`) — atenção ao mexer em arquivos que
-  vivem em pastas diferentes.
-- Google Fonts, Font Awesome via CDN, Meta Pixel no footer, EmailJS para
-  formulários (`emailjs-integration.js`).
+  Editar textos em `ferramentas/parciais/*.html` e rodar o script. Nunca
+  editar o conteúdo entre marcadores direto na página (é sobrescrito).
+- **Blog:** a lista de posts é `ferramentas/posts.json` (o primeiro é o mais
+  recente). Post novo: copiar `ferramentas/modelo-post.html` para
+  `blog/posts/<slug>.html`, acrescentar no topo do `posts.json`, rodar
+  `montar.mjs`. Home, lista do blog, "Continue lendo" e `sitemap.xml` se
+  atualizam sozinhos. Imagem de compartilhamento do post em
+  `assets/capas/<slug>.jpg`; páginas usam `assets/compartilhar.jpg`.
+- **Formulário:** `js/contato.js`, via EmailJS (campos `from_name`,
+  `company_name`, `from_email`, `whatsapp`, `message`). Ao enviar, dispara
+  `generate_lead` (GA4) e `Lead` (Meta Pixel). O configurador da home leva a
+  `/fale-conosco.html?desafio=...&setor=...`, que pré-preenche o formulário.
+- **Publicação:** push no `main` → GitHub Actions envia por FTP para a
+  HostGator (`.github/workflows/deploy.yml`). `ferramentas/`, `.github/` e
+  `*.md` não sobem. Push = site no ar: só com ok do dono.
 
 ---
 
 ## Antes de considerar qualquer entrega pronta
 
-Passar pelo checklist do manual da marca:
-
 - Isso transmite organização e segurança, ou tenta convencer?
 - Existe algum termo da lista proibida, mesmo em nome de classe/variável/
   comentário de código?
-- A seção de metodologia (se houver) bate com S.C.A.L.E — 4 etapas, essa
+- A seção de metodologia (se houver) bate com S.C.A.L.E: 4 etapas, essa
   ordem?
-- A mudança resolve o problema técnico sem reintroduzir gradiente/glow/
-  glassmorphism/animação excessiva?
+- Algum número, resultado, case ou depoimento inventado?
+- O conteúdo aparece sem JS e com movimento reduzido?
+- Rodou `node ferramentas/montar.mjs` e conferiu computador e celular?

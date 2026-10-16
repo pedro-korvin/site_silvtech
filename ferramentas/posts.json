@@ -1,0 +1,252 @@
+[
+  {
+    "slug": "consultoria-marketing-saas-brasil",
+    "titulo": "Existe consultoria de marketing especializada em SaaS no Brasil?",
+    "resumo": "Por que estratégias importadas dos EUA raramente encaixam no mercado brasileiro de SaaS, e onde entra a estratégia antes do canal.",
+    "categoria": "SaaS",
+    "grupo": "SaaS",
+    "data": "2026-07-22",
+    "foto": "dev-dupla",
+    "capa": "/assets/capas/consultoria-marketing-saas-brasil.jpg"
+  },
+  {
+    "slug": "agencia-marketing-focada-em-negocios",
+    "titulo": "Existe agência de marketing que entende de negócio, não só de campanha?",
+    "resumo": "A maioria das agências entrega campanha. Poucas entendem o negócio por trás dela antes de comunicar.",
+    "categoria": "Estratégia",
+    "grupo": "Estratégia e gestão",
+    "data": "2026-07-22",
+    "foto": "reuniao-lideranca",
+    "capa": "/assets/agencia-marketing-focada-em-negocios.jpg"
+  },
+  {
+    "slug": "marketing-clinica-estetica-cfm",
+    "titulo": "Marketing para clínica de estética: o que muda com as regras do CFM",
+    "resumo": "A Resolução CFM 2.336/2023 abriu novas possibilidades de comunicação — mas a estética tem um cuidado a mais.",
+    "categoria": "Clínicas de Saúde",
+    "grupo": "Clínicas de Saúde",
+    "data": "2026-07-22",
+    "foto": "clinica-recepcao",
+    "capa": "/assets/marketing-clinica-estetica-cfm.jpg"
+  },
+  {
+    "slug": "portaria-remota-como-vender-a-solucao",
+    "titulo": "Portaria remota: como comunicar a solução sem parecer só mais uma franquia",
+    "resumo": "Como falar com quem decide de fato — o síndico — em vez de vender só a marca da franquia.",
+    "categoria": "Segurança Eletrônica",
+    "grupo": "Segurança Eletrônica",
+    "data": "2026-07-22",
+    "foto": "camera-dome",
+    "capa": "/assets/portaria-remota-como-vender-a-solucao.jpg"
+  },
+  {
+    "slug": "lgpd-cameras-seguranca-venda-monitoramento",
+    "titulo": "LGPD e câmeras de segurança: o que muda na venda de monitoramento",
+    "resumo": "Como transformar conformidade com a LGPD em argumento de venda, em vez de obstáculo.",
+    "categoria": "Segurança Eletrônica",
+    "grupo": "Segurança Eletrônica",
+    "data": "2026-07-22",
+    "foto": "cameras-seguranca",
+    "capa": "/assets/lgpd-cameras-seguranca-venda-monitoramento.jpg"
+  },
+  {
+    "slug": "como-escalar-resultados-de-marketing",
+    "titulo": "Por que seu marketing parou de dar resultado (antes de gastar mais em anúncio)",
+    "resumo": "Se aumentar o investimento em anúncio parou de trazer retorno proporcional, o problema raramente é o anúncio.",
+    "categoria": "Estratégia",
+    "grupo": "Estratégia e gestão",
+    "data": "2026-07-22",
+    "foto": "estrategia-parede",
+    "capa": "/assets/como-escalar-resultados-de-marketing.jpg"
+  },
+  {
+    "slug": "linkedin-ads-para-industria",
+    "titulo": "Vale a pena anunciar maquinário e produtos industriais no LinkedIn?",
+    "resumo": "LinkedIn Ads pode funcionar para venda industrial B2B — mas não do mesmo jeito que funciona para SaaS.",
+    "categoria": "Indústria",
+    "grupo": "Indústria",
+    "data": "2026-07-22",
+    "foto": "galpao-tablet",
+    "capa": "/assets/linkedin-ads-para-industria.jpg"
+  },
+  {
+    "slug": "leads-para-energia-solar",
+    "titulo": "Comprar leads de energia solar vale a pena? O que considerar antes",
+    "resumo": "A diferença entre comprar leads prontos e gerar demanda própria — e o que isso significa pro seu funil.",
+    "categoria": "Energia Solar",
+    "grupo": "Energia Solar",
+    "data": "2026-07-22",
+    "foto": "solar-telhado",
+    "capa": "/assets/leads-para-energia-solar.jpg"
+  },
+  {
+    "slug": "ideias-promocao-provedor-internet",
+    "titulo": "Promoções para provedor de internet: o que funciona além do desconto",
+    "resumo": "O que realmente sustenta captação e retenção no longo prazo, além de desconto e brinde.",
+    "categoria": "Provedores de Internet",
+    "grupo": "Provedores de Internet",
+    "data": "2026-07-22",
+    "foto": "tecnicos-poste-caminhao",
+    "capa": "/assets/ideias-promocao-provedor-internet.jpg"
+  },
+  {
+    "slug": "reduzir-cac-saas-b2b",
+    "titulo": "Como reduzir o CAC em SaaS B2B sem cortar investimento às cegas",
+    "resumo": "Quando o custo de aquisição sobe, cortar investimento em mídia raramente resolve a causa real do problema.",
+    "categoria": "SaaS",
+    "grupo": "SaaS",
+    "data": "2026-07-22",
+    "foto": "dev-noite",
+    "capa": "/assets/reduzir-cac-saas-b2b.jpg"
+  },
+  {
+    "slug": "marketing-medico-o-que-e-permitido-2026",
+    "titulo": "Marketing médico em 2026: o que a Resolução CFM 2.336/2023 permite (e o que ainda é risco)",
+    "resumo": "O que mudou de fato na regulamentação, o que ainda é risco mesmo sendo permitido, e como ir da permissão à estratégia.",
+    "categoria": "Clínicas de Saúde",
+    "grupo": "Clínicas de Saúde",
+    "data": "2026-07-21",
+    "foto": "clinica-recepcao",
+    "capa": "/assets/capas/marketing-medico-o-que-e-permitido-2026.jpg"
+  },
+  {
+    "slug": "como-vender-energia-solar-fio-b-60",
+    "titulo": "Como vender energia solar em 2026 com o Fio B a 60%",
+    "resumo": "O argumento que resiste à objeção do Fio B e como reposicionar a venda diante da nova realidade tarifária.",
+    "categoria": "Energia Solar",
+    "grupo": "Energia Solar",
+    "data": "2026-07-21",
+    "foto": "solar-tecnico",
+    "capa": "/assets/capas/como-vender-energia-solar-fio-b-60.jpg"
+  },
+  {
+    "slug": "reforma-tributaria-impacto-industria-b2b",
+    "titulo": "Reforma tributária: como o CBS e o IBS mudam a venda e o preço na indústria B2B",
+    "resumo": "Por que a transição tributária é também um problema de comunicação — e o risco de ficar em silêncio diante dela.",
+    "categoria": "Indústria",
+    "grupo": "Indústria",
+    "data": "2026-07-21",
+    "foto": "escritorio-moderno",
+    "capa": "/assets/capas/reforma-tributaria-impacto-industria-b2b.jpg"
+  },
+  {
+    "slug": "agencia-marketing-seguranca-eletronica-monitoramento",
+    "titulo": "Existe agência de marketing especializada em segurança eletrônica e monitoramento?",
+    "resumo": "Por que monitoramento e segurança eletrônica vendem um serviço que só é percebido quando falha — e o que fazer a respeito.",
+    "categoria": "Segurança Eletrônica",
+    "grupo": "Segurança Eletrônica",
+    "data": "2026-07-21",
+    "foto": "monitor-dados",
+    "capa": "/assets/capas/agencia-marketing-seguranca-eletronica-monitoramento.jpg"
+  },
+  {
+    "slug": "consultoria-marketing-provedores-internet",
+    "titulo": "Consultoria de marketing para provedores de internet: por que o marketing genérico não resolve",
+    "resumo": "Como tratar marketing como parte do negócio, não como panfleto, para reduzir churn e estruturar aquisição.",
+    "categoria": "Provedores de Internet",
+    "grupo": "Provedores de Internet",
+    "data": "2026-07-21",
+    "foto": "tecnico-rack",
+    "capa": "/assets/capas/consultoria-marketing-provedores-internet.jpg"
+  },
+  {
+    "slug": "marketing-digital-energia-solar",
+    "titulo": "Marketing digital na energia solar: uma estratégia essencial no mercado",
+    "resumo": "Os tipos de marketing digital mais eficientes para empresas de energia solar que querem se posicionar antes da concorrência.",
+    "categoria": "Energia Solar",
+    "grupo": "Energia Solar",
+    "data": "2025-07-15",
+    "foto": "dashboard-escuro",
+    "capa": "/assets/capas/marketing-digital-energia-solar.jpg"
+  },
+  {
+    "slug": "marketing-de-performance",
+    "titulo": "Marketing de performance: uma estratégia focada em retorno financeiro",
+    "resumo": "Por que essa abordagem é essencial para empresas que querem crescer de forma previsível e lucrativa.",
+    "categoria": "Estratégia",
+    "grupo": "Estratégia e gestão",
+    "data": "2025-07-15",
+    "foto": "laptop-dashboard",
+    "capa": "/assets/capas/marketing-de-performance.jpg"
+  },
+  {
+    "slug": "5-tipos-de-marketing",
+    "titulo": "5 tipos de marketing para aplicar no seu negócio",
+    "resumo": "Escolher o tipo certo de marketing pode ser a diferença entre estagnar e crescer.",
+    "categoria": "Fundamentos",
+    "grupo": "Estratégia e gestão",
+    "data": "2025-07-15",
+    "foto": "colegas-laptop",
+    "capa": "/assets/capas/5-tipos-de-marketing.jpg"
+  },
+  {
+    "slug": "branding-performance",
+    "titulo": "A diferença entre branding e performance",
+    "resumo": "Duas abordagens que atendem a objetivos diferentes e exigem investimentos estratégicos em momentos específicos.",
+    "categoria": "Branding",
+    "grupo": "Estratégia e gestão",
+    "data": "2025-07-15",
+    "foto": "gravacao-entrevista",
+    "capa": "/assets/capas/branding-performance.jpg"
+  },
+  {
+    "slug": "como-atrair-clientes-com-marketing-digital",
+    "titulo": "Como atrair clientes todos os dias com marketing digital",
+    "resumo": "Um plano de ação estruturado, baseado em dados e comportamento do consumidor.",
+    "categoria": "Aquisição",
+    "grupo": "Estratégia e gestão",
+    "data": "2025-07-15",
+    "foto": "estrategia-quadro",
+    "capa": "/assets/capas/como-atrair-clientes-com-marketing-digital.jpg"
+  },
+  {
+    "slug": "consultoria-de-marketing",
+    "titulo": "Consultoria de marketing: quando vale a pena contratar e como escolher",
+    "resumo": "Escolher o tipo certo de marketing pode ser a diferença entre estagnar e crescer.",
+    "categoria": "Consultoria",
+    "grupo": "Estratégia e gestão",
+    "data": "2025-07-15",
+    "foto": "estrategia-post-its",
+    "capa": "/assets/capas/consultoria-de-marketing.jpg"
+  },
+  {
+    "slug": "crm-sistema-de-vendas",
+    "titulo": "CRM: como um sistema de vendas pode aumentar sua produtividade",
+    "resumo": "Como organizar o funil de vendas, acompanhar clientes e aumentar a produtividade da equipe comercial.",
+    "categoria": "Vendas",
+    "grupo": "Estratégia e gestão",
+    "data": "2025-07-15",
+    "foto": "equipe-escritorio",
+    "capa": "/assets/capas/crm-sistema-de-vendas.jpg"
+  },
+  {
+    "slug": "impacto-das-redes-sociais",
+    "titulo": "Como pequenos negócios estão dominando o jogo digital",
+    "resumo": "Um movimento silencioso que está mudando a forma como o comércio local se posiciona.",
+    "categoria": "Redes Sociais",
+    "grupo": "Estratégia e gestão",
+    "data": "2025-07-15",
+    "foto": "gravacao-estudio",
+    "capa": "/assets/capas/impacto-das-redes-sociais.jpg"
+  },
+  {
+    "slug": "inbound-outbound",
+    "titulo": "Inbound x Outbound: qual estratégia gera mais resultados?",
+    "resumo": "Enquanto o Inbound atrai clientes de forma orgânica, o Outbound aposta na prospecção ativa.",
+    "categoria": "Estratégia",
+    "grupo": "Estratégia e gestão",
+    "data": "2025-07-15",
+    "foto": "edicao-video",
+    "capa": "/assets/capas/inbound-outbound.jpg"
+  },
+  {
+    "slug": "importancia-marketing-empresas",
+    "titulo": "A importância do marketing na empresa",
+    "resumo": "Como está o setor de marketing na sua organização — e por que ele sustenta o crescimento.",
+    "categoria": "Gestão",
+    "grupo": "Estratégia e gestão",
+    "data": "2025-10-13",
+    "foto": "reuniao-lideranca",
+    "capa": "/assets/capas/importancia-marketing-empresas.jpg"
+  }
+]

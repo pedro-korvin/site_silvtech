@@ -3,106 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Solicite seu diagnóstico de marketing com a Silvtech. Preencha o formulário e receba uma resposta em até 72 horas."
-    />
-    <link
-      rel="canonical"
-      href="https://www.silvtech.com.br/fale-conosco.html"
-    />
-    <meta property="og:title" content="Fale conosco | Silvtech" />
-    <meta
-      property="og:description"
-      content="Solicite seu diagnóstico e entenda onde estão as prioridades do marketing da sua empresa."
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:image"
-      content="https://www.silvtech.com.br/assets/logo_silvtech.png"
-    />
-    <meta
-      property="og:url"
-      content="https://www.silvtech.com.br/fale-conosco.html"
-    />
     <title>Fale conosco | Silvtech</title>
-
+    <meta name="description" content="Solicite seu diagnóstico de marketing com a Silvtech. Preencha o formulário e receba uma resposta em até 72 horas." />
+    <link rel="canonical" href="https://www.silvtech.com.br/fale-conosco.html" />
+    <meta property="og:title" content="Fale conosco | Silvtech" />
+    <meta property="og:description" content="Solicite seu diagnóstico e entenda onde estão as prioridades do marketing da sua empresa." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.silvtech.com.br/assets/compartilhar.jpg" />
+    <meta property="og:url" content="https://www.silvtech.com.br/fale-conosco.html" />
+    <!-- @head-comum -->
+    <meta name="theme-color" content="#05070d" />
     <link rel="icon" type="image/png" href="/favicon.png" />
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@500&display=swap"
     />
-
-    <link rel="stylesheet" href="/css/tokens.css" />
-    <link rel="stylesheet" href="/css/base.css" />
-    <link rel="stylesheet" href="/css/fale-conosco.css" />
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "ContactPage",
-        "name": "Fale conosco - Silvtech",
-        "description": "Solicite um diagnóstico de marketing com a Silvtech.",
-        "url": "https://www.silvtech.com.br/fale-conosco.html",
-        "mainEntity": {
-          "@type": "Organization",
-          "name": "Silvtech",
-          "email": "contato@silvtech.com.br",
-          "telephone": "+55-43-98873-8360",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Londrina",
-            "addressRegion": "PR",
-            "addressCountry": "BR"
-          },
-          "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "customer service",
-            "telephone": "+55-43-98873-8360",
-            "availableLanguage": "Portuguese"
-          }
-        }
-      }
-    </script>
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://www.silvtech.com.br/index.html"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Fale conosco",
-            "item": "https://www.silvtech.com.br/fale-conosco.html"
-          }
-        ]
-      }
-    </script>
-
-    <!-- EmailJS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-      defer
-    ></script>
+    <link rel="stylesheet" href="/css/nucleo.css" />
+    <script src="/js/nucleo.js" defer></script>
 
     <!-- Meta Pixel Code -->
     <script>
       !(function (f, b, e, v, n, t, s) {
         if (f.fbq) return;
         n = f.fbq = function () {
-          n.callMethod
-            ? n.callMethod.apply(n, arguments)
-            : n.queue.push(arguments);
+          n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
         };
         if (!f._fbq) f._fbq = n;
         n.push = n;
@@ -114,12 +40,7 @@
         t.src = v;
         s = b.getElementsByTagName(e)[0];
         s.parentNode.insertBefore(t, s);
-      })(
-        window,
-        document,
-        "script",
-        "https://connect.facebook.net/en_US/fbevents.js",
-      );
+      })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
       fbq("init", "654658884374776");
       fbq("track", "PageView");
     </script>
@@ -133,252 +54,307 @@
     <!-- End Meta Pixel Code -->
 
     <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-CXBEJDWY21"
-    ></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CXBEJDWY21"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "G-CXBEJDWY21");
     </script>
     <!-- End Google tag -->
+    <!-- /@head-comum -->
+    <link rel="stylesheet" href="/css/fale-conosco.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+    <script src="/js/contato.js" defer></script>
+    <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Fale conosco - Silvtech",
+            "description": "Solicite um diagnóstico de marketing com a Silvtech.",
+            "url": "https://www.silvtech.com.br/fale-conosco.html",
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "Silvtech",
+              "email": "contato@silvtech.com.br",
+              "telephone": "+55-43-98873-8360",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Londrina",
+                "addressRegion": "PR",
+                "addressCountry": "BR"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "contactType": "customer service",
+                "telephone": "+55-43-98873-8360",
+                "availableLanguage": "Portuguese"
+              }
+            }
+          }
+        </script>
+    <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.silvtech.com.br/index.html"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Fale conosco",
+                "item": "https://www.silvtech.com.br/fale-conosco.html"
+              }
+            ]
+          }
+        </script>
   </head>
 
   <body>
-    <header class="site-header">
-      <div class="container site-header__inner">
-        <a class="site-header__logo" href="/index.html">
-          <img src="/assets/logo_preto.svg" alt="Silvtech" />
+    <!-- @cabecalho -->
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="cabecalho">
+      <div class="container cabecalho__dentro">
+        <a class="cabecalho__logo" href="/" aria-label="Silvtech, página inicial">
+          <img src="/assets/logo-silvtech-escuro.webp" alt="Silvtech" width="223" height="112" />
         </a>
 
-        <button
-          class="site-header__toggle"
-          aria-label="Abrir menu"
-          aria-expanded="false"
-          aria-controls="site-nav"
-        >
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            aria-hidden="true"
-          >
-            <line x1="3" y1="7" x2="21" y2="7" />
-            <line x1="3" y1="12" x2="21" y2="12" />
-            <line x1="3" y1="17" x2="21" y2="17" />
-          </svg>
-        </button>
-
-        <nav class="site-nav" id="site-nav" aria-label="Principal">
-          <ul class="site-nav__list">
-            <li><a href="/index.html">Home</a></li>
+        <nav class="nav" aria-label="Principal">
+          <ul class="nav__lista">
             <li><a href="/quemsomos.html">Quem somos</a></li>
-            <li><a href="/servicos.html">Serviços</a></li>
+            <li><a href="/servicos.html">Soluções</a></li>
             <li><a href="/metodologia.html">Metodologia</a></li>
-            <li><a href="/setores/index.html">Setores</a></li>
-            <li><a href="/cases/index.html">Cases</a></li>
             <li><a href="/blog/index.html">Blog</a></li>
-            <li><a href="/provedores/sites/">Sites para Provedores</a></li>
-            <li>
-              <a href="/fale-conosco.html" aria-current="page">Contato</a>
-            </li>
+            <li><a href="/provedores/sites/">Sites para provedores</a></li>
+            <li><a href="/fale-conosco.html" aria-current="page">Contato</a></li>
           </ul>
-          <a class="btn btn--acento site-nav__cta" href="/fale-conosco.html"
-            >Solicitar diagnóstico</a
-          >
         </nav>
+
+        <div class="cabecalho__acoes">
+          <a class="btn btn--primario btn--pequeno cabecalho__cta" href="/fale-conosco.html">Solicitar diagnóstico</a>
+          <button class="menu-botao" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+            <span></span>
+          </button>
+        </div>
       </div>
     </header>
 
-    <main>
-      <!-- ================= HERO ================= -->
-      <section class="hero">
-        <div class="container reveal">
-          <span class="rotulo rotulo--acento">Fale conosco</span>
-          <h1>Solicite seu diagnóstico.</h1>
-          <p class="destaque hero__apoio">
-            Preencha o formulário abaixo. Analisamos o cenário da sua empresa e
-            retornamos com os próximos passos.
-          </p>
+    <div class="menu" id="menu">
+      <ul class="menu__lista">
+        <li><a href="/">Início</a></li>
+        <li><a href="/quemsomos.html">Quem somos</a></li>
+        <li><a href="/servicos.html">Soluções</a></li>
+        <li><a href="/metodologia.html">Metodologia</a></li>
+        <li><a href="/blog/index.html">Blog</a></li>
+        <li><a href="/provedores/sites/">Sites para provedores</a></li>
+        <li><a href="/fale-conosco.html" aria-current="page">Contato</a></li>
+      </ul>
+      <div class="menu__rodape">
+        <a class="btn btn--primario" href="/fale-conosco.html">Solicitar diagnóstico</a>
+        <div class="menu__contato">
+          <a href="https://wa.me/5543988738360" target="_blank" rel="noopener">WhatsApp (43) 98873-8360</a>
+          <a href="mailto:contato@silvtech.com.br">contato@silvtech.com.br</a>
         </div>
-      </section>
+      </div>
+    </div>
+    <!-- /@cabecalho -->
 
-      <!-- ================= CONTATO ================= -->
-      <section class="secao contato">
-        <div class="container contato__grid reveal">
-          <div class="expectativa">
-            <span class="rotulo">O que acontece depois do envio</span>
-            <div class="expectativa__lista">
-              <div class="expectativa__item">
-                <h3>Resposta em até 72 horas</h3>
-                <p>
-                  Analisamos as informações enviadas e retornamos por e-mail ou
-                  WhatsApp com os próximos passos.
-                </p>
-              </div>
-              <div class="expectativa__item">
-                <h3>Diagnóstico sem compromisso</h3>
-                <p>
-                  Reservamos duas vagas de diagnóstico gratuito por mês. Se
-                  fizer sentido para os dois lados, seguimos para uma conversa.
-                </p>
-              </div>
-              <div class="expectativa__item">
-                <h3>Sem venda no primeiro contato</h3>
-                <p>
-                  O diagnóstico existe para entender o seu negócio — não para
-                  empurrar um serviço.
-                </p>
-              </div>
-            </div>
+    <main id="conteudo">
+      <!-- ================= TOPO + FORMULÁRIO ================= -->
+      <section class="pagina-topo contato">
+        <div class="container contato__grade">
+          <div class="contato__texto">
+            <nav class="migalhas revelar" aria-label="Você está em">
+              <a href="/">Início</a><span aria-hidden="true">/</span><span>Contato</span>
+            </nav>
+            <h1 class="revelar" style="--atraso: 80ms">Solicite seu <span class="grad">diagnóstico.</span></h1>
+            <p class="texto-grande revelar" style="--atraso: 160ms">
+              Preencha o formulário. Analisamos o cenário da sua empresa e retornamos com os
+              próximos passos.
+            </p>
 
-            <div class="expectativa__canal">
-              <p>Prefere falar diretamente?</p>
-              <a
-                class="btn btn--secundario"
-                href="https://wa.me/5543988738360"
-                target="_blank"
-                rel="noopener"
-                >Chamar no WhatsApp</a
-              >
+            <ul class="expectativas revelar" style="--atraso: 240ms">
+              <li>
+                <span class="expectativas__icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg></span>
+                <span><strong>Resposta em até 72 horas</strong>Analisamos as informações enviadas e retornamos por e-mail ou WhatsApp com os próximos passos.</span>
+              </li>
+              <li>
+                <span class="expectativas__icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v10H4V12M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" /></svg></span>
+                <span><strong>Diagnóstico sem compromisso</strong>Reservamos duas vagas de diagnóstico gratuito por mês. Se fizer sentido para os dois lados, seguimos para uma conversa.</span>
+              </li>
+              <li>
+                <span class="expectativas__icone" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" /><circle cx="12" cy="12" r="3" /></svg></span>
+                <span><strong>Sem venda no primeiro contato</strong>O diagnóstico existe para entender o seu negócio, não para empurrar um serviço.</span>
+              </li>
+            </ul>
+
+            <div class="canais revelar" style="--atraso: 320ms">
+              <p class="mono">Prefere falar diretamente?</p>
+              <div class="canais__lista">
+                <a class="canal" href="https://wa.me/5543988738360" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" /></svg>
+                  <span><small>WhatsApp</small>(43) 98873-8360</span>
+                </a>
+                <a class="canal" href="mailto:contato@silvtech.com.br">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><path d="m22 6-10 7L2 6" /></svg>
+                  <span><small>E-mail</small>contato@silvtech.com.br</span>
+                </a>
+                <a class="canal" href="https://www.instagram.com/assessoria.silvtech/" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37zM17.5 6.5h.01" /></svg>
+                  <span><small>Instagram</small>@assessoria.silvtech</span>
+                </a>
+              </div>
             </div>
           </div>
 
-          <form id="contact-form" class="form-contato" novalidate>
-            <div class="campo">
-              <label for="from_name">Nome completo</label>
-              <input type="text" id="from_name" name="from_name" required />
+          <div class="contato__cartao revelar" style="--atraso: 120ms">
+            <form id="contact-form" class="form-contato" novalidate>
+              <p class="mono"><span class="ponto" aria-hidden="true"></span> 2 vagas de diagnóstico gratuito por mês</p>
+              <h2>Conte sobre a sua empresa.</h2>
+
+              <div class="form-contato__duplo">
+                <div class="campo">
+                  <label for="from_name">Nome completo</label>
+                  <input type="text" id="from_name" name="from_name" autocomplete="name" required />
+                </div>
+                <div class="campo">
+                  <label for="company_name">Empresa</label>
+                  <input type="text" id="company_name" name="company_name" autocomplete="organization" required />
+                </div>
+                <div class="campo">
+                  <label for="from_email">E-mail corporativo</label>
+                  <input type="email" id="from_email" name="from_email" autocomplete="email" required />
+                </div>
+                <div class="campo">
+                  <label for="whatsapp">WhatsApp</label>
+                  <input type="tel" id="whatsapp" name="whatsapp" autocomplete="tel" placeholder="(00) 00000-0000" required />
+                </div>
+              </div>
+
+              <fieldset class="desafios">
+                <legend>Qual é o principal desafio hoje? <small>(opcional)</small></legend>
+                <div class="fichas">
+                  <button class="ficha" type="button" aria-pressed="false" data-desafio="gestao">Não tenho equipe de marketing</button>
+                  <button class="ficha" type="button" aria-pressed="false" data-desafio="comercial">Marketing e comercial não conversam</button>
+                  <button class="ficha" type="button" aria-pressed="false" data-desafio="marca">Marca pouco reconhecida</button>
+                  <button class="ficha" type="button" aria-pressed="false" data-desafio="digital">Digital sem resultado</button>
+                </div>
+              </fieldset>
+
+              <div class="campo">
+                <label for="message">Conte um pouco do cenário atual</label>
+                <textarea id="message" name="message" rows="4" placeholder="Ex.: segmento, tamanho da equipe, o que já foi tentado..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn--primario form-contato__enviar">
+                Solicitar diagnóstico
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
+              </button>
+              <p class="form-feedback" role="status" hidden></p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= COMO FUNCIONA ================= -->
+      <section class="secao secao--painel">
+        <div class="container">
+          <div class="secao__topo secao__topo--lado">
+            <div>
+              <p class="mono mono--linha revelar">Como funciona</p>
+              <h2 class="revelar" style="--atraso: 80ms">Do formulário ao diagnóstico.</h2>
             </div>
-
-            <div class="campo">
-              <label for="company_name">Empresa</label>
-              <input
-                type="text"
-                id="company_name"
-                name="company_name"
-                required
-              />
-            </div>
-
-            <div class="campo">
-              <label for="from_email">E-mail corporativo</label>
-              <input type="email" id="from_email" name="from_email" required />
-            </div>
-
-            <div class="campo">
-              <label for="whatsapp">WhatsApp</label>
-              <input type="tel" id="whatsapp" name="whatsapp" required />
-            </div>
-
-            <div class="campo">
-              <label for="message"
-                >Qual o principal desafio do seu negócio hoje?</label
-              >
-              <textarea id="message" name="message" rows="4"></textarea>
-            </div>
-
-            <button type="submit" class="btn btn--acento">
-              Solicitar diagnóstico
-            </button>
-
-            <p class="form-feedback" role="status" hidden></p>
-          </form>
+            <p class="texto-grande revelar" style="--atraso: 160ms">
+              O diagnóstico é a primeira etapa do S.C.A.L.E, o Scan. É por ele que todo projeto da
+              Silvtech começa.
+            </p>
+          </div>
+          <ol class="passos-contato">
+            <li class="revelar">
+              <figure class="foto foto--azul"><img src="/assets/fotos/colegas-laptop-p.webp" width="800" height="534" alt="" loading="lazy" /></figure>
+              <span class="mono">Passo 01</span>
+              <h3>Você conta o cenário</h3>
+              <p>Pelo formulário ou pelo WhatsApp, com as informações principais da empresa.</p>
+            </li>
+            <li class="revelar" style="--atraso: 100ms">
+              <figure class="foto foto--azul"><img src="/assets/fotos/monitor-dados-p.webp" width="800" height="576" alt="" loading="lazy" /></figure>
+              <span class="mono">Passo 02</span>
+              <h3>Analisamos o negócio</h3>
+              <p>Olhamos o negócio, o mercado e a comunicação para entender o que limita o crescimento.</p>
+            </li>
+            <li class="revelar" style="--atraso: 200ms">
+              <figure class="foto foto--azul"><img src="/assets/fotos/reuniao-lideranca-p.webp" width="800" height="533" alt="" loading="lazy" /></figure>
+              <span class="mono">Passo 03</span>
+              <h3>Mostramos os próximos passos</h3>
+              <p>Retornamos em até 72 horas, por e-mail ou WhatsApp, antes de qualquer proposta.</p>
+            </li>
+          </ol>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
+    <!-- @rodape -->
+    <footer class="rodape">
       <div class="container">
-        <div class="site-footer__grid">
-          <div class="site-footer__brand">
-            <a class="site-header__logo" href="/index.html">Silvtech</a>
-            <p class="site-footer__desc">
-              Marketing orientado por estratégia para empresas que querem
-              crescer com consistência.
-            </p>
+        <div class="rodape__topo">
+          <div class="rodape__chamada">
+            <img class="rodape__logo" src="/assets/logo-silvtech-escuro.webp" alt="Silvtech" width="223" height="112" loading="lazy" />
+            <h2>Marketing orientado por estratégia.</h2>
+            <p>Para empresas B2B que querem crescer com consistência. Londrina, Paraná — Brasil.</p>
+            <a class="btn btn--primario" href="/fale-conosco.html">Solicitar diagnóstico</a>
           </div>
-
-          <div class="footer-col">
-            <h4>Navegação</h4>
-            <ul>
-              <li><a href="/index.html">Home</a></li>
-              <li><a href="/quemsomos.html">Quem somos</a></li>
-              <li><a href="/servicos.html">Serviços</a></li>
-              <li><a href="/metodologia.html">Metodologia</a></li>
-              <li><a href="/setores/index.html">Setores</a></li>
-              <li><a href="/cases/index.html">Cases</a></li>
-              <li><a href="/blog/index.html">Blog</a></li>
-              <li><a href="/fale-conosco.html">Contato</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h4>Soluções</h4>
-            <ul>
-              <li><a href="/servicos.html">Gestão de Marketing</a></li>
-              <li><a href="/servicos.html">Estruturação Comercial</a></li>
-              <li><a href="/servicos.html">Posicionamento e Branding</a></li>
-              <li><a href="/servicos.html">Marketing Digital</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h4>Contato</h4>
-            <ul>
-              <li><a href="tel:+5543988738360">(43) 98873-8360</a></li>
-              <li>
-                <a href="mailto:contato@silvtech.com.br"
-                  >contato@silvtech.com.br</a
-                >
-              </li>
-              <li>Londrina, Paraná — Brasil</li>
-              <li>
-                <a
-                  href="https://www.instagram.com/assessoria.silvtech/"
-                  target="_blank"
-                  rel="noopener"
-                  >Instagram</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://wa.me/5543988738360"
-                  target="_blank"
-                  rel="noopener"
-                  >WhatsApp</a
-                >
-              </li>
-            </ul>
+          <div class="rodape__colunas">
+            <div>
+              <h3>Navegação</h3>
+              <ul>
+                <li><a href="/">Início</a></li>
+                <li><a href="/quemsomos.html">Quem somos</a></li>
+                <li><a href="/metodologia.html">Metodologia</a></li>
+                <li><a href="/blog/index.html">Blog</a></li>
+                <li><a href="/provedores/sites/">Sites para provedores</a></li>
+                <li><a href="/fale-conosco.html">Contato</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3>Soluções</h3>
+              <ul>
+                <li><a href="/servicos.html#gestao">Gestão de Marketing</a></li>
+                <li><a href="/servicos.html#comercial">Estruturação Comercial</a></li>
+                <li><a href="/servicos.html#marca">Posicionamento e Branding</a></li>
+                <li><a href="/servicos.html#digital">Marketing Digital</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3>Contato</h3>
+              <ul>
+                <li><a href="https://wa.me/5543988738360" target="_blank" rel="noopener">(43) 98873-8360</a></li>
+                <li><a href="mailto:contato@silvtech.com.br">contato@silvtech.com.br</a></li>
+                <li><a href="https://www.instagram.com/assessoria.silvtech/" target="_blank" rel="noopener">Instagram</a></li>
+              </ul>
+            </div>
           </div>
         </div>
-
-        <div class="site-footer__bottom">
+        <p class="rodape__marca" aria-hidden="true">Silvtech</p>
+        <div class="rodape__base">
           <p>&copy; 2026 Silvtech. Todos os direitos reservados.</p>
+          <p>Marketing orientado por estratégia</p>
         </div>
       </div>
     </footer>
 
-    <a
-      class="whatsapp-float"
-      href="https://wa.me/5543988738360"
-      target="_blank"
-      rel="noopener"
-      aria-label="Falar no WhatsApp"
-    >
+    <a class="whats" href="https://wa.me/5543988738360" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
       <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
-        <path
-          d="M16.001 3C9.383 3 4 8.383 4 15.001c0 2.386.63 4.62 1.833 6.605L4 29l7.59-1.992A11.94 11.94 0 0 0 16 27c6.618 0 12-5.383 12-12S22.619 3 16.001 3zm0 21.6a9.55 9.55 0 0 1-4.868-1.335l-.349-.207-4.504 1.183 1.203-4.391-.228-.362A9.56 9.56 0 0 1 6.4 15c0-5.294 4.307-9.6 9.601-9.6 5.293 0 9.6 4.306 9.6 9.6 0 5.294-4.307 9.6-9.6 9.6zm5.264-7.19c-.288-.144-1.706-.842-1.97-.938-.264-.096-.456-.144-.648.144-.192.288-.744.938-.912 1.13-.168.192-.336.216-.624.072-.288-.144-1.215-.448-2.314-1.428-.855-.762-1.432-1.704-1.6-1.992-.168-.288-.018-.444.126-.588.129-.128.288-.336.432-.504.144-.168.192-.288.288-.48.096-.192.048-.36-.024-.504-.072-.144-.648-1.562-.888-2.14-.234-.562-.472-.486-.648-.495l-.552-.01c-.192 0-.504.072-.768.36-.264.288-1.008.984-1.008 2.4 0 1.416 1.032 2.784 1.176 2.976.144.192 2.03 3.1 4.92 4.346.688.297 1.224.474 1.643.607.69.22 1.318.189 1.814.115.553-.083 1.706-.697 1.946-1.371.24-.674.24-1.252.168-1.372-.072-.12-.264-.192-.552-.336z"
-        />
+        <path d="M16.001 3C9.383 3 4 8.383 4 15.001c0 2.386.63 4.62 1.833 6.605L4 29l7.59-1.992A11.94 11.94 0 0 0 16 27c6.618 0 12-5.383 12-12S22.619 3 16.001 3zm0 21.6a9.55 9.55 0 0 1-4.868-1.335l-.349-.207-4.504 1.183 1.203-4.391-.228-.362A9.56 9.56 0 0 1 6.4 15c0-5.294 4.307-9.6 9.601-9.6 5.293 0 9.6 4.306 9.6 9.6 0 5.294-4.307 9.6-9.6 9.6zm5.264-7.19c-.288-.144-1.706-.842-1.97-.938-.264-.096-.456-.144-.648.144-.192.288-.744.938-.912 1.13-.168.192-.336.216-.624.072-.288-.144-1.215-.448-2.314-1.428-.855-.762-1.432-1.704-1.6-1.992-.168-.288-.018-.444.126-.588.129-.128.288-.336.432-.504.144-.168.192-.288.288-.48.096-.192.048-.36-.024-.504-.072-.144-.648-1.562-.888-2.14-.234-.562-.472-.486-.648-.495l-.552-.01c-.192 0-.504.072-.768.36-.264.288-1.008.984-1.008 2.4 0 1.416 1.032 2.784 1.176 2.976.144.192 2.03 3.1 4.92 4.346.688.297 1.224.474 1.643.607.69.22 1.318.189 1.814.115.553-.083 1.706-.697 1.946-1.371.24-.674.24-1.252.168-1.372-.072-.12-.264-.192-.552-.336z" />
       </svg>
     </a>
-
-    <script src="/js/site.js" defer></script>
-    <script src="/js/contato.js" defer></script>
+    <!-- /@rodape -->
   </body>
 </html>

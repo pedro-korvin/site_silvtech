@@ -46,5 +46,6 @@ jobs:
             **/.git*
             **/.git*/**
             .github/**
+            ferramentas/**
             **/*.md
             **/node_modules/**

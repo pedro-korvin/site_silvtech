@@ -1,137 +1,156 @@
 /* ==========================================================================
-   Silvtech — Serviços (novo design system)
-   Depende de tokens.css + base.css. Só esta página usa este arquivo.
+   Silvtech — Soluções (depende de nucleo.css)
    ========================================================================== */
 
-/* ---- Hero (tipo A) ---- */
-.hero {
-  padding-block: var(--esp-7) var(--respiro-secao);
+/* Atalhos fixos para as 4 soluções */
+.atalhos {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-block: 1px solid var(--borda);
+  background: rgba(5, 7, 13, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: top 400ms var(--ease);
 }
 
-.hero h1 {
-  max-width: 18ch;
+.cabecalho:not(.escondido) ~ main .atalhos {
+  top: var(--cabecalho-h);
 }
 
-.hero__apoio {
-  margin-top: var(--esp-4);
-  max-width: 58ch;
-}
-
-.hero__acoes {
-  margin-top: var(--esp-5);
+.atalhos__lista {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--esp-2);
+  gap: 6px;
+  padding: 10px 0;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
 
-/* ---- Soluções (por problema) — cada bloco alterna tipo A/B ---- */
+.atalhos__lista a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--texto-2);
+  transition: color 250ms, border-color 250ms, background-color 250ms;
+}
+
+.atalhos__lista b {
+  font-family: var(--ff-mono);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--azul-claro);
+}
+
+.atalhos__lista a:hover {
+  color: var(--texto);
+  border-color: var(--borda-forte);
+}
+
+.atalhos__lista a.ativo {
+  color: var(--texto);
+  border-color: var(--azul);
+  background: rgba(42, 99, 255, 0.16);
+}
+
+/* Cada solução */
 .solucao {
-  padding: var(--esp-5) var(--esp-4);
-  border-radius: var(--raio);
-}
-
-.solucao:nth-child(even) {
-  background: var(--cor-fundo-alt);
-}
-
-.solucao__cabecalho {
-  margin-bottom: var(--esp-3);
-  max-width: 60ch;
-}
-
-.solucao__cabecalho .rotulo {
-  margin-bottom: var(--esp-2);
+  scroll-margin-top: calc(var(--cabecalho-h) + 70px);
 }
 
 .solucao__problema {
-  color: var(--cor-neutro);
-  margin-top: var(--esp-2);
+  max-width: 24ch;
+  font-size: clamp(24px, 2.4vw, 34px);
+  font-weight: 700;
+  font-stretch: 85%;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--texto);
 }
 
-.solucao__grid {
-  margin-top: var(--esp-4);
+.solucao .dividido__texto > p:not([class]) {
+  color: var(--texto-2);
+}
+
+.solucao__nome {
+  margin-top: 12px;
+  font-size: clamp(40px, 5vw, 76px);
+  line-height: 0.95;
+}
+
+.solucao__blocos {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--esp-4);
+  gap: 24px;
+  width: 100%;
+  margin-top: 8px;
+  padding: 24px;
+  border-radius: var(--raio-g);
+  border: 1px solid var(--borda);
+  background: rgba(255, 255, 255, 0.02);
 }
 
-.solucao__bloco h4 {
-  font-family: var(--ff-texto);
-  font-size: var(--fs-rotulo);
-  font-weight: 600;
-  letter-spacing: 0.08em;
+.solucao__blocos h3 {
+  margin-bottom: 14px;
+  font-family: var(--ff-mono);
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: 100%;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--cor-neutro);
-  margin-bottom: var(--esp-2);
+  color: var(--azul-claro);
 }
 
-.solucao__bloco ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: var(--esp-1);
+.solucao__blocos .lista-check {
+  margin: 0;
 }
 
-.solucao__bloco li {
-  padding-left: var(--esp-2);
-  position: relative;
+.solucao__blocos p {
+  color: var(--texto-2);
 }
 
-.solucao__bloco li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.7em;
-  width: 4px;
-  height: 4px;
-  background: var(--cor-acento);
-  border-radius: 50%;
-}
-
-.solucao__garantia {
-  margin-top: var(--esp-3);
-  padding: var(--esp-3);
-  background: var(--cor-superficie);
-  border: 1px solid var(--cor-borda);
-  border-radius: var(--raio);
-  font-size: var(--fs-legenda);
-}
-
-.solucao__garantia strong {
-  color: var(--cor-texto);
-}
-
-@media (min-width: 768px) {
-  .solucao__grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (min-width: 640px) {
+  .solucao__blocos {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-/* ---- CTA final ---- */
-.cta-final {
-  background: var(--cor-acento);
-  color: var(--cor-fundo);
+/* Fluxo comercial animado */
+.fluxo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
 }
 
-.cta-final h2,
-.cta-final p {
-  color: var(--cor-fundo);
+.fluxo li {
+  position: relative;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid var(--borda-forte);
+  font-size: 14px;
+  font-weight: 600;
+  background: rgba(42, 99, 255, 0.08);
+  animation: fluxo-luz 4s var(--ease) infinite;
 }
 
-.cta-final__inner {
-  max-width: 60ch;
-}
+.fluxo li:nth-child(2) { animation-delay: 1s; }
+.fluxo li:nth-child(3) { animation-delay: 2s; }
+.fluxo li:nth-child(4) { animation-delay: 3s; }
 
-.cta-final p {
-  margin-top: var(--esp-3);
-  opacity: 0.85;
-}
-
-.cta-final .btn {
-  margin-top: var(--esp-5);
-}
-
-.cta-final .btn--primario {
-  background: var(--cor-fundo);
-  color: var(--cor-acento);
+@keyframes fluxo-luz {
+  0%,
+  30%,
+  100% {
+    border-color: var(--borda-forte);
+    box-shadow: none;
+  }
+  12% {
+    border-color: var(--ciano);
+    box-shadow: 0 0 18px rgba(63, 216, 255, 0.35);
+  }
 }
