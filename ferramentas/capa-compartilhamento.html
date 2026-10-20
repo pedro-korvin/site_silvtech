@@ -1,0 +1,35 @@
+<!--
+  IMAGEM DE COMPARTILHAMENTO DOS POSTS (1200x630) — uso:
+  1. Copie este arquivo para a raiz do site (ex.: _capa.html) e suba o
+     servidor local do site.
+  2. Abra no Chrome sem cabeçalho, com a janela em 1200x630:
+       chrome --headless=new --window-size=1200,630 --virtual-time-budget=8000
+         --screenshot=capa.png "http://localhost:PORTA/_capa.html?t=TÍTULO&cat=CATEGORIA&foto=NOME-DA-FOTO"
+     (t e cat com encodeURIComponent; foto = nome em assets/fotos, sem .webp)
+  3. Converta o PNG para JPG (qualidade ~84) em assets/capas/<slug>.jpg e
+     apague a cópia da raiz.
+-->
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=JetBrains+Mono:wght@500&display=block">
+<link rel="stylesheet" href="/css/nucleo.css">
+<style>
+html,body{margin:0;width:1200px;height:630px;overflow:hidden}
+.c{position:relative;width:1200px;height:630px;overflow:hidden;background:radial-gradient(55% 70% at 85% 30%,rgba(42,99,255,.35),transparent 70%),radial-gradient(40% 50% at 0% 100%,rgba(63,216,255,.12),transparent 70%),#05070d}
+.c::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(143,170,230,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(143,170,230,.08) 1px,transparent 1px);background-size:60px 60px;-webkit-mask-image:radial-gradient(80% 80% at 70% 40%,#000 20%,transparent 85%)}
+.t{position:absolute;left:64px;top:52px;bottom:52px;width:640px;display:flex;flex-direction:column}
+.t img{height:54px;width:auto;align-self:flex-start}
+.t .mono{margin-top:auto;margin-bottom:18px;font-size:15px;color:var(--ciano)}
+.t h1{font-size:var(--tam,56px);line-height:1.02;margin:0;text-transform:none;font-stretch:74%;letter-spacing:-.015em}
+.t p{margin-top:26px;font-family:var(--ff-mono);font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--azul-claro);display:flex;gap:12px;align-items:center}
+.f{position:absolute;right:56px;top:70px;width:390px;height:490px;border-radius:26px;box-shadow:0 0 0 1px rgba(143,170,230,.3),0 40px 80px -20px #000}
+</style></head><body><div class="c">
+<div class="t"><img src="/assets/logo-silvtech-escuro.webp" alt=""><span class="mono" id="cat"></span><h1 id="tit"></h1><p><span class="ponto"></span>silvtech.com.br/blog</p></div>
+<figure class="f foto foto--azul foto--grao"><img id="foto" alt=""><span class="visor"></span></figure>
+</div>
+<script>
+const q=new URLSearchParams(location.search);
+document.getElementById('cat').textContent=q.get('cat');
+const t=q.get('t'); document.getElementById('tit').textContent=t;
+document.documentElement.style.setProperty('--tam', (t.length>80?50:t.length>65?54:58)+'px');
+document.getElementById('foto').src='/assets/fotos/'+q.get('foto')+'.webp';
+</script></body></html>

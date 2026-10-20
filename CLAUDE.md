@@ -124,7 +124,8 @@ helden.com.br, dasckup.com.
   `blog/posts/<slug>.html`, acrescentar no topo do `posts.json`, rodar
   `montar.mjs`. Home, lista do blog, "Continue lendo" e `sitemap.xml` se
   atualizam sozinhos. Imagem de compartilhamento do post em
-  `assets/capas/<slug>.jpg`; páginas usam `assets/compartilhar.jpg`.
+  `assets/capas/<slug>.jpg` (gerada com `ferramentas/capa-compartilhamento.html`,
+  no mesmo padrão visual dos posts); páginas usam `assets/compartilhar.jpg`.
 - **Formulário:** `js/contato.js`, via EmailJS (campos `from_name`,
   `company_name`, `from_email`, `whatsapp`, `message`). Ao enviar, dispara
   `generate_lead` (GA4) e `Lead` (Meta Pixel). O configurador da home leva a
