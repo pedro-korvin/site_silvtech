@@ -1,5 +1,105 @@
 [
   {
+    "slug": "whatsapp-business-cobranca-mensagens-de-atendimento",
+    "titulo": "WhatsApp Business: o que muda com a cobrança das mensagens de atendimento",
+    "resumo": "A API do WhatsApp passou a cobrar mensagens de atendimento acima da franquia. O custo é o menor dos problemas para quem atende sem processo.",
+    "categoria": "Vendas",
+    "grupo": "Estratégia e gestão",
+    "data": "2026-10-20",
+    "foto": "whatsapp-icone",
+    "capa": "/assets/capas/whatsapp-business-cobranca-mensagens-de-atendimento.jpg"
+  },
+  {
+    "slug": "energia-solar-bateria-fio-b-2027",
+    "titulo": "Fio B a 75% em 2027: como vender sistema com bateria sem cair na guerra de preço",
+    "resumo": "A alta do Fio B muda a conta do cliente. Quem explica a bateria pelo uso, e não pelo preço, sai da comparação de orçamentos.",
+    "categoria": "Energia Solar",
+    "grupo": "Energia Solar",
+    "data": "2026-10-20",
+    "foto": "baterias-armazenamento",
+    "capa": "/assets/capas/energia-solar-bateria-fio-b-2027.jpg"
+  },
+  {
+    "slug": "google-ai-mode-empresas-b2b",
+    "titulo": "Google AI Mode: o que muda para empresas que dependem da busca orgânica",
+    "resumo": "A busca com IA reduz os cliques em respostas genéricas. Empresas com conteúdo próprio, claro e confiável continuam sendo citadas.",
+    "categoria": "Estratégia",
+    "grupo": "Estratégia e gestão",
+    "data": "2026-10-20",
+    "foto": "busca-google-celular",
+    "capa": "/assets/capas/google-ai-mode-empresas-b2b.jpg"
+  },
+  {
+    "slug": "cbs-2027-saas-precos-contratos",
+    "titulo": "CBS em 2027: como empresas de SaaS devem revisar preço, proposta e contrato",
+    "resumo": "A troca de PIS e Cofins pela CBS muda como o preço aparece na nota e o crédito do cliente. É assunto fiscal, mas também comercial.",
+    "categoria": "SaaS",
+    "grupo": "SaaS",
+    "data": "2026-10-20",
+    "foto": "calculadora-notas",
+    "capa": "/assets/capas/cbs-2027-saas-precos-contratos.jpg"
+  },
+  {
+    "slug": "planejamento-de-marketing-2027",
+    "titulo": "Planejamento de marketing para 2027: como montar a partir do que 2026 ensinou",
+    "resumo": "Um bom planejamento começa olhando para trás: o que trouxe cliente, o que só gerou movimento e o que muda no mercado em 2027.",
+    "categoria": "Estratégia",
+    "grupo": "Estratégia e gestão",
+    "data": "2026-10-20",
+    "foto": "planejamento-calendario",
+    "capa": "/assets/capas/planejamento-de-marketing-2027.jpg"
+  },
+  {
+    "slug": "pix-automatico-provedores-de-internet",
+    "titulo": "Pix Automático para provedores: como reduzir a inadimplência sem perder o cliente",
+    "resumo": "Parte do cancelamento em provedores começa num boleto atrasado. A cobrança recorrente é tecnologia, mas a adesão depende de comunicação.",
+    "categoria": "Provedores de Internet",
+    "grupo": "Provedores de Internet",
+    "data": "2026-10-20",
+    "foto": "pagamento-qr-celular",
+    "capa": "/assets/capas/pix-automatico-provedores-de-internet.jpg"
+  },
+  {
+    "slug": "monitoramento-com-inteligencia-artificial-como-vender",
+    "titulo": "Monitoramento com inteligência artificial: como vender sem cair no discurso de tecnologia",
+    "resumo": "Quando todo concorrente diz que tem IA, a tecnologia deixa de diferenciar. O que vende é o que muda na segurança do cliente.",
+    "categoria": "Segurança Eletrônica",
+    "grupo": "Segurança Eletrônica",
+    "data": "2026-10-20",
+    "foto": "central-monitoramento",
+    "capa": "/assets/capas/monitoramento-com-inteligencia-artificial-como-vender.jpg"
+  },
+  {
+    "slug": "avaliacoes-google-clinicas",
+    "titulo": "Avaliações no Google para clínicas: como pedir e responder dentro das regras",
+    "resumo": "O paciente compara clínicas pelas avaliações antes de ligar. Pedir do jeito certo e responder com cuidado faz parte da comunicação.",
+    "categoria": "Clínicas de Saúde",
+    "grupo": "Clínicas de Saúde",
+    "data": "2026-10-20",
+    "foto": "paciente-celular",
+    "capa": "/assets/capas/avaliacoes-google-clinicas.jpg"
+  },
+  {
+    "slug": "google-ads-industria-qualidade-dos-leads",
+    "titulo": "Google Ads para indústria: por que a automação traz contatos errados e como corrigir",
+    "resumo": "A automação do Google otimiza o que você mede. Se a meta é formulário preenchido, ela entrega formulário, e não pedido.",
+    "categoria": "Indústria",
+    "grupo": "Indústria",
+    "data": "2026-10-20",
+    "foto": "industria-operador",
+    "capa": "/assets/capas/google-ads-industria-qualidade-dos-leads.jpg"
+  },
+  {
+    "slug": "valor-de-um-provedor-de-internet",
+    "titulo": "Quanto vale o seu provedor? O que pesa além do número de assinantes",
+    "resumo": "Em um mercado em consolidação, base grande com muito cancelamento vale menos do que parece. Receita previsível é o que pesa.",
+    "categoria": "Provedores de Internet",
+    "grupo": "Provedores de Internet",
+    "data": "2026-10-20",
+    "foto": "fibra-switch",
+    "capa": "/assets/capas/valor-de-um-provedor-de-internet.jpg"
+  },
+  {
     "slug": "consultoria-marketing-saas-brasil",
     "titulo": "Existe consultoria de marketing especializada em SaaS no Brasil?",
     "resumo": "Por que estratégias importadas dos EUA raramente encaixam no mercado brasileiro de SaaS, e onde entra a estratégia antes do canal.",

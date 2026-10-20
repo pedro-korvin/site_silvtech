@@ -1,7 +1,7 @@
 # Fotos do banco (Unsplash)
 
 Todas sob a Licença Unsplash (uso comercial gratuito, crédito não obrigatório).
-Baixadas em 2026-10-14 e 2026-10-15. Cada arquivo tem duas versões: `nome.webp` (1600 px) e `nome-p.webp` (800 px).
+Baixadas em 2026-10-14, 2026-10-15 e 2026-10-20. Cada arquivo tem duas versões: `nome.webp` (1600 px) e `nome-p.webp` (800 px).
 
 | Arquivo | Tema | Página no Unsplash |
 |---|---|---|
@@ -28,3 +28,13 @@ Baixadas em 2026-10-14 e 2026-10-15. Cada arquivo tem duas versões: `nome.webp`
 | colegas-laptop | Empresas | https://unsplash.com/photos/Of_m3hMsoAA |
 | escritorio-moderno | Empresas | https://unsplash.com/photos/l90zRbWvCoE |
 | tecnico-rack | Técnico/rede | https://unsplash.com/photos/zBLtU0zbJcU |
+| planejamento-calendario | Planejamento | https://unsplash.com/photos/tT2DSShVDTI |
+| busca-google-celular | Busca | https://unsplash.com/photos/UWVJaDvXW_c |
+| whatsapp-icone | WhatsApp | https://unsplash.com/photos/_qsuER9xYOY |
+| industria-operador | Indústria | https://unsplash.com/photos/hTUdXgbhd3o |
+| calculadora-notas | Financeiro | https://unsplash.com/photos/0rHxkbcvQAE |
+| pagamento-qr-celular | Pagamentos | https://unsplash.com/photos/IPe4SIIKuno |
+| baterias-armazenamento | Energia solar | https://unsplash.com/photos/CH7kRmyBQ4I |
+| central-monitoramento | Segurança | https://unsplash.com/photos/vwo_izFVy-k |
+| paciente-celular | Clínicas | https://unsplash.com/photos/WjWpTPZlu7E |
+| fibra-switch | Técnico/rede | https://unsplash.com/photos/eVWWr6nmDf8 |
