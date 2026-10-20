@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /provedores/previas/
 
 Sitemap: https://www.silvtech.com.br/sitemap.xml
