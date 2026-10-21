@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 372 48" role="img" aria-label="Teclenet Telecomunicações">
+  <g fill="none" stroke="#C2410C" stroke-width="3" stroke-linecap="round">
+    <path d="M6 28a18 18 0 0 1 28 0" />
+    <path d="M12 33a10 10 0 0 1 16 0" />
+  </g>
+  <circle cx="20" cy="38" r="3" fill="#C2410C" />
+  <text x="46" y="32" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="20" font-weight="700">
+    <tspan fill="#14171A">Teclenet </tspan><tspan fill="#C2410C">Telecomunicações</tspan>
+  </text>
+</svg>

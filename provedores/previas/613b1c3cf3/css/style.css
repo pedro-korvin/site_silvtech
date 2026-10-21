@@ -1,0 +1,342 @@
+/* ==========================================================================
+   Modelo 01 — Provedor de cidade pequena (v3)
+   Ângulo: "o provedor da sua cidade" — proximidade, gente daqui.
+   Direção visual: claro e quente (creme, terracota, âmbar), serifada
+   expressiva nos títulos, fotos com luz de fim de tarde e granulação,
+   moldura em arco no hero e carimbo girando.
+   Carregado DEPOIS de base.css e secoes.css: tokens + pele do modelo.
+   ========================================================================== */
+
+:root {
+  --ff-titulo: "Fraunces", Georgia, serif;
+  --ff-texto: "Work Sans", system-ui, sans-serif;
+
+  --cor-fundo: #fff9f3;
+  --cor-fundo-alt: #fdf0e3;
+  --cor-superficie: #ffffff;
+  --cor-texto: #2a1b12;
+  --cor-texto-neutro: #6e5b4e;
+  --cor-borda: rgba(42, 27, 18, 0.1);
+  --cor-borda-forte: rgba(42, 27, 18, 0.18);
+
+  --cor-acento: color-mix(in srgb, var(--cor-primaria) 85%, #000000);
+  --grad-texto: linear-gradient(95deg, color-mix(in srgb, var(--cor-primaria) 92%, #000000), color-mix(in srgb, var(--cor-secundaria) 70%, #000000));
+  --grad-faixa: radial-gradient(circle at 85% 15%, color-mix(in srgb, var(--cor-secundaria) 50%, transparent), transparent 55%),
+    linear-gradient(120deg, color-mix(in srgb, var(--cor-primaria) 75%, #1c0f08), color-mix(in srgb, var(--cor-primaria) 45%, #1c0f08));
+  --brilho: 0 14px 34px -14px color-mix(in srgb, var(--cor-primaria) 70%, transparent);
+
+  --vidro: rgba(42, 27, 18, 0.035);
+  --vidro-forte: rgba(42, 27, 18, 0.06);
+  --painel: rgba(255, 255, 255, 0.95);
+  --linha-grade: rgba(42, 27, 18, 0.05);
+  --moldura-fundo: linear-gradient(165deg, color-mix(in srgb, var(--cor-secundaria) 25%, #fff3e6), color-mix(in srgb, var(--cor-primaria) 25%, #fff3e6));
+  --plano-destaque-fundo: linear-gradient(180deg, #ffffff, color-mix(in srgb, var(--cor-secundaria) 8%, #ffffff));
+  --vel-cor: var(--cor-texto);
+  --esquema: light;
+  --sucesso-texto: #166534;
+  --alerta-texto: #92400e;
+  --cor-sucesso-fundo: #ecfdf3;
+  --cor-alerta-fundo: #fff7e6;
+  --contorno-numero: rgba(42, 27, 18, 0.12);
+  --sombra-card: 0 18px 40px -24px rgba(90, 50, 20, 0.35);
+  --rodape-fundo: #24160e;
+
+  --raio: 26px;
+  --raio-pequeno: 999px;
+
+  --cor-header-fundo: #ffffff;
+  --cor-header-texto: #2a1b12;
+  --cor-header-texto-neutro: #6e5b4e;
+  --cor-header-borda: #f0e3d6;
+}
+
+/* ---- Tipografia: serifada com personalidade ---- */
+h1,
+h2 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 1.3rem + 4vw, 4.2rem);
+  line-height: 1.05;
+}
+
+.grad {
+  font-style: italic;
+}
+
+.rotulo {
+  color: var(--cor-acento);
+}
+
+.btn--grande {
+  padding: 18px 30px;
+}
+
+/* Barra do assinante em terracota escuro */
+.barra-topo {
+  background: linear-gradient(90deg, color-mix(in srgb, var(--cor-primaria) 70%, #1c0f08), color-mix(in srgb, var(--cor-primaria) 45%, #1c0f08));
+}
+
+/* ==========================================================================
+   HERO: fundo creme com manchas de cor, moldura em arco, carimbo girando
+   ========================================================================== */
+.hero {
+  background: var(--cor-fundo);
+}
+
+.hero__fundo {
+  background:
+    radial-gradient(40% 45% at 92% 12%, color-mix(in srgb, var(--cor-secundaria) 30%, transparent), transparent 70%),
+    radial-gradient(35% 50% at 0% 90%, color-mix(in srgb, var(--cor-primaria) 18%, transparent), transparent 70%);
+}
+
+.hero__fundo::before,
+.hero__luz {
+  display: none;
+}
+
+.hero__selo {
+  background: #ffffff;
+  box-shadow: var(--sombra-card);
+}
+
+.hero__visual {
+  max-width: 500px;
+}
+
+.hero__moldura--arco {
+  aspect-ratio: 4 / 4.9;
+  border-radius: 999px 999px 32px 32px;
+  border: 8px solid #ffffff;
+  box-shadow: 0 40px 80px -40px rgba(90, 40, 10, 0.55);
+}
+
+.hero__moldura--arco .hero__foto {
+  object-position: 40% center;
+}
+
+.carimbo {
+  position: absolute;
+  left: -34px;
+  bottom: 22%;
+  z-index: 3;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  background: var(--cor-acento);
+  color: #ffffff;
+  box-shadow: 0 18px 40px -16px rgba(90, 40, 10, 0.6);
+}
+
+.carimbo svg {
+  width: 100%;
+  height: 100%;
+  animation: girar 18s linear infinite;
+}
+
+.carimbo text {
+  fill: #ffffff;
+  font-family: var(--ff-texto);
+  font-size: 14.5px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.carimbo__centro {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+.carimbo__centro svg {
+  width: 34px;
+  height: 34px;
+  animation: none;
+}
+
+.flutuante {
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 24px 50px -24px rgba(90, 40, 10, 0.45);
+}
+
+@media (max-width: 599px) {
+  .carimbo {
+    width: 100px;
+    height: 100px;
+    left: -8px;
+    bottom: auto;
+    top: 52%;
+  }
+  .carimbo text {
+    font-size: 15px;
+  }
+}
+
+/* Vantagens: cartões brancos soltos, sem vidro */
+.vantagens {
+  background: transparent;
+  border: none;
+  backdrop-filter: none;
+  padding: 0;
+  gap: 14px;
+  box-shadow: none;
+}
+
+.vantagem {
+  background: #ffffff;
+  border: 1px solid var(--cor-borda);
+  box-shadow: var(--sombra-card);
+}
+
+/* ==========================================================================
+   SEÇÕES: ritmo creme / branco, cartões arredondados com sombra quente
+   ========================================================================== */
+.secao--planos::before {
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--cor-secundaria) 22%, transparent), transparent);
+}
+
+.plano {
+  background: #ffffff;
+}
+
+.plano__nome {
+  font-family: var(--ff-titulo);
+  font-size: 22px;
+  letter-spacing: 0;
+  text-transform: none;
+  font-style: italic;
+}
+
+.plano__vel-numero,
+.plano__preco-reais {
+  font-family: var(--ff-titulo);
+}
+
+.plano__vel-unidade {
+  font-family: var(--ff-texto);
+  font-size: 18px;
+}
+
+.secao--perfis {
+  background: var(--cor-fundo-alt);
+}
+
+.perfil {
+  border: none;
+}
+
+.foto--perfil {
+  margin: 10px 10px 0;
+  border-radius: 20px;
+}
+
+.secao--sobre {
+  background: var(--cor-fundo);
+}
+
+.foto--sobre {
+  border-radius: 999px 999px 28px 28px;
+  aspect-ratio: 4 / 4.2;
+}
+
+.secao--beneficios {
+  background: var(--cor-fundo-alt);
+  border: none;
+}
+
+.beneficio {
+  border: none;
+}
+
+.beneficio__icone {
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--cor-secundaria) 22%, #ffffff);
+  border: none;
+}
+
+/* Cobertura: foto da cidade com cartão por cima */
+.cobertura-foto {
+  position: relative;
+  max-width: 540px;
+  margin-inline: auto;
+  width: 100%;
+}
+
+.foto--cobertura {
+  aspect-ratio: 4 / 3.6;
+  border-radius: 28px;
+  border: 8px solid #ffffff;
+  box-shadow: 0 40px 80px -40px rgba(90, 40, 10, 0.5);
+}
+
+.cobertura-foto__cartao {
+  position: absolute;
+  left: -18px;
+  bottom: -22px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px 14px 14px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: var(--sombra-card);
+}
+
+.cobertura-foto__cartao strong {
+  display: block;
+  font-family: var(--ff-titulo);
+  font-size: 18px;
+}
+
+.cobertura-foto__cartao small {
+  display: block;
+  font-size: 12.5px;
+  color: var(--cor-texto-neutro);
+}
+
+.cobertura-foto__icone {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--grad-botao);
+  color: var(--cor-texto-botao);
+}
+
+.cobertura-foto__icone svg {
+  width: 22px;
+  height: 22px;
+}
+
+@media (max-width: 599px) {
+  .cobertura-foto__cartao {
+    left: 8px;
+  }
+}
+
+.secao--passos {
+  background: var(--cor-fundo-alt);
+  border: none;
+}
+
+.passo__icone {
+  border-radius: 50%;
+}
+
+.secao--cliente {
+  background: var(--cor-fundo-alt);
+  border: none;
+}
+
+.depoimento__aspas {
+  color: var(--cor-secundaria);
+}
+
+.faq__lista .faq__item {
+  border-radius: 22px;
+}
