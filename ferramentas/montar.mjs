@@ -61,7 +61,8 @@ function listarPaginas(dir = RAIZ, saida = []) {
     const rel = path.relative(RAIZ, abs).split(path.sep).join("/");
     if (IGNORAR.some((p) => rel === p || rel.startsWith(p + "/"))) continue;
     if (fs.statSync(abs).isDirectory()) listarPaginas(abs, saida);
-    else if (nome.endsWith(".html") && !nome.startsWith("google")) saida.push(rel);
+    // pula só o arquivo de verificação do Google Search Console (google<código>.html)
+    else if (nome.endsWith(".html") && !/^google[0-9a-f]+.html$/.test(nome)) saida.push(rel);
   }
   return saida;
 }
@@ -258,3 +259,12 @@ if (fs.readFileSync(caminhoSitemap, "utf8") !== novoSitemap) {
   console.log("sitemap.xml atualizado");
 }
 console.log(`\n${alteradas} página(s) atualizada(s).`);
+
+/* ---- Conferência: nenhuma página pode ficar com bloco sem montar ---- */
+const vazias = listarPaginas().filter((rel) =>
+  /<!-- @[\w-]+ --><!-- \/@[\w-]+ -->/.test(fs.readFileSync(path.join(RAIZ, rel), "utf8"))
+);
+if (vazias.length) {
+  console.error("\nERRO: páginas com blocos sem montar:\n  " + vazias.join("\n  "));
+  process.exitCode = 1;
+}
